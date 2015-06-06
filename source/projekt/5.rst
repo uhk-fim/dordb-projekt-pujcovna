@@ -121,8 +121,7 @@ Skript vytvářející databázové schéma
     CREATE TABLE oznaceni (
       id number(10) NOT NULL,
       vyrobce varchar2(50) NOT NULL,
-      druh varchar2(50) NOT NULL,
-      rok_vyroby number(10) NOT NULL,
+      nazev varchar2(50) NOT NULL,
       PRIMARY KEY (id)
     )  ;
 
