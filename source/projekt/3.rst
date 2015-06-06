@@ -1,0 +1,52 @@
+
+===============
+Business logika
+===============
+
+zobrazNevraceneVypujckyKDatu()
+==============================
+
+Kontrola včas nevrácených výpůjček. Slouží personálu pro kontrolu včas nevrácených vozidel a následnou urgenci a infromování zákazníků.
+
+Parametry
+---------
+
+``datum`` - datum ke ktéremu se bude filtrovat
+
+Návratová hodnota
+-----------------
+
+seznam výpůjček
+
+zobrazPochybneZakazniky()
+=========================
+
+Vrátí seznam zákazníků, kteři často vrací po dohodnuté době vrácení nebo je zabanován.
+
+Parametry
+---------
+
+``pocet_nevraceni`` - definuje po kolika pozdních vrácení bude zákazník označen za pochybného, defaultně 5
+
+Návratová hodnota
+-----------------
+
+seznam Zákazníků
+
+
+zkontrolujZakaznika()
+=====================
+
+Během zadání výpůjčky dojde ke kontrole zákázníka jestli není zabanován z nějakých důvodů(nevrátil, často pozdě vrací, poškodil vozidlo).
+
+Parametry
+---------
+
+``idZakaznika``
+
+Návratová hodnota
+-----------------
+
+``boolean``
+
+
