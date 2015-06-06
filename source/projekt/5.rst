@@ -89,6 +89,7 @@ Skript vytvářející databázové schéma
       VIN varchar2(80) NOT NULL,
       takt_motoru number(10) NOT NULL,
       cena_den number(10) NOT NULL,
+      id_barva number(10) NOT NULL,
       id_kubatura number(10) NOT NULL,
       id_typ_motorky number(10) NOT NULL,
       id_prevodovka number(10) NOT NULL,
@@ -99,6 +100,7 @@ Skript vytvářející databázové schéma
       CONSTRAINT motorka_ibfk_2 FOREIGN KEY (id_typ_motorky) REFERENCES typ_motorky (id),
       CONSTRAINT motorka_ibfk_3 FOREIGN KEY (id_prevodovka) REFERENCES prevodovka (id),
       CONSTRAINT motorka_ibfk_4 FOREIGN KEY (id_oznaceni) REFERENCES oznaceni (id)
+      CONSTRAINT motorka_ibfk_4 FOREIGN KEY (id_barva) REFERENCES barva (id)
     )  ;
 
     -- Generate ID using sequence and trigger
