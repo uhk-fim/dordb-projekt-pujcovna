@@ -2,3 +2,10 @@
 =========================
 Test integritních omezení
 =========================
+     
+     One error saving changes to table "JOSEFJA1"."POLOZKA_VYPUJCKY":
+Row 51: ORA-20000: Polozka objednavky neobsahuje ani vozidlo ani motorku!
+ORA-06512: na "JOSEFJA1.KONTROLA_POLOZKY", line 5
+ORA-06512: na "JOSEFJA1.TRIG_KONTROLA_POLOZKY_VYPUJCKY", line 2
+ORA-04088: chyba během provádění triggeru 'JOSEFJA1.TRIG_KONTROLA_POLOZKY_VYPUJCKY'
+ORA-06512: na line 1
