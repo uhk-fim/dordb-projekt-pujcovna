@@ -74,7 +74,6 @@
               <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="1.html">E-R diagram</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="1.html#diagram">Diagram</a></li>
-<li class="toctree-l2"><a class="reference internal" href="1.html#origial">Origiál</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="2.html">Integritní omezení</a><ul>
@@ -241,8 +240,8 @@
   <span class="k">CONSTRAINT</span> <span class="n">motorka_ibfk_1</span> <span class="k">FOREIGN</span> <span class="k">KEY</span> <span class="p">(</span><span class="n">id_kubatura</span><span class="p">)</span> <span class="k">REFERENCES</span> <span class="n">kubatura</span> <span class="p">(</span><span class="n">id</span><span class="p">),</span>
   <span class="k">CONSTRAINT</span> <span class="n">motorka_ibfk_2</span> <span class="k">FOREIGN</span> <span class="k">KEY</span> <span class="p">(</span><span class="n">id_typ_motorky</span><span class="p">)</span> <span class="k">REFERENCES</span> <span class="n">typ_motorky</span> <span class="p">(</span><span class="n">id</span><span class="p">),</span>
   <span class="k">CONSTRAINT</span> <span class="n">motorka_ibfk_3</span> <span class="k">FOREIGN</span> <span class="k">KEY</span> <span class="p">(</span><span class="n">id_prevodovka</span><span class="p">)</span> <span class="k">REFERENCES</span> <span class="n">prevodovka</span> <span class="p">(</span><span class="n">id</span><span class="p">),</span>
-  <span class="k">CONSTRAINT</span> <span class="n">motorka_ibfk_4</span> <span class="k">FOREIGN</span> <span class="k">KEY</span> <span class="p">(</span><span class="n">id_oznaceni</span><span class="p">)</span> <span class="k">REFERENCES</span> <span class="n">oznaceni</span> <span class="p">(</span><span class="n">id</span><span class="p">)</span>
-  <span class="k">CONSTRAINT</span> <span class="n">motorka_ibfk_4</span> <span class="k">FOREIGN</span> <span class="k">KEY</span> <span class="p">(</span><span class="n">id_barva</span><span class="p">)</span> <span class="k">REFERENCES</span> <span class="n">barva</span> <span class="p">(</span><span class="n">id</span><span class="p">)</span>
+  <span class="k">CONSTRAINT</span> <span class="n">motorka_ibfk_4</span> <span class="k">FOREIGN</span> <span class="k">KEY</span> <span class="p">(</span><span class="n">id_oznaceni</span><span class="p">)</span> <span class="k">REFERENCES</span> <span class="n">oznaceni</span> <span class="p">(</span><span class="n">id</span><span class="p">),</span>
+  <span class="k">CONSTRAINT</span> <span class="n">motorka_ibfk_5</span> <span class="k">FOREIGN</span> <span class="k">KEY</span> <span class="p">(</span><span class="n">id_barva</span><span class="p">)</span> <span class="k">REFERENCES</span> <span class="n">barva</span> <span class="p">(</span><span class="n">id</span><span class="p">)</span>
 <span class="p">)</span>  <span class="p">;</span>
 
 <span class="c1">-- Generate ID using sequence and trigger</span>
@@ -301,12 +300,12 @@
 
 <span class="k">CREATE</span> <span class="k">TABLE</span> <span class="n">polozka_vypujcky</span> <span class="p">(</span>
   <span class="n">id</span> <span class="nb">number</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span> <span class="k">NOT</span> <span class="k">NULL</span><span class="p">,</span>
-  <span class="n">id_vypujcky</span> <span class="nb">number</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span> <span class="k">NOT</span> <span class="k">NULL</span><span class="p">,</span>
-  <span class="n">id_vozidla</span> <span class="nb">number</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span> <span class="k">DEFAULT</span> <span class="k">NULL</span><span class="p">,</span>
-  <span class="n">id_motorky</span> <span class="nb">number</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span> <span class="k">DEFAULT</span> <span class="k">NULL</span><span class="p">,</span>
+  <span class="n">id_vypujcka</span> <span class="nb">number</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span> <span class="k">NOT</span> <span class="k">NULL</span><span class="p">,</span>
+  <span class="n">id_vozidlo</span> <span class="nb">number</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span> <span class="k">DEFAULT</span> <span class="k">NULL</span><span class="p">,</span>
+  <span class="n">id_motorka</span> <span class="nb">number</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span> <span class="k">DEFAULT</span> <span class="k">NULL</span><span class="p">,</span>
   <span class="k">PRIMARY</span> <span class="k">KEY</span> <span class="p">(</span><span class="n">id</span><span class="p">)</span>
  <span class="p">,</span>
-  <span class="k">CONSTRAINT</span> <span class="n">polozka_vypujcky_ibfk_1</span> <span class="k">FOREIGN</span> <span class="k">KEY</span> <span class="p">(</span><span class="n">id_vypujcky</span><span class="p">)</span> <span class="k">REFERENCES</span> <span class="n">vypujcka</span> <span class="p">(</span><span class="n">id</span><span class="p">)</span>
+  <span class="k">CONSTRAINT</span> <span class="n">polozka_vypujcky_ibfk_1</span> <span class="k">FOREIGN</span> <span class="k">KEY</span> <span class="p">(</span><span class="n">id_vypujcka</span><span class="p">)</span> <span class="k">REFERENCES</span> <span class="n">vypujcka</span> <span class="p">(</span><span class="n">id</span><span class="p">)</span>
 <span class="p">)</span>  <span class="p">;</span>
 
 <span class="c1">-- Generate ID using sequence and trigger</span>
@@ -404,7 +403,7 @@
   <span class="n">konec</span> <span class="k">timestamp</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span> <span class="k">NOT</span> <span class="k">NULL</span><span class="p">,</span>
   <span class="n">datum_sjednani</span> <span class="k">timestamp</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span> <span class="k">NOT</span> <span class="k">NULL</span><span class="p">,</span>
   <span class="n">datum_vraceni</span> <span class="k">timestamp</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span> <span class="k">DEFAULT</span> <span class="k">NULL</span><span class="p">,</span>
-  <span class="n">id_zakaznika</span> <span class="nb">number</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span> <span class="k">NOT</span> <span class="k">NULL</span><span class="p">,</span>
+  <span class="n">id_zakaznik</span> <span class="nb">number</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span> <span class="k">NOT</span> <span class="k">NULL</span><span class="p">,</span>
   <span class="n">cislo_pojistky</span> <span class="n">varchar2</span><span class="p">(</span><span class="mi">30</span><span class="p">)</span> <span class="k">NOT</span> <span class="k">NULL</span><span class="p">,</span>
   <span class="k">PRIMARY</span> <span class="k">KEY</span> <span class="p">(</span><span class="n">id</span><span class="p">)</span>
 <span class="p">)</span>  <span class="p">;</span>

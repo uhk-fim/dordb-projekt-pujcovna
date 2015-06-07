@@ -101,8 +101,8 @@ Skript vytvářející databázové schéma
       CONSTRAINT motorka_ibfk_1 FOREIGN KEY (id_kubatura) REFERENCES kubatura (id),
       CONSTRAINT motorka_ibfk_2 FOREIGN KEY (id_typ_motorky) REFERENCES typ_motorky (id),
       CONSTRAINT motorka_ibfk_3 FOREIGN KEY (id_prevodovka) REFERENCES prevodovka (id),
-      CONSTRAINT motorka_ibfk_4 FOREIGN KEY (id_oznaceni) REFERENCES oznaceni (id)
-      CONSTRAINT motorka_ibfk_4 FOREIGN KEY (id_barva) REFERENCES barva (id)
+      CONSTRAINT motorka_ibfk_4 FOREIGN KEY (id_oznaceni) REFERENCES oznaceni (id),
+      CONSTRAINT motorka_ibfk_5 FOREIGN KEY (id_barva) REFERENCES barva (id)
     )  ;
 
     -- Generate ID using sequence and trigger
@@ -161,12 +161,12 @@ Skript vytvářející databázové schéma
 
     CREATE TABLE polozka_vypujcky (
       id number(10) NOT NULL,
-      id_vypujcky number(10) NOT NULL,
-      id_vozidla number(10) DEFAULT NULL,
-      id_motorky number(10) DEFAULT NULL,
+      id_vypujcka number(10) NOT NULL,
+      id_vozidlo number(10) DEFAULT NULL,
+      id_motorka number(10) DEFAULT NULL,
       PRIMARY KEY (id)
      ,
-      CONSTRAINT polozka_vypujcky_ibfk_1 FOREIGN KEY (id_vypujcky) REFERENCES vypujcka (id)
+      CONSTRAINT polozka_vypujcky_ibfk_1 FOREIGN KEY (id_vypujcka) REFERENCES vypujcka (id)
     )  ;
 
     -- Generate ID using sequence and trigger
@@ -264,7 +264,7 @@ Skript vytvářející databázové schéma
       konec timestamp(0) NOT NULL,
       datum_sjednani timestamp(0) NOT NULL,
       datum_vraceni timestamp(0) DEFAULT NULL,
-      id_zakaznika number(10) NOT NULL,
+      id_zakaznik number(10) NOT NULL,
       cislo_pojistky varchar2(30) NOT NULL,
       PRIMARY KEY (id)
     )  ;
