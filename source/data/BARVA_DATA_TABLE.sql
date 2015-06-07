@@ -1,0 +1,27 @@
+REM INSERTING into JOSEFJA1.BARVA
+SET DEFINE OFF;
+Insert into JOSEFJA1.BARVA (ID,KOD_BARVY,TYP_BARVY,BARVA) values ('1','248HDA','metalÌza','zelen·');
+Insert into JOSEFJA1.BARVA (ID,KOD_BARVY,TYP_BARVY,BARVA) values ('2','SD212','metalÌza','Ëerven·');
+Insert into JOSEFJA1.BARVA (ID,KOD_BARVY,TYP_BARVY,BARVA) values ('3','D32KKSA','perleù','Ëerven·');
+Insert into JOSEFJA1.BARVA (ID,KOD_BARVY,TYP_BARVY,BARVA) values ('4','ASED21','metalÌza','st¯Ìbrn·');
+Insert into JOSEFJA1.BARVA (ID,KOD_BARVY,TYP_BARVY,BARVA) values ('5','DJ3I220','matn·','Ëern·');
+Insert into JOSEFJA1.BARVA (ID,KOD_BARVY,TYP_BARVY,BARVA) values ('6','SF2123X','metalÌza','Ëern·');
+Insert into JOSEFJA1.BARVA (ID,KOD_BARVY,TYP_BARVY,BARVA) values ('7','BCBU2','metalÌza','bÌl·');
+Insert into JOSEFJA1.BARVA (ID,KOD_BARVY,TYP_BARVY,BARVA) values ('8','BD3I21','matn·','bÌl·');
+Insert into JOSEFJA1.BARVA (ID,KOD_BARVY,TYP_BARVY,BARVA) values ('9','MDRJI2','metalÌza','modr·');
+Insert into JOSEFJA1.BARVA (ID,KOD_BARVY,TYP_BARVY,BARVA) values ('10','EQWE2L','metalÌza','vÌnov·');
+Insert into JOSEFJA1.BARVA (ID,KOD_BARVY,TYP_BARVY,BARVA) values ('11','SHIUGG','perleù','zelen·');
+Insert into JOSEFJA1.BARVA (ID,KOD_BARVY,TYP_BARVY,BARVA) values ('12','SEHUIA','metalÌze','öed·');
+Insert into JOSEFJA1.BARVA (ID,KOD_BARVY,TYP_BARVY,BARVA) values ('13','ASEFSE','metalÌze','fialov·');
+Insert into JOSEFJA1.BARVA (ID,KOD_BARVY,TYP_BARVY,BARVA) values ('14','AFHIUGF','matn·','fialov·');
+Insert into JOSEFJA1.BARVA (ID,KOD_BARVY,TYP_BARVY,BARVA) values ('15','XSADEFE','metalÌza','ûlut·');
+Insert into JOSEFJA1.BARVA (ID,KOD_BARVY,TYP_BARVY,BARVA) values ('16','DSFEAED','metalÌza','bÈûov·');
+Insert into JOSEFJA1.BARVA (ID,KOD_BARVY,TYP_BARVY,BARVA) values ('17','hiUGHFUGE','matn·','zlat·');
+Insert into JOSEFJA1.BARVA (ID,KOD_BARVY,TYP_BARVY,BARVA) values ('18','GGIUGCS','matn·','karbonov·');
+Insert into JOSEFJA1.BARVA (ID,KOD_BARVY,TYP_BARVY,BARVA) values ('19','ICGGIGG','metalÌze','azurov·');
+Insert into JOSEFJA1.BARVA (ID,KOD_BARVY,TYP_BARVY,BARVA) values ('20','FHIGHIUA','matn·','r˘ûov·');
+Insert into JOSEFJA1.BARVA (ID,KOD_BARVY,TYP_BARVY,BARVA) values ('21','FSHFIGH','metalÌze','r˘ûov·');
+Insert into JOSEFJA1.BARVA (ID,KOD_BARVY,TYP_BARVY,BARVA) values ('22','CGIGSFR','metalÌze','khaki');
+Insert into JOSEFJA1.BARVA (ID,KOD_BARVY,TYP_BARVY,BARVA) values ('23','SFGGFUE','metalÌza','oranûov·');
+Insert into JOSEFJA1.BARVA (ID,KOD_BARVY,TYP_BARVY,BARVA) values ('24','hiudgiug3','metalÌze','karbonov·');
+Insert into JOSEFJA1.BARVA (ID,KOD_BARVY,TYP_BARVY,BARVA) values ('25','HFGISUF','perleù','zelen·');

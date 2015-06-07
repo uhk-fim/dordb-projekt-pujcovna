@@ -2,3 +2,5 @@
 ============================================
 Skript pro naplnění tabulky testovacími daty
 ============================================
+
+:download:`Export dat <../data/DATA_ALL.sql>`.

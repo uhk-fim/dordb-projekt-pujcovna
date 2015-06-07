@@ -1,0 +1,6002 @@
+[
+  {
+    "cp": 683,
+    "ulice": "Bleecker Street",
+    "mesto": "Leeper",
+    "psc": 89374
+  },
+  {
+    "cp": 397,
+    "ulice": "Pineapple Street",
+    "mesto": "Callaghan",
+    "psc": 80476
+  },
+  {
+    "cp": 790,
+    "ulice": "Douglass Street",
+    "mesto": "Ypsilanti",
+    "psc": 57005
+  },
+  {
+    "cp": 892,
+    "ulice": "Pierrepont Street",
+    "mesto": "Jamestown",
+    "psc": 15387
+  },
+  {
+    "cp": 322,
+    "ulice": "Lincoln Terrace",
+    "mesto": "Germanton",
+    "psc": 22957
+  },
+  {
+    "cp": 808,
+    "ulice": "Woodside Avenue",
+    "mesto": "Dante",
+    "psc": 65947
+  },
+  {
+    "cp": 249,
+    "ulice": "Vermont Court",
+    "mesto": "Weedville",
+    "psc": 55624
+  },
+  {
+    "cp": 953,
+    "ulice": "Bragg Court",
+    "mesto": "Lloyd",
+    "psc": 79429
+  },
+  {
+    "cp": 368,
+    "ulice": "Crooke Avenue",
+    "mesto": "Emory",
+    "psc": 82739
+  },
+  {
+    "cp": 234,
+    "ulice": "Irving Street",
+    "mesto": "Bodega",
+    "psc": 76097
+  },
+  {
+    "cp": 435,
+    "ulice": "Vanderveer Street",
+    "mesto": "Lavalette",
+    "psc": 82816
+  },
+  {
+    "cp": 618,
+    "ulice": "Dorset Street",
+    "mesto": "Nadine",
+    "psc": 10301
+  },
+  {
+    "cp": 468,
+    "ulice": "Hamilton Walk",
+    "mesto": "Hall",
+    "psc": 94075
+  },
+  {
+    "cp": 336,
+    "ulice": "Burnett Street",
+    "mesto": "Fredericktown",
+    "psc": 21241
+  },
+  {
+    "cp": 906,
+    "ulice": "Anthony Street",
+    "mesto": "Robinette",
+    "psc": 90683
+  },
+  {
+    "cp": 626,
+    "ulice": "Freeman Street",
+    "mesto": "Helen",
+    "psc": 31664
+  },
+  {
+    "cp": 203,
+    "ulice": "Ash Street",
+    "mesto": "Wedgewood",
+    "psc": 11541
+  },
+  {
+    "cp": 740,
+    "ulice": "Butler Place",
+    "mesto": "Otranto",
+    "psc": 24810
+  },
+  {
+    "cp": 141,
+    "ulice": "Hamilton Avenue",
+    "mesto": "Troy",
+    "psc": 95324
+  },
+  {
+    "cp": 318,
+    "ulice": "Vanderbilt Street",
+    "mesto": "Leola",
+    "psc": 60111
+  },
+  {
+    "cp": 796,
+    "ulice": "Ridgewood Place",
+    "mesto": "Loyalhanna",
+    "psc": 37494
+  },
+  {
+    "cp": 130,
+    "ulice": "Beayer Place",
+    "mesto": "Seymour",
+    "psc": 52349
+  },
+  {
+    "cp": 132,
+    "ulice": "Macon Street",
+    "mesto": "Caron",
+    "psc": 82033
+  },
+  {
+    "cp": 453,
+    "ulice": "Quay Street",
+    "mesto": "Dexter",
+    "psc": 77777
+  },
+  {
+    "cp": 263,
+    "ulice": "Garden Street",
+    "mesto": "Levant",
+    "psc": 80722
+  },
+  {
+    "cp": 974,
+    "ulice": "Herkimer Court",
+    "mesto": "Worton",
+    "psc": 59772
+  },
+  {
+    "cp": 365,
+    "ulice": "Dewey Place",
+    "mesto": "Garfield",
+    "psc": 86233
+  },
+  {
+    "cp": 139,
+    "ulice": "Hausman Street",
+    "mesto": "Spelter",
+    "psc": 90104
+  },
+  {
+    "cp": 573,
+    "ulice": "Ira Court",
+    "mesto": "Garberville",
+    "psc": 43313
+  },
+  {
+    "cp": 669,
+    "ulice": "Sandford Street",
+    "mesto": "Lacomb",
+    "psc": 74008
+  },
+  {
+    "cp": 148,
+    "ulice": "Bayview Avenue",
+    "mesto": "Grandview",
+    "psc": 21921
+  },
+  {
+    "cp": 366,
+    "ulice": "Times Placez",
+    "mesto": "Rehrersburg",
+    "psc": 11415
+  },
+  {
+    "cp": 505,
+    "ulice": "Seaview Court",
+    "mesto": "Interlochen",
+    "psc": 48906
+  },
+  {
+    "cp": 491,
+    "ulice": "Jamison Lane",
+    "mesto": "Soham",
+    "psc": 88429
+  },
+  {
+    "cp": 993,
+    "ulice": "Taaffe Place",
+    "mesto": "Vivian",
+    "psc": 30879
+  },
+  {
+    "cp": 874,
+    "ulice": "Meserole Street",
+    "mesto": "Topaz",
+    "psc": 21964
+  },
+  {
+    "cp": 142,
+    "ulice": "Knight Court",
+    "mesto": "Greer",
+    "psc": 97323
+  },
+  {
+    "cp": 830,
+    "ulice": "Fay Court",
+    "mesto": "Coldiron",
+    "psc": 76398
+  },
+  {
+    "cp": 824,
+    "ulice": "Columbia Place",
+    "mesto": "Davenport",
+    "psc": 90809
+  },
+  {
+    "cp": 883,
+    "ulice": "Hampton Avenue",
+    "mesto": "Robinson",
+    "psc": 87558
+  },
+  {
+    "cp": 719,
+    "ulice": "Sunnyside Avenue",
+    "mesto": "Layhill",
+    "psc": 97464
+  },
+  {
+    "cp": 145,
+    "ulice": "Roosevelt Court",
+    "mesto": "Brule",
+    "psc": 14463
+  },
+  {
+    "cp": 226,
+    "ulice": "Brevoort Place",
+    "mesto": "Muir",
+    "psc": 46738
+  },
+  {
+    "cp": 946,
+    "ulice": "Desmond Court",
+    "mesto": "Dale",
+    "psc": 40538
+  },
+  {
+    "cp": 111,
+    "ulice": "Porter Avenue",
+    "mesto": "Winchester",
+    "psc": 24805
+  },
+  {
+    "cp": 778,
+    "ulice": "Autumn Avenue",
+    "mesto": "Shawmut",
+    "psc": 52535
+  },
+  {
+    "cp": 436,
+    "ulice": "Fayette Street",
+    "mesto": "Bynum",
+    "psc": 32377
+  },
+  {
+    "cp": 205,
+    "ulice": "Crown Street",
+    "mesto": "Brooktrails",
+    "psc": 69606
+  },
+  {
+    "cp": 901,
+    "ulice": "Gilmore Court",
+    "mesto": "Allamuchy",
+    "psc": 73106
+  },
+  {
+    "cp": 436,
+    "ulice": "Lewis Place",
+    "mesto": "Bluetown",
+    "psc": 26631
+  },
+  {
+    "cp": 781,
+    "ulice": "Canton Court",
+    "mesto": "Como",
+    "psc": 96022
+  },
+  {
+    "cp": 277,
+    "ulice": "Fillmore Avenue",
+    "mesto": "Tuttle",
+    "psc": 65159
+  },
+  {
+    "cp": 178,
+    "ulice": "Malta Street",
+    "mesto": "Bayview",
+    "psc": 57750
+  },
+  {
+    "cp": 825,
+    "ulice": "Dare Court",
+    "mesto": "Kanauga",
+    "psc": 57022
+  },
+  {
+    "cp": 520,
+    "ulice": "Junius Street",
+    "mesto": "Adamstown",
+    "psc": 81769
+  },
+  {
+    "cp": 720,
+    "ulice": "Rochester Avenue",
+    "mesto": "Loma",
+    "psc": 91558
+  },
+  {
+    "cp": 146,
+    "ulice": "Kingston Avenue",
+    "mesto": "Deercroft",
+    "psc": 65559
+  },
+  {
+    "cp": 442,
+    "ulice": "Hicks Street",
+    "mesto": "Somerset",
+    "psc": 65314
+  },
+  {
+    "cp": 303,
+    "ulice": "Cornelia Street",
+    "mesto": "Nicut",
+    "psc": 46841
+  },
+  {
+    "cp": 638,
+    "ulice": "Meeker Avenue",
+    "mesto": "Boyd",
+    "psc": 44506
+  },
+  {
+    "cp": 755,
+    "ulice": "Pulaski Street",
+    "mesto": "Wakarusa",
+    "psc": 94671
+  },
+  {
+    "cp": 775,
+    "ulice": "Strauss Street",
+    "mesto": "Columbus",
+    "psc": 26826
+  },
+  {
+    "cp": 934,
+    "ulice": "Cleveland Street",
+    "mesto": "Nelson",
+    "psc": 86385
+  },
+  {
+    "cp": 779,
+    "ulice": "Eaton Court",
+    "mesto": "Trail",
+    "psc": 21210
+  },
+  {
+    "cp": 733,
+    "ulice": "Glendale Court",
+    "mesto": "Brogan",
+    "psc": 44856
+  },
+  {
+    "cp": 920,
+    "ulice": "Ruby Street",
+    "mesto": "Harmon",
+    "psc": 74232
+  },
+  {
+    "cp": 977,
+    "ulice": "Gates Avenue",
+    "mesto": "Cecilia",
+    "psc": 26272
+  },
+  {
+    "cp": 205,
+    "ulice": "Canal Avenue",
+    "mesto": "Hachita",
+    "psc": 22717
+  },
+  {
+    "cp": 645,
+    "ulice": "Cove Lane",
+    "mesto": "Kersey",
+    "psc": 52337
+  },
+  {
+    "cp": 745,
+    "ulice": "Colin Place",
+    "mesto": "Statenville",
+    "psc": 66498
+  },
+  {
+    "cp": 768,
+    "ulice": "Chester Street",
+    "mesto": "Carrsville",
+    "psc": 32148
+  },
+  {
+    "cp": 347,
+    "ulice": "Vandervoort Place",
+    "mesto": "Barclay",
+    "psc": 42044
+  },
+  {
+    "cp": 420,
+    "ulice": "Caton Place",
+    "mesto": "Falmouth",
+    "psc": 82624
+  },
+  {
+    "cp": 150,
+    "ulice": "Taylor Street",
+    "mesto": "Moquino",
+    "psc": 95096
+  },
+  {
+    "cp": 618,
+    "ulice": "Varanda Place",
+    "mesto": "Bloomington",
+    "psc": 27032
+  },
+  {
+    "cp": 479,
+    "ulice": "Whitwell Place",
+    "mesto": "Chamberino",
+    "psc": 26488
+  },
+  {
+    "cp": 242,
+    "ulice": "Malbone Street",
+    "mesto": "Wescosville",
+    "psc": 28351
+  },
+  {
+    "cp": 476,
+    "ulice": "Commerce Street",
+    "mesto": "Movico",
+    "psc": 73866
+  },
+  {
+    "cp": 692,
+    "ulice": "Arion Place",
+    "mesto": "Martinez",
+    "psc": 63782
+  },
+  {
+    "cp": 345,
+    "ulice": "Hill Street",
+    "mesto": "Sardis",
+    "psc": 60482
+  },
+  {
+    "cp": 404,
+    "ulice": "Morton Street",
+    "mesto": "Rote",
+    "psc": 88526
+  },
+  {
+    "cp": 549,
+    "ulice": "Jamaica Avenue",
+    "mesto": "Sultana",
+    "psc": 26456
+  },
+  {
+    "cp": 866,
+    "ulice": "Middleton Street",
+    "mesto": "Brenton",
+    "psc": 39245
+  },
+  {
+    "cp": 193,
+    "ulice": "Aberdeen Street",
+    "mesto": "Wilmington",
+    "psc": 35185
+  },
+  {
+    "cp": 442,
+    "ulice": "Nassau Street",
+    "mesto": "Zeba",
+    "psc": 40820
+  },
+  {
+    "cp": 579,
+    "ulice": "Meserole Avenue",
+    "mesto": "Curtice",
+    "psc": 96804
+  },
+  {
+    "cp": 708,
+    "ulice": "Etna Street",
+    "mesto": "Lowell",
+    "psc": 73574
+  },
+  {
+    "cp": 216,
+    "ulice": "Hawthorne Street",
+    "mesto": "Leyner",
+    "psc": 93601
+  },
+  {
+    "cp": 995,
+    "ulice": "Congress Street",
+    "mesto": "Hannasville",
+    "psc": 22982
+  },
+  {
+    "cp": 950,
+    "ulice": "Seacoast Terrace",
+    "mesto": "Reno",
+    "psc": 16476
+  },
+  {
+    "cp": 736,
+    "ulice": "Cameron Court",
+    "mesto": "Abiquiu",
+    "psc": 38547
+  },
+  {
+    "cp": 127,
+    "ulice": "Branton Street",
+    "mesto": "Herlong",
+    "psc": 40675
+  },
+  {
+    "cp": 346,
+    "ulice": "Cypress Court",
+    "mesto": "Jacksonwald",
+    "psc": 52596
+  },
+  {
+    "cp": 412,
+    "ulice": "Halleck Street",
+    "mesto": "Shasta",
+    "psc": 45462
+  },
+  {
+    "cp": 473,
+    "ulice": "Gatling Place",
+    "mesto": "Temperanceville",
+    "psc": 92205
+  },
+  {
+    "cp": 600,
+    "ulice": "Oxford Walk",
+    "mesto": "Masthope",
+    "psc": 43898
+  },
+  {
+    "cp": 203,
+    "ulice": "Martense Street",
+    "mesto": "Sattley",
+    "psc": 26313
+  },
+  {
+    "cp": 220,
+    "ulice": "Wythe Place",
+    "mesto": "Lafferty",
+    "psc": 25375
+  },
+  {
+    "cp": 311,
+    "ulice": "Noll Street",
+    "mesto": "Ronco",
+    "psc": 89689
+  },
+  {
+    "cp": 544,
+    "ulice": "Albemarle Road",
+    "mesto": "Dellview",
+    "psc": 95352
+  },
+  {
+    "cp": 229,
+    "ulice": "Aitken Place",
+    "mesto": "Foscoe",
+    "psc": 25872
+  },
+  {
+    "cp": 599,
+    "ulice": "Utica Avenue",
+    "mesto": "Richford",
+    "psc": 40532
+  },
+  {
+    "cp": 825,
+    "ulice": "Ebony Court",
+    "mesto": "Snyderville",
+    "psc": 40881
+  },
+  {
+    "cp": 531,
+    "ulice": "Christopher Avenue",
+    "mesto": "Basye",
+    "psc": 62864
+  },
+  {
+    "cp": 501,
+    "ulice": "Amersfort Place",
+    "mesto": "Edinburg",
+    "psc": 64033
+  },
+  {
+    "cp": 851,
+    "ulice": "Benson Avenue",
+    "mesto": "Canoochee",
+    "psc": 22593
+  },
+  {
+    "cp": 138,
+    "ulice": "Sedgwick Place",
+    "mesto": "Chapin",
+    "psc": 34064
+  },
+  {
+    "cp": 882,
+    "ulice": "Elliott Walk",
+    "mesto": "Saddlebrooke",
+    "psc": 93508
+  },
+  {
+    "cp": 541,
+    "ulice": "Emerald Street",
+    "mesto": "Homestead",
+    "psc": 82910
+  },
+  {
+    "cp": 385,
+    "ulice": "Louise Terrace",
+    "mesto": "Sena",
+    "psc": 26252
+  },
+  {
+    "cp": 828,
+    "ulice": "Bouck Court",
+    "mesto": "Chumuckla",
+    "psc": 55174
+  },
+  {
+    "cp": 246,
+    "ulice": "Union Avenue",
+    "mesto": "Ebro",
+    "psc": 77281
+  },
+  {
+    "cp": 573,
+    "ulice": "Kane Place",
+    "mesto": "Frank",
+    "psc": 28378
+  },
+  {
+    "cp": 771,
+    "ulice": "Clark Street",
+    "mesto": "Kiskimere",
+    "psc": 53238
+  },
+  {
+    "cp": 308,
+    "ulice": "Tampa Court",
+    "mesto": "Edneyville",
+    "psc": 20569
+  },
+  {
+    "cp": 420,
+    "ulice": "Rockaway Parkway",
+    "mesto": "Floris",
+    "psc": 40549
+  },
+  {
+    "cp": 147,
+    "ulice": "Hampton Place",
+    "mesto": "Calvary",
+    "psc": 81434
+  },
+  {
+    "cp": 501,
+    "ulice": "Lee Avenue",
+    "mesto": "Deputy",
+    "psc": 62883
+  },
+  {
+    "cp": 359,
+    "ulice": "Clinton Street",
+    "mesto": "Broadlands",
+    "psc": 14892
+  },
+  {
+    "cp": 138,
+    "ulice": "Crystal Street",
+    "mesto": "Alleghenyville",
+    "psc": 44882
+  },
+  {
+    "cp": 961,
+    "ulice": "Ashland Place",
+    "mesto": "Walker",
+    "psc": 96090
+  },
+  {
+    "cp": 107,
+    "ulice": "Lois Avenue",
+    "mesto": "Cowiche",
+    "psc": 75280
+  },
+  {
+    "cp": 675,
+    "ulice": "Duffield Street",
+    "mesto": "Nescatunga",
+    "psc": 49280
+  },
+  {
+    "cp": 386,
+    "ulice": "Lott Avenue",
+    "mesto": "Belmont",
+    "psc": 58314
+  },
+  {
+    "cp": 948,
+    "ulice": "Aster Court",
+    "mesto": "Rowe",
+    "psc": 94079
+  },
+  {
+    "cp": 963,
+    "ulice": "Argyle Road",
+    "mesto": "Noblestown",
+    "psc": 38962
+  },
+  {
+    "cp": 266,
+    "ulice": "Bragg Street",
+    "mesto": "Klagetoh",
+    "psc": 81172
+  },
+  {
+    "cp": 289,
+    "ulice": "Wyckoff Street",
+    "mesto": "Alfarata",
+    "psc": 79299
+  },
+  {
+    "cp": 963,
+    "ulice": "Cass Place",
+    "mesto": "Lemoyne",
+    "psc": 53396
+  },
+  {
+    "cp": 935,
+    "ulice": "Coleridge Street",
+    "mesto": "Hamilton",
+    "psc": 47375
+  },
+  {
+    "cp": 582,
+    "ulice": "Shale Street",
+    "mesto": "Sussex",
+    "psc": 52007
+  },
+  {
+    "cp": 702,
+    "ulice": "Adler Place",
+    "mesto": "Cashtown",
+    "psc": 59023
+  },
+  {
+    "cp": 999,
+    "ulice": "Degraw Street",
+    "mesto": "Clarktown",
+    "psc": 49777
+  },
+  {
+    "cp": 760,
+    "ulice": "Hendrickson Street",
+    "mesto": "Remington",
+    "psc": 57035
+  },
+  {
+    "cp": 931,
+    "ulice": "Hendrickson Place",
+    "mesto": "Kimmell",
+    "psc": 60754
+  },
+  {
+    "cp": 991,
+    "ulice": "Pacific Street",
+    "mesto": "Rosburg",
+    "psc": 30637
+  },
+  {
+    "cp": 496,
+    "ulice": "Melrose Street",
+    "mesto": "Marysville",
+    "psc": 37638
+  },
+  {
+    "cp": 194,
+    "ulice": "Friel Place",
+    "mesto": "Nutrioso",
+    "psc": 24171
+  },
+  {
+    "cp": 955,
+    "ulice": "Story Court",
+    "mesto": "Reinerton",
+    "psc": 45321
+  },
+  {
+    "cp": 319,
+    "ulice": "Navy Walk",
+    "mesto": "Jacksonburg",
+    "psc": 56231
+  },
+  {
+    "cp": 613,
+    "ulice": "Mill Lane",
+    "mesto": "Rosedale",
+    "psc": 66834
+  },
+  {
+    "cp": 848,
+    "ulice": "Apollo Street",
+    "mesto": "Riegelwood",
+    "psc": 22806
+  },
+  {
+    "cp": 716,
+    "ulice": "Sharon Street",
+    "mesto": "Singer",
+    "psc": 77144
+  },
+  {
+    "cp": 490,
+    "ulice": "Gerritsen Avenue",
+    "mesto": "Blairstown",
+    "psc": 23447
+  },
+  {
+    "cp": 801,
+    "ulice": "Everett Avenue",
+    "mesto": "Rivereno",
+    "psc": 67749
+  },
+  {
+    "cp": 204,
+    "ulice": "Graham Avenue",
+    "mesto": "Waiohinu",
+    "psc": 89491
+  },
+  {
+    "cp": 612,
+    "ulice": "Barbey Street",
+    "mesto": "Disautel",
+    "psc": 77096
+  },
+  {
+    "cp": 795,
+    "ulice": "Bedford Place",
+    "mesto": "Succasunna",
+    "psc": 39384
+  },
+  {
+    "cp": 881,
+    "ulice": "Broome Street",
+    "mesto": "Ivanhoe",
+    "psc": 11648
+  },
+  {
+    "cp": 440,
+    "ulice": "Dikeman Street",
+    "mesto": "Belgreen",
+    "psc": 12645
+  },
+  {
+    "cp": 979,
+    "ulice": "Perry Place",
+    "mesto": "Convent",
+    "psc": 60519
+  },
+  {
+    "cp": 963,
+    "ulice": "Vanderbilt Avenue",
+    "mesto": "Leland",
+    "psc": 32511
+  },
+  {
+    "cp": 968,
+    "ulice": "Highland Place",
+    "mesto": "Hanover",
+    "psc": 55270
+  },
+  {
+    "cp": 517,
+    "ulice": "Polar Street",
+    "mesto": "Brookfield",
+    "psc": 13125
+  },
+  {
+    "cp": 114,
+    "ulice": "Hale Avenue",
+    "mesto": "Ferney",
+    "psc": 85006
+  },
+  {
+    "cp": 359,
+    "ulice": "Atlantic Avenue",
+    "mesto": "Enoree",
+    "psc": 18613
+  },
+  {
+    "cp": 646,
+    "ulice": "Halsey Street",
+    "mesto": "Roland",
+    "psc": 42584
+  },
+  {
+    "cp": 859,
+    "ulice": "Stryker Court",
+    "mesto": "Century",
+    "psc": 46880
+  },
+  {
+    "cp": 524,
+    "ulice": "Willoughby Street",
+    "mesto": "Rose",
+    "psc": 25285
+  },
+  {
+    "cp": 253,
+    "ulice": "Pleasant Place",
+    "mesto": "Dyckesville",
+    "psc": 99245
+  },
+  {
+    "cp": 759,
+    "ulice": "Pooles Lane",
+    "mesto": "Delco",
+    "psc": 70228
+  },
+  {
+    "cp": 718,
+    "ulice": "Banner Avenue",
+    "mesto": "Vandiver",
+    "psc": 17579
+  },
+  {
+    "cp": 598,
+    "ulice": "Perry Terrace",
+    "mesto": "Fontanelle",
+    "psc": 71636
+  },
+  {
+    "cp": 916,
+    "ulice": "Morgan Avenue",
+    "mesto": "Elliott",
+    "psc": 37780
+  },
+  {
+    "cp": 613,
+    "ulice": "Creamer Street",
+    "mesto": "Fruitdale",
+    "psc": 20862
+  },
+  {
+    "cp": 144,
+    "ulice": "Thatford Avenue",
+    "mesto": "Hackneyville",
+    "psc": 91596
+  },
+  {
+    "cp": 373,
+    "ulice": "Bridge Street",
+    "mesto": "Fannett",
+    "psc": 57988
+  },
+  {
+    "cp": 762,
+    "ulice": "Schermerhorn Street",
+    "mesto": "Gerton",
+    "psc": 74318
+  },
+  {
+    "cp": 332,
+    "ulice": "Waldane Court",
+    "mesto": "Maxville",
+    "psc": 65186
+  },
+  {
+    "cp": 645,
+    "ulice": "Doughty Street",
+    "mesto": "Yukon",
+    "psc": 91147
+  },
+  {
+    "cp": 544,
+    "ulice": "Bartlett Place",
+    "mesto": "Fairfield",
+    "psc": 89077
+  },
+  {
+    "cp": 877,
+    "ulice": "Canarsie Road",
+    "mesto": "Shindler",
+    "psc": 89166
+  },
+  {
+    "cp": 862,
+    "ulice": "Jewel Street",
+    "mesto": "Takilma",
+    "psc": 37858
+  },
+  {
+    "cp": 964,
+    "ulice": "Madoc Avenue",
+    "mesto": "Crawfordsville",
+    "psc": 76215
+  },
+  {
+    "cp": 330,
+    "ulice": "Ridgecrest Terrace",
+    "mesto": "Bethany",
+    "psc": 88380
+  },
+  {
+    "cp": 382,
+    "ulice": "Adelphi Street",
+    "mesto": "Baden",
+    "psc": 39441
+  },
+  {
+    "cp": 120,
+    "ulice": "Seigel Court",
+    "mesto": "Osage",
+    "psc": 24505
+  },
+  {
+    "cp": 802,
+    "ulice": "Newkirk Placez",
+    "mesto": "Rockingham",
+    "psc": 21719
+  },
+  {
+    "cp": 801,
+    "ulice": "Rutherford Place",
+    "mesto": "Valmy",
+    "psc": 96347
+  },
+  {
+    "cp": 217,
+    "ulice": "Mill Road",
+    "mesto": "Wright",
+    "psc": 19742
+  },
+  {
+    "cp": 737,
+    "ulice": "Bushwick Avenue",
+    "mesto": "Libertytown",
+    "psc": 31656
+  },
+  {
+    "cp": 548,
+    "ulice": "Madeline Court",
+    "mesto": "Datil",
+    "psc": 62278
+  },
+  {
+    "cp": 326,
+    "ulice": "Hunterfly Place",
+    "mesto": "Sims",
+    "psc": 21114
+  },
+  {
+    "cp": 624,
+    "ulice": "Woodpoint Road",
+    "mesto": "Orick",
+    "psc": 83188
+  },
+  {
+    "cp": 271,
+    "ulice": "Woodrow Court",
+    "mesto": "Cumberland",
+    "psc": 81795
+  },
+  {
+    "cp": 203,
+    "ulice": "Barlow Drive",
+    "mesto": "Stockdale",
+    "psc": 16291
+  },
+  {
+    "cp": 404,
+    "ulice": "Gain Court",
+    "mesto": "Clarksburg",
+    "psc": 11129
+  },
+  {
+    "cp": 314,
+    "ulice": "Elm Place",
+    "mesto": "Delwood",
+    "psc": 54056
+  },
+  {
+    "cp": 807,
+    "ulice": "Cambridge Place",
+    "mesto": "Gouglersville",
+    "psc": 55583
+  },
+  {
+    "cp": 226,
+    "ulice": "Charles Place",
+    "mesto": "Aguila",
+    "psc": 62364
+  },
+  {
+    "cp": 289,
+    "ulice": "Lincoln Avenue",
+    "mesto": "Ladera",
+    "psc": 60353
+  },
+  {
+    "cp": 513,
+    "ulice": "Dennett Place",
+    "mesto": "Innsbrook",
+    "psc": 72945
+  },
+  {
+    "cp": 160,
+    "ulice": "Cheever Place",
+    "mesto": "Bancroft",
+    "psc": 77553
+  },
+  {
+    "cp": 975,
+    "ulice": "Elizabeth Place",
+    "mesto": "Siglerville",
+    "psc": 70724
+  },
+  {
+    "cp": 410,
+    "ulice": "Leonora Court",
+    "mesto": "Centerville",
+    "psc": 58240
+  },
+  {
+    "cp": 184,
+    "ulice": "Milford Street",
+    "mesto": "Fairforest",
+    "psc": 73792
+  },
+  {
+    "cp": 741,
+    "ulice": "Clarendon Road",
+    "mesto": "Rutherford",
+    "psc": 94239
+  },
+  {
+    "cp": 176,
+    "ulice": "Will Place",
+    "mesto": "Snelling",
+    "psc": 95517
+  },
+  {
+    "cp": 140,
+    "ulice": "Tilden Avenue",
+    "mesto": "Ticonderoga",
+    "psc": 91129
+  },
+  {
+    "cp": 786,
+    "ulice": "Oliver Street",
+    "mesto": "Bennett",
+    "psc": 90816
+  },
+  {
+    "cp": 310,
+    "ulice": "Anna Court",
+    "mesto": "Greenfields",
+    "psc": 77786
+  },
+  {
+    "cp": 809,
+    "ulice": "Noel Avenue",
+    "mesto": "Dubois",
+    "psc": 52794
+  },
+  {
+    "cp": 195,
+    "ulice": "Hewes Street",
+    "mesto": "Driftwood",
+    "psc": 93998
+  },
+  {
+    "cp": 547,
+    "ulice": "Schenck Court",
+    "mesto": "Wanamie",
+    "psc": 82907
+  },
+  {
+    "cp": 791,
+    "ulice": "Provost Street",
+    "mesto": "Wyoming",
+    "psc": 22342
+  },
+  {
+    "cp": 710,
+    "ulice": "Channel Avenue",
+    "mesto": "Babb",
+    "psc": 74790
+  },
+  {
+    "cp": 646,
+    "ulice": "Wolf Place",
+    "mesto": "Gardiner",
+    "psc": 16030
+  },
+  {
+    "cp": 281,
+    "ulice": "Vandervoort Avenue",
+    "mesto": "Chestnut",
+    "psc": 59428
+  },
+  {
+    "cp": 126,
+    "ulice": "Dorchester Road",
+    "mesto": "Worcester",
+    "psc": 18878
+  },
+  {
+    "cp": 421,
+    "ulice": "Tehama Street",
+    "mesto": "Gorst",
+    "psc": 77085
+  },
+  {
+    "cp": 562,
+    "ulice": "Colonial Road",
+    "mesto": "Clara",
+    "psc": 28598
+  },
+  {
+    "cp": 133,
+    "ulice": "Irving Avenue",
+    "mesto": "Shepardsville",
+    "psc": 17770
+  },
+  {
+    "cp": 654,
+    "ulice": "Tech Place",
+    "mesto": "Malott",
+    "psc": 21907
+  },
+  {
+    "cp": 482,
+    "ulice": "Withers Street",
+    "mesto": "Brethren",
+    "psc": 36207
+  },
+  {
+    "cp": 239,
+    "ulice": "Montgomery Place",
+    "mesto": "Catharine",
+    "psc": 15167
+  },
+  {
+    "cp": 126,
+    "ulice": "Ditmars Street",
+    "mesto": "Advance",
+    "psc": 82929
+  },
+  {
+    "cp": 137,
+    "ulice": "Dank Court",
+    "mesto": "Lynn",
+    "psc": 80848
+  },
+  {
+    "cp": 319,
+    "ulice": "Victor Road",
+    "mesto": "Bellamy",
+    "psc": 32202
+  },
+  {
+    "cp": 880,
+    "ulice": "Chester Avenue",
+    "mesto": "Beaverdale",
+    "psc": 89378
+  },
+  {
+    "cp": 294,
+    "ulice": "Kent Street",
+    "mesto": "Craig",
+    "psc": 87679
+  },
+  {
+    "cp": 747,
+    "ulice": "Schenck Place",
+    "mesto": "Kipp",
+    "psc": 66486
+  },
+  {
+    "cp": 993,
+    "ulice": "Brigham Street",
+    "mesto": "Watrous",
+    "psc": 85769
+  },
+  {
+    "cp": 321,
+    "ulice": "Sackett Street",
+    "mesto": "Lydia",
+    "psc": 48580
+  },
+  {
+    "cp": 910,
+    "ulice": "Chester Court",
+    "mesto": "Chalfant",
+    "psc": 35887
+  },
+  {
+    "cp": 265,
+    "ulice": "Harden Street",
+    "mesto": "Salvo",
+    "psc": 12305
+  },
+  {
+    "cp": 725,
+    "ulice": "Aurelia Court",
+    "mesto": "Caroleen",
+    "psc": 51862
+  },
+  {
+    "cp": 596,
+    "ulice": "Dekoven Court",
+    "mesto": "Bergoo",
+    "psc": 31824
+  },
+  {
+    "cp": 365,
+    "ulice": "Dwight Street",
+    "mesto": "Detroit",
+    "psc": 75762
+  },
+  {
+    "cp": 355,
+    "ulice": "Wallabout Street",
+    "mesto": "Waikele",
+    "psc": 80752
+  },
+  {
+    "cp": 147,
+    "ulice": "Ellery Street",
+    "mesto": "Teasdale",
+    "psc": 20578
+  },
+  {
+    "cp": 961,
+    "ulice": "Jackson Place",
+    "mesto": "Walland",
+    "psc": 46977
+  },
+  {
+    "cp": 132,
+    "ulice": "Goodwin Place",
+    "mesto": "Windsor",
+    "psc": 20044
+  },
+  {
+    "cp": 287,
+    "ulice": "Oxford Street",
+    "mesto": "Marion",
+    "psc": 80842
+  },
+  {
+    "cp": 270,
+    "ulice": "Turner Place",
+    "mesto": "Townsend",
+    "psc": 89357
+  },
+  {
+    "cp": 913,
+    "ulice": "Columbia Street",
+    "mesto": "Maury",
+    "psc": 28744
+  },
+  {
+    "cp": 375,
+    "ulice": "Elliott Place",
+    "mesto": "Sharon",
+    "psc": 85212
+  },
+  {
+    "cp": 424,
+    "ulice": "Dewitt Avenue",
+    "mesto": "Gardners",
+    "psc": 76974
+  },
+  {
+    "cp": 306,
+    "ulice": "Suydam Place",
+    "mesto": "Ironton",
+    "psc": 41565
+  },
+  {
+    "cp": 643,
+    "ulice": "Lombardy Street",
+    "mesto": "Healy",
+    "psc": 80614
+  },
+  {
+    "cp": 418,
+    "ulice": "Johnson Avenue",
+    "mesto": "Snowville",
+    "psc": 42045
+  },
+  {
+    "cp": 688,
+    "ulice": "Village Court",
+    "mesto": "Vienna",
+    "psc": 11207
+  },
+  {
+    "cp": 106,
+    "ulice": "Danforth Street",
+    "mesto": "Coaldale",
+    "psc": 55404
+  },
+  {
+    "cp": 897,
+    "ulice": "Manhattan Court",
+    "mesto": "Eastmont",
+    "psc": 43464
+  },
+  {
+    "cp": 995,
+    "ulice": "Eldert Street",
+    "mesto": "Bendon",
+    "psc": 80687
+  },
+  {
+    "cp": 385,
+    "ulice": "Vandalia Avenue",
+    "mesto": "Warren",
+    "psc": 30787
+  },
+  {
+    "cp": 566,
+    "ulice": "Harbor Court",
+    "mesto": "Taft",
+    "psc": 21148
+  },
+  {
+    "cp": 580,
+    "ulice": "Lancaster Avenue",
+    "mesto": "Lisco",
+    "psc": 81237
+  },
+  {
+    "cp": 313,
+    "ulice": "Plaza Street",
+    "mesto": "Lindisfarne",
+    "psc": 77237
+  },
+  {
+    "cp": 116,
+    "ulice": "Paerdegat Avenue",
+    "mesto": "Draper",
+    "psc": 63419
+  },
+  {
+    "cp": 519,
+    "ulice": "Franklin Avenue",
+    "mesto": "Southmont",
+    "psc": 75598
+  },
+  {
+    "cp": 633,
+    "ulice": "Arlington Avenue",
+    "mesto": "Elliston",
+    "psc": 80097
+  },
+  {
+    "cp": 916,
+    "ulice": "Beacon Court",
+    "mesto": "Woodruff",
+    "psc": 89630
+  },
+  {
+    "cp": 616,
+    "ulice": "Rockwell Place",
+    "mesto": "Outlook",
+    "psc": 32901
+  },
+  {
+    "cp": 992,
+    "ulice": "Wilson Avenue",
+    "mesto": "Glenshaw",
+    "psc": 96142
+  },
+  {
+    "cp": 524,
+    "ulice": "Kimball Street",
+    "mesto": "Enlow",
+    "psc": 82099
+  },
+  {
+    "cp": 993,
+    "ulice": "Hyman Court",
+    "mesto": "Wauhillau",
+    "psc": 40960
+  },
+  {
+    "cp": 786,
+    "ulice": "Grafton Street",
+    "mesto": "Rodanthe",
+    "psc": 13721
+  },
+  {
+    "cp": 796,
+    "ulice": "Ridgewood Avenue",
+    "mesto": "Leming",
+    "psc": 27514
+  },
+  {
+    "cp": 790,
+    "ulice": "Jaffray Street",
+    "mesto": "Eden",
+    "psc": 19622
+  },
+  {
+    "cp": 706,
+    "ulice": "Osborn Street",
+    "mesto": "Sanford",
+    "psc": 34533
+  },
+  {
+    "cp": 218,
+    "ulice": "Henderson Walk",
+    "mesto": "Harrison",
+    "psc": 44051
+  },
+  {
+    "cp": 583,
+    "ulice": "Lake Place",
+    "mesto": "Bentley",
+    "psc": 12979
+  },
+  {
+    "cp": 886,
+    "ulice": "Walker Court",
+    "mesto": "Marienthal",
+    "psc": 71015
+  },
+  {
+    "cp": 678,
+    "ulice": "Auburn Place",
+    "mesto": "Itmann",
+    "psc": 68278
+  },
+  {
+    "cp": 345,
+    "ulice": "Green Street",
+    "mesto": "Villarreal",
+    "psc": 12616
+  },
+  {
+    "cp": 253,
+    "ulice": "Micieli Place",
+    "mesto": "Hailesboro",
+    "psc": 39979
+  },
+  {
+    "cp": 845,
+    "ulice": "Rutledge Street",
+    "mesto": "Forbestown",
+    "psc": 99019
+  },
+  {
+    "cp": 568,
+    "ulice": "Bush Street",
+    "mesto": "Finzel",
+    "psc": 54944
+  },
+  {
+    "cp": 876,
+    "ulice": "Estate Road",
+    "mesto": "Cornucopia",
+    "psc": 68369
+  },
+  {
+    "cp": 542,
+    "ulice": "Gunnison Court",
+    "mesto": "Katonah",
+    "psc": 85452
+  },
+  {
+    "cp": 848,
+    "ulice": "Montgomery Street",
+    "mesto": "Carlos",
+    "psc": 82179
+  },
+  {
+    "cp": 144,
+    "ulice": "Falmouth Street",
+    "mesto": "Celeryville",
+    "psc": 31819
+  },
+  {
+    "cp": 150,
+    "ulice": "Georgia Avenue",
+    "mesto": "Englevale",
+    "psc": 67764
+  },
+  {
+    "cp": 296,
+    "ulice": "Oakland Place",
+    "mesto": "Belvoir",
+    "psc": 98704
+  },
+  {
+    "cp": 415,
+    "ulice": "Raleigh Place",
+    "mesto": "Robbins",
+    "psc": 15444
+  },
+  {
+    "cp": 690,
+    "ulice": "Bay Parkway",
+    "mesto": "Cressey",
+    "psc": 35048
+  },
+  {
+    "cp": 366,
+    "ulice": "Leonard Street",
+    "mesto": "Dunbar",
+    "psc": 43681
+  },
+  {
+    "cp": 618,
+    "ulice": "Mayfair Drive",
+    "mesto": "Whitmer",
+    "psc": 52950
+  },
+  {
+    "cp": 469,
+    "ulice": "Eckford Street",
+    "mesto": "Lutsen",
+    "psc": 16644
+  },
+  {
+    "cp": 211,
+    "ulice": "Randolph Street",
+    "mesto": "Iola",
+    "psc": 96576
+  },
+  {
+    "cp": 252,
+    "ulice": "President Street",
+    "mesto": "Fidelis",
+    "psc": 80326
+  },
+  {
+    "cp": 761,
+    "ulice": "Richardson Street",
+    "mesto": "Diaperville",
+    "psc": 73370
+  },
+  {
+    "cp": 238,
+    "ulice": "Bills Place",
+    "mesto": "Dana",
+    "psc": 62670
+  },
+  {
+    "cp": 608,
+    "ulice": "Sumpter Street",
+    "mesto": "Twilight",
+    "psc": 30629
+  },
+  {
+    "cp": 705,
+    "ulice": "Newkirk Avenue",
+    "mesto": "Utting",
+    "psc": 54810
+  },
+  {
+    "cp": 297,
+    "ulice": "Coles Street",
+    "mesto": "Idledale",
+    "psc": 14599
+  },
+  {
+    "cp": 481,
+    "ulice": "Fulton Street",
+    "mesto": "Defiance",
+    "psc": 80518
+  },
+  {
+    "cp": 141,
+    "ulice": "McDonald Avenue",
+    "mesto": "Greenock",
+    "psc": 27327
+  },
+  {
+    "cp": 235,
+    "ulice": "Woodruff Avenue",
+    "mesto": "Efland",
+    "psc": 70728
+  },
+  {
+    "cp": 950,
+    "ulice": "Mermaid Avenue",
+    "mesto": "Keller",
+    "psc": 65362
+  },
+  {
+    "cp": 108,
+    "ulice": "Voorhies Avenue",
+    "mesto": "Machias",
+    "psc": 90473
+  },
+  {
+    "cp": 570,
+    "ulice": "Dahlgreen Place",
+    "mesto": "Ernstville",
+    "psc": 32285
+  },
+  {
+    "cp": 505,
+    "ulice": "Tillary Street",
+    "mesto": "Sugartown",
+    "psc": 99441
+  },
+  {
+    "cp": 889,
+    "ulice": "Stryker Street",
+    "mesto": "Cherokee",
+    "psc": 80754
+  },
+  {
+    "cp": 541,
+    "ulice": "Norwood Avenue",
+    "mesto": "Turah",
+    "psc": 32245
+  },
+  {
+    "cp": 517,
+    "ulice": "Madison Place",
+    "mesto": "Castleton",
+    "psc": 74394
+  },
+  {
+    "cp": 383,
+    "ulice": "Catherine Street",
+    "mesto": "Titanic",
+    "psc": 99303
+  },
+  {
+    "cp": 395,
+    "ulice": "Caton Avenue",
+    "mesto": "Bagtown",
+    "psc": 38276
+  },
+  {
+    "cp": 755,
+    "ulice": "Losee Terrace",
+    "mesto": "Bawcomville",
+    "psc": 79187
+  },
+  {
+    "cp": 588,
+    "ulice": "Dinsmore Place",
+    "mesto": "Kenvil",
+    "psc": 49216
+  },
+  {
+    "cp": 424,
+    "ulice": "Buffalo Avenue",
+    "mesto": "Sehili",
+    "psc": 15603
+  },
+  {
+    "cp": 615,
+    "ulice": "Doone Court",
+    "mesto": "Orin",
+    "psc": 74575
+  },
+  {
+    "cp": 694,
+    "ulice": "Varet Street",
+    "mesto": "Bonanza",
+    "psc": 38520
+  },
+  {
+    "cp": 811,
+    "ulice": "Veterans Avenue",
+    "mesto": "Hobucken",
+    "psc": 63274
+  },
+  {
+    "cp": 811,
+    "ulice": "Classon Avenue",
+    "mesto": "Coventry",
+    "psc": 99992
+  },
+  {
+    "cp": 610,
+    "ulice": "Heath Place",
+    "mesto": "Nile",
+    "psc": 94035
+  },
+  {
+    "cp": 146,
+    "ulice": "Lynch Street",
+    "mesto": "Tioga",
+    "psc": 48575
+  },
+  {
+    "cp": 772,
+    "ulice": "Guernsey Street",
+    "mesto": "Canterwood",
+    "psc": 11638
+  },
+  {
+    "cp": 476,
+    "ulice": "Chestnut Street",
+    "mesto": "Kylertown",
+    "psc": 85405
+  },
+  {
+    "cp": 264,
+    "ulice": "Powers Street",
+    "mesto": "Summerfield",
+    "psc": 52218
+  },
+  {
+    "cp": 698,
+    "ulice": "Ryder Street",
+    "mesto": "Cazadero",
+    "psc": 76188
+  },
+  {
+    "cp": 952,
+    "ulice": "Fleet Place",
+    "mesto": "Crucible",
+    "psc": 70898
+  },
+  {
+    "cp": 350,
+    "ulice": "Bliss Terrace",
+    "mesto": "Wattsville",
+    "psc": 34761
+  },
+  {
+    "cp": 475,
+    "ulice": "Jackson Street",
+    "mesto": "Fairhaven",
+    "psc": 88566
+  },
+  {
+    "cp": 549,
+    "ulice": "Bridgewater Street",
+    "mesto": "Gulf",
+    "psc": 37874
+  },
+  {
+    "cp": 249,
+    "ulice": "Seagate Terrace",
+    "mesto": "Lewis",
+    "psc": 59307
+  },
+  {
+    "cp": 828,
+    "ulice": "Jerome Avenue",
+    "mesto": "Dawn",
+    "psc": 21425
+  },
+  {
+    "cp": 921,
+    "ulice": "Kosciusko Street",
+    "mesto": "Manitou",
+    "psc": 63473
+  },
+  {
+    "cp": 744,
+    "ulice": "Garden Place",
+    "mesto": "Rossmore",
+    "psc": 15312
+  },
+  {
+    "cp": 411,
+    "ulice": "Pioneer Street",
+    "mesto": "Woodlands",
+    "psc": 79162
+  },
+  {
+    "cp": 536,
+    "ulice": "Conklin Avenue",
+    "mesto": "Muse",
+    "psc": 28049
+  },
+  {
+    "cp": 984,
+    "ulice": "Ingraham Street",
+    "mesto": "Ola",
+    "psc": 16629
+  },
+  {
+    "cp": 329,
+    "ulice": "Bulwer Place",
+    "mesto": "Manila",
+    "psc": 96331
+  },
+  {
+    "cp": 964,
+    "ulice": "Beadel Street",
+    "mesto": "Selma",
+    "psc": 71853
+  },
+  {
+    "cp": 538,
+    "ulice": "Conway Street",
+    "mesto": "Wilsonia",
+    "psc": 85853
+  },
+  {
+    "cp": 248,
+    "ulice": "Ferris Street",
+    "mesto": "Trucksville",
+    "psc": 98380
+  },
+  {
+    "cp": 467,
+    "ulice": "Seba Avenue",
+    "mesto": "Tolu",
+    "psc": 77411
+  },
+  {
+    "cp": 756,
+    "ulice": "Krier Place",
+    "mesto": "Noxen",
+    "psc": 75488
+  },
+  {
+    "cp": 442,
+    "ulice": "Rutland Road",
+    "mesto": "Barrelville",
+    "psc": 49961
+  },
+  {
+    "cp": 733,
+    "ulice": "Hinckley Place",
+    "mesto": "Saranap",
+    "psc": 18964
+  },
+  {
+    "cp": 888,
+    "ulice": "Portland Avenue",
+    "mesto": "Epworth",
+    "psc": 44424
+  },
+  {
+    "cp": 615,
+    "ulice": "Greenwood Avenue",
+    "mesto": "Fairacres",
+    "psc": 55796
+  },
+  {
+    "cp": 752,
+    "ulice": "Monroe Street",
+    "mesto": "Blodgett",
+    "psc": 32398
+  },
+  {
+    "cp": 406,
+    "ulice": "Herbert Street",
+    "mesto": "Norris",
+    "psc": 40043
+  },
+  {
+    "cp": 825,
+    "ulice": "Bond Street",
+    "mesto": "Wanship",
+    "psc": 22661
+  },
+  {
+    "cp": 811,
+    "ulice": "Miami Court",
+    "mesto": "Fairlee",
+    "psc": 86453
+  },
+  {
+    "cp": 526,
+    "ulice": "Plymouth Street",
+    "mesto": "Roeville",
+    "psc": 69280
+  },
+  {
+    "cp": 807,
+    "ulice": "Regent Place",
+    "mesto": "Lodoga",
+    "psc": 24023
+  },
+  {
+    "cp": 482,
+    "ulice": "Imlay Street",
+    "mesto": "Camptown",
+    "psc": 34842
+  },
+  {
+    "cp": 720,
+    "ulice": "Wythe Avenue",
+    "mesto": "Stollings",
+    "psc": 47629
+  },
+  {
+    "cp": 430,
+    "ulice": "Lott Street",
+    "mesto": "Vincent",
+    "psc": 64550
+  },
+  {
+    "cp": 331,
+    "ulice": "Emerson Place",
+    "mesto": "Odessa",
+    "psc": 27862
+  },
+  {
+    "cp": 306,
+    "ulice": "Garnet Street",
+    "mesto": "Gila",
+    "psc": 68115
+  },
+  {
+    "cp": 478,
+    "ulice": "Moore Street",
+    "mesto": "Caln",
+    "psc": 84112
+  },
+  {
+    "cp": 121,
+    "ulice": "Kenilworth Place",
+    "mesto": "Glidden",
+    "psc": 89516
+  },
+  {
+    "cp": 546,
+    "ulice": "Seaview Avenue",
+    "mesto": "Wells",
+    "psc": 27006
+  },
+  {
+    "cp": 907,
+    "ulice": "Empire Boulevard",
+    "mesto": "Franklin",
+    "psc": 43583
+  },
+  {
+    "cp": 939,
+    "ulice": "Rodney Street",
+    "mesto": "Retsof",
+    "psc": 94753
+  },
+  {
+    "cp": 134,
+    "ulice": "Crosby Avenue",
+    "mesto": "Hayes",
+    "psc": 43900
+  },
+  {
+    "cp": 323,
+    "ulice": "Evans Street",
+    "mesto": "Rivera",
+    "psc": 72115
+  },
+  {
+    "cp": 854,
+    "ulice": "Bushwick Place",
+    "mesto": "Stewartville",
+    "psc": 76425
+  },
+  {
+    "cp": 383,
+    "ulice": "Roosevelt Place",
+    "mesto": "Savage",
+    "psc": 79413
+  },
+  {
+    "cp": 840,
+    "ulice": "Haring Street",
+    "mesto": "Boomer",
+    "psc": 90391
+  },
+  {
+    "cp": 316,
+    "ulice": "Delevan Street",
+    "mesto": "Nord",
+    "psc": 18551
+  },
+  {
+    "cp": 291,
+    "ulice": "Agate Court",
+    "mesto": "Bakersville",
+    "psc": 45657
+  },
+  {
+    "cp": 500,
+    "ulice": "Grimes Road",
+    "mesto": "Steinhatchee",
+    "psc": 42746
+  },
+  {
+    "cp": 336,
+    "ulice": "Narrows Avenue",
+    "mesto": "Westboro",
+    "psc": 36608
+  },
+  {
+    "cp": 747,
+    "ulice": "Hendrix Street",
+    "mesto": "Trona",
+    "psc": 45758
+  },
+  {
+    "cp": 700,
+    "ulice": "Bath Avenue",
+    "mesto": "Aurora",
+    "psc": 46591
+  },
+  {
+    "cp": 683,
+    "ulice": "Driggs Avenue",
+    "mesto": "Unionville",
+    "psc": 42920
+  },
+  {
+    "cp": 332,
+    "ulice": "Atkins Avenue",
+    "mesto": "Lawrence",
+    "psc": 67538
+  },
+  {
+    "cp": 644,
+    "ulice": "Erskine Loop",
+    "mesto": "Vowinckel",
+    "psc": 61469
+  },
+  {
+    "cp": 966,
+    "ulice": "Howard Place",
+    "mesto": "Blende",
+    "psc": 36807
+  },
+  {
+    "cp": 575,
+    "ulice": "Radde Place",
+    "mesto": "Kaka",
+    "psc": 75111
+  },
+  {
+    "cp": 949,
+    "ulice": "John Street",
+    "mesto": "Silkworth",
+    "psc": 43337
+  },
+  {
+    "cp": 729,
+    "ulice": "Reeve Place",
+    "mesto": "Walton",
+    "psc": 59010
+  },
+  {
+    "cp": 578,
+    "ulice": "Brightwater Court",
+    "mesto": "Blanford",
+    "psc": 20014
+  },
+  {
+    "cp": 362,
+    "ulice": "Belmont Avenue",
+    "mesto": "Urbana",
+    "psc": 32311
+  },
+  {
+    "cp": 652,
+    "ulice": "Quentin Road",
+    "mesto": "Yettem",
+    "psc": 22290
+  },
+  {
+    "cp": 263,
+    "ulice": "Fillmore Place",
+    "mesto": "Suitland",
+    "psc": 54467
+  },
+  {
+    "cp": 374,
+    "ulice": "Sullivan Street",
+    "mesto": "Riner",
+    "psc": 48609
+  },
+  {
+    "cp": 724,
+    "ulice": "Broadway ",
+    "mesto": "Roulette",
+    "psc": 56703
+  },
+  {
+    "cp": 401,
+    "ulice": "Church Lane",
+    "mesto": "Fostoria",
+    "psc": 26837
+  },
+  {
+    "cp": 112,
+    "ulice": "Tiffany Place",
+    "mesto": "Lund",
+    "psc": 87109
+  },
+  {
+    "cp": 541,
+    "ulice": "Florence Avenue",
+    "mesto": "Biddle",
+    "psc": 89773
+  },
+  {
+    "cp": 411,
+    "ulice": "Garland Court",
+    "mesto": "Mansfield",
+    "psc": 25783
+  },
+  {
+    "cp": 102,
+    "ulice": "Brighton Court",
+    "mesto": "Hiwasse",
+    "psc": 41190
+  },
+  {
+    "cp": 491,
+    "ulice": "Amherst Street",
+    "mesto": "Darbydale",
+    "psc": 39150
+  },
+  {
+    "cp": 757,
+    "ulice": "Poplar Street",
+    "mesto": "Oasis",
+    "psc": 74837
+  },
+  {
+    "cp": 326,
+    "ulice": "Verona Place",
+    "mesto": "Wadsworth",
+    "psc": 57954
+  },
+  {
+    "cp": 859,
+    "ulice": "Lloyd Court",
+    "mesto": "Hondah",
+    "psc": 69192
+  },
+  {
+    "cp": 352,
+    "ulice": "Juliana Place",
+    "mesto": "Idamay",
+    "psc": 17877
+  },
+  {
+    "cp": 228,
+    "ulice": "Kermit Place",
+    "mesto": "Yogaville",
+    "psc": 62284
+  },
+  {
+    "cp": 328,
+    "ulice": "Reed Street",
+    "mesto": "Chase",
+    "psc": 22785
+  },
+  {
+    "cp": 459,
+    "ulice": "Scott Avenue",
+    "mesto": "Martell",
+    "psc": 79842
+  },
+  {
+    "cp": 714,
+    "ulice": "Newton Street",
+    "mesto": "Gadsden",
+    "psc": 41645
+  },
+  {
+    "cp": 716,
+    "ulice": "Oak Street",
+    "mesto": "Grayhawk",
+    "psc": 23765
+  },
+  {
+    "cp": 708,
+    "ulice": "Abbey Court",
+    "mesto": "Sanders",
+    "psc": 68781
+  },
+  {
+    "cp": 977,
+    "ulice": "Church Avenue",
+    "mesto": "Templeton",
+    "psc": 94325
+  },
+  {
+    "cp": 292,
+    "ulice": "Ovington Court",
+    "mesto": "Bowmansville",
+    "psc": 75963
+  },
+  {
+    "cp": 733,
+    "ulice": "Frank Court",
+    "mesto": "Bluffview",
+    "psc": 39471
+  },
+  {
+    "cp": 264,
+    "ulice": "Herkimer Street",
+    "mesto": "Balm",
+    "psc": 75330
+  },
+  {
+    "cp": 880,
+    "ulice": "Rogers Avenue",
+    "mesto": "Dargan",
+    "psc": 92201
+  },
+  {
+    "cp": 869,
+    "ulice": "Hull Street",
+    "mesto": "Veyo",
+    "psc": 50379
+  },
+  {
+    "cp": 522,
+    "ulice": "Euclid Avenue",
+    "mesto": "Coyote",
+    "psc": 72569
+  },
+  {
+    "cp": 719,
+    "ulice": "Battery Avenue",
+    "mesto": "Goodville",
+    "psc": 22953
+  },
+  {
+    "cp": 174,
+    "ulice": "Virginia Place",
+    "mesto": "Juntura",
+    "psc": 29862
+  },
+  {
+    "cp": 122,
+    "ulice": "Llama Court",
+    "mesto": "Linganore",
+    "psc": 16862
+  },
+  {
+    "cp": 785,
+    "ulice": "Bokee Court",
+    "mesto": "Kansas",
+    "psc": 78174
+  },
+  {
+    "cp": 564,
+    "ulice": "Dean Street",
+    "mesto": "Coleville",
+    "psc": 78142
+  },
+  {
+    "cp": 209,
+    "ulice": "Kingsway Place",
+    "mesto": "Genoa",
+    "psc": 26138
+  },
+  {
+    "cp": 928,
+    "ulice": "Pine Street",
+    "mesto": "Magnolia",
+    "psc": 88698
+  },
+  {
+    "cp": 144,
+    "ulice": "Gem Street",
+    "mesto": "Lumberton",
+    "psc": 42655
+  },
+  {
+    "cp": 748,
+    "ulice": "Maujer Street",
+    "mesto": "Gracey",
+    "psc": 55350
+  },
+  {
+    "cp": 417,
+    "ulice": "Miller Avenue",
+    "mesto": "Rushford",
+    "psc": 11864
+  },
+  {
+    "cp": 486,
+    "ulice": "Arkansas Drive",
+    "mesto": "Durham",
+    "psc": 23012
+  },
+  {
+    "cp": 857,
+    "ulice": "Manor Court",
+    "mesto": "Comptche",
+    "psc": 20212
+  },
+  {
+    "cp": 994,
+    "ulice": "Louisiana Avenue",
+    "mesto": "Longoria",
+    "psc": 17676
+  },
+  {
+    "cp": 906,
+    "ulice": "Canda Avenue",
+    "mesto": "Winfred",
+    "psc": 60630
+  },
+  {
+    "cp": 952,
+    "ulice": "Blake Avenue",
+    "mesto": "Urie",
+    "psc": 70931
+  },
+  {
+    "cp": 645,
+    "ulice": "Remsen Street",
+    "mesto": "Eagleville",
+    "psc": 76592
+  },
+  {
+    "cp": 585,
+    "ulice": "Oceanview Avenue",
+    "mesto": "Dorneyville",
+    "psc": 17342
+  },
+  {
+    "cp": 926,
+    "ulice": "Woodbine Street",
+    "mesto": "Maplewood",
+    "psc": 41765
+  },
+  {
+    "cp": 716,
+    "ulice": "Banker Street",
+    "mesto": "Tyro",
+    "psc": 64277
+  },
+  {
+    "cp": 637,
+    "ulice": "Lott Place",
+    "mesto": "Northchase",
+    "psc": 55145
+  },
+  {
+    "cp": 146,
+    "ulice": "Marconi Place",
+    "mesto": "Gibsonia",
+    "psc": 26052
+  },
+  {
+    "cp": 612,
+    "ulice": "Stoddard Place",
+    "mesto": "Woodlake",
+    "psc": 12487
+  },
+  {
+    "cp": 452,
+    "ulice": "Livingston Street",
+    "mesto": "Navarre",
+    "psc": 55862
+  },
+  {
+    "cp": 892,
+    "ulice": "Wolcott Street",
+    "mesto": "Tooleville",
+    "psc": 17436
+  },
+  {
+    "cp": 995,
+    "ulice": "College Place",
+    "mesto": "Mammoth",
+    "psc": 92029
+  },
+  {
+    "cp": 303,
+    "ulice": "Winthrop Street",
+    "mesto": "Boling",
+    "psc": 85628
+  },
+  {
+    "cp": 976,
+    "ulice": "Loring Avenue",
+    "mesto": "Murillo",
+    "psc": 82405
+  },
+  {
+    "cp": 533,
+    "ulice": "Murdock Court",
+    "mesto": "Sabillasville",
+    "psc": 46885
+  },
+  {
+    "cp": 525,
+    "ulice": "Story Street",
+    "mesto": "Courtland",
+    "psc": 88996
+  },
+  {
+    "cp": 663,
+    "ulice": "Seton Place",
+    "mesto": "Greenbush",
+    "psc": 68213
+  },
+  {
+    "cp": 156,
+    "ulice": "Richards Street",
+    "mesto": "Makena",
+    "psc": 44255
+  },
+  {
+    "cp": 558,
+    "ulice": "Bay Avenue",
+    "mesto": "Grazierville",
+    "psc": 77989
+  },
+  {
+    "cp": 623,
+    "ulice": "Lake Avenue",
+    "mesto": "Bourg",
+    "psc": 98001
+  },
+  {
+    "cp": 632,
+    "ulice": "Hillel Place",
+    "mesto": "Laurelton",
+    "psc": 58300
+  },
+  {
+    "cp": 339,
+    "ulice": "Fuller Place",
+    "mesto": "Whitehaven",
+    "psc": 52434
+  },
+  {
+    "cp": 240,
+    "ulice": "Covert Street",
+    "mesto": "Tuskahoma",
+    "psc": 27560
+  },
+  {
+    "cp": 955,
+    "ulice": "Neptune Court",
+    "mesto": "Heil",
+    "psc": 84786
+  },
+  {
+    "cp": 326,
+    "ulice": "Monitor Street",
+    "mesto": "Newcastle",
+    "psc": 52067
+  },
+  {
+    "cp": 479,
+    "ulice": "Glenwood Road",
+    "mesto": "Caroline",
+    "psc": 12926
+  },
+  {
+    "cp": 449,
+    "ulice": "Beverly Road",
+    "mesto": "Knowlton",
+    "psc": 62520
+  },
+  {
+    "cp": 677,
+    "ulice": "Howard Alley",
+    "mesto": "Sylvanite",
+    "psc": 83190
+  },
+  {
+    "cp": 533,
+    "ulice": "Willmohr Street",
+    "mesto": "Brewster",
+    "psc": 87580
+  },
+  {
+    "cp": 985,
+    "ulice": "Montague Street",
+    "mesto": "Lookingglass",
+    "psc": 15758
+  },
+  {
+    "cp": 848,
+    "ulice": "Berriman Street",
+    "mesto": "Freetown",
+    "psc": 40609
+  },
+  {
+    "cp": 359,
+    "ulice": "Amity Street",
+    "mesto": "Sunriver",
+    "psc": 51609
+  },
+  {
+    "cp": 588,
+    "ulice": "Harkness Avenue",
+    "mesto": "Carrizo",
+    "psc": 86837
+  },
+  {
+    "cp": 246,
+    "ulice": "Clarkson Avenue",
+    "mesto": "Mulino",
+    "psc": 99763
+  },
+  {
+    "cp": 504,
+    "ulice": "Judge Street",
+    "mesto": "Harborton",
+    "psc": 79054
+  },
+  {
+    "cp": 149,
+    "ulice": "Billings Place",
+    "mesto": "Dowling",
+    "psc": 75613
+  },
+  {
+    "cp": 555,
+    "ulice": "Vista Place",
+    "mesto": "Westwood",
+    "psc": 52256
+  },
+  {
+    "cp": 511,
+    "ulice": "Drew Street",
+    "mesto": "Marenisco",
+    "psc": 84766
+  },
+  {
+    "cp": 337,
+    "ulice": "Polhemus Place",
+    "mesto": "Gwynn",
+    "psc": 74182
+  },
+  {
+    "cp": 903,
+    "ulice": "Brighton Avenue",
+    "mesto": "Wheatfields",
+    "psc": 19420
+  },
+  {
+    "cp": 339,
+    "ulice": "Jackson Court",
+    "mesto": "Hebron",
+    "psc": 61769
+  },
+  {
+    "cp": 207,
+    "ulice": "Corbin Place",
+    "mesto": "Faxon",
+    "psc": 58913
+  },
+  {
+    "cp": 854,
+    "ulice": "Maple Avenue",
+    "mesto": "Brady",
+    "psc": 36626
+  },
+  {
+    "cp": 261,
+    "ulice": "Erasmus Street",
+    "mesto": "Orovada",
+    "psc": 52012
+  },
+  {
+    "cp": 457,
+    "ulice": "Colonial Court",
+    "mesto": "Cucumber",
+    "psc": 25285
+  },
+  {
+    "cp": 234,
+    "ulice": "Beard Street",
+    "mesto": "Bangor",
+    "psc": 80739
+  },
+  {
+    "cp": 338,
+    "ulice": "Keap Street",
+    "mesto": "Alderpoint",
+    "psc": 44002
+  },
+  {
+    "cp": 702,
+    "ulice": "Kensington Walk",
+    "mesto": "National",
+    "psc": 85475
+  },
+  {
+    "cp": 354,
+    "ulice": "Montana Place",
+    "mesto": "Fulford",
+    "psc": 25974
+  },
+  {
+    "cp": 303,
+    "ulice": "Crawford Avenue",
+    "mesto": "Orason",
+    "psc": 41166
+  },
+  {
+    "cp": 589,
+    "ulice": "Prospect Street",
+    "mesto": "Morningside",
+    "psc": 26236
+  },
+  {
+    "cp": 861,
+    "ulice": "Rugby Road",
+    "mesto": "Drytown",
+    "psc": 25969
+  },
+  {
+    "cp": 353,
+    "ulice": "Gallatin Place",
+    "mesto": "Tedrow",
+    "psc": 15445
+  },
+  {
+    "cp": 920,
+    "ulice": "Hornell Loop",
+    "mesto": "Caledonia",
+    "psc": 25662
+  },
+  {
+    "cp": 706,
+    "ulice": "Central Avenue",
+    "mesto": "Cawood",
+    "psc": 11436
+  },
+  {
+    "cp": 713,
+    "ulice": "Thames Street",
+    "mesto": "Hendersonville",
+    "psc": 71512
+  },
+  {
+    "cp": 916,
+    "ulice": "Richmond Street",
+    "mesto": "Emerald",
+    "psc": 71131
+  },
+  {
+    "cp": 785,
+    "ulice": "Stratford Road",
+    "mesto": "Swartzville",
+    "psc": 79749
+  },
+  {
+    "cp": 414,
+    "ulice": "Hall Street",
+    "mesto": "Tryon",
+    "psc": 27478
+  },
+  {
+    "cp": 547,
+    "ulice": "Hazel Court",
+    "mesto": "Albany",
+    "psc": 96044
+  },
+  {
+    "cp": 574,
+    "ulice": "Coventry Road",
+    "mesto": "Greensburg",
+    "psc": 54822
+  },
+  {
+    "cp": 689,
+    "ulice": "Maple Street",
+    "mesto": "Belfair",
+    "psc": 40736
+  },
+  {
+    "cp": 595,
+    "ulice": "Stockton Street",
+    "mesto": "Topanga",
+    "psc": 37388
+  },
+  {
+    "cp": 810,
+    "ulice": "Applegate Court",
+    "mesto": "Thornport",
+    "psc": 91618
+  },
+  {
+    "cp": 918,
+    "ulice": "Navy Street",
+    "mesto": "Keyport",
+    "psc": 22135
+  },
+  {
+    "cp": 257,
+    "ulice": "Amber Street",
+    "mesto": "Coalmont",
+    "psc": 38426
+  },
+  {
+    "cp": 706,
+    "ulice": "Senator Street",
+    "mesto": "Montura",
+    "psc": 23988
+  },
+  {
+    "cp": 564,
+    "ulice": "Kings Place",
+    "mesto": "Dunnavant",
+    "psc": 99401
+  },
+  {
+    "cp": 272,
+    "ulice": "Lake Street",
+    "mesto": "Clayville",
+    "psc": 57601
+  },
+  {
+    "cp": 210,
+    "ulice": "Boulevard Court",
+    "mesto": "Hollymead",
+    "psc": 77519
+  },
+  {
+    "cp": 446,
+    "ulice": "Henry Street",
+    "mesto": "Mulberry",
+    "psc": 64850
+  },
+  {
+    "cp": 313,
+    "ulice": "Greenpoint Avenue",
+    "mesto": "Madaket",
+    "psc": 93177
+  },
+  {
+    "cp": 360,
+    "ulice": "Denton Place",
+    "mesto": "Oretta",
+    "psc": 66488
+  },
+  {
+    "cp": 482,
+    "ulice": "Logan Street",
+    "mesto": "Lindcove",
+    "psc": 43742
+  },
+  {
+    "cp": 744,
+    "ulice": "Harrison Avenue",
+    "mesto": "Bascom",
+    "psc": 86113
+  },
+  {
+    "cp": 954,
+    "ulice": "Homecrest Avenue",
+    "mesto": "Trexlertown",
+    "psc": 92965
+  },
+  {
+    "cp": 857,
+    "ulice": "Folsom Place",
+    "mesto": "Ona",
+    "psc": 32781
+  },
+  {
+    "cp": 869,
+    "ulice": "Stone Avenue",
+    "mesto": "Sandston",
+    "psc": 47803
+  },
+  {
+    "cp": 417,
+    "ulice": "Vine Street",
+    "mesto": "Limestone",
+    "psc": 20776
+  },
+  {
+    "cp": 938,
+    "ulice": "Cranberry Street",
+    "mesto": "Adelino",
+    "psc": 60935
+  },
+  {
+    "cp": 376,
+    "ulice": "Railroad Avenue",
+    "mesto": "Sidman",
+    "psc": 29664
+  },
+  {
+    "cp": 275,
+    "ulice": "Liberty Avenue",
+    "mesto": "Coinjock",
+    "psc": 63316
+  },
+  {
+    "cp": 892,
+    "ulice": "Overbaugh Place",
+    "mesto": "Torboy",
+    "psc": 55653
+  },
+  {
+    "cp": 277,
+    "ulice": "Harwood Place",
+    "mesto": "Mooresburg",
+    "psc": 56417
+  },
+  {
+    "cp": 976,
+    "ulice": "Howard Avenue",
+    "mesto": "Bethpage",
+    "psc": 65745
+  },
+  {
+    "cp": 797,
+    "ulice": "Monaco Place",
+    "mesto": "Edmund",
+    "psc": 58380
+  },
+  {
+    "cp": 346,
+    "ulice": "Engert Avenue",
+    "mesto": "Falconaire",
+    "psc": 66509
+  },
+  {
+    "cp": 592,
+    "ulice": "Laurel Avenue",
+    "mesto": "Imperial",
+    "psc": 26254
+  },
+  {
+    "cp": 480,
+    "ulice": "Homecrest Court",
+    "mesto": "Welda",
+    "psc": 51869
+  },
+  {
+    "cp": 866,
+    "ulice": "Beekman Place",
+    "mesto": "Lorraine",
+    "psc": 55279
+  },
+  {
+    "cp": 174,
+    "ulice": "Love Lane",
+    "mesto": "Corriganville",
+    "psc": 45432
+  },
+  {
+    "cp": 360,
+    "ulice": "Ross Street",
+    "mesto": "Allison",
+    "psc": 53769
+  },
+  {
+    "cp": 618,
+    "ulice": "Veranda Place",
+    "mesto": "Ruckersville",
+    "psc": 51413
+  },
+  {
+    "cp": 599,
+    "ulice": "Montrose Avenue",
+    "mesto": "Blanco",
+    "psc": 99863
+  },
+  {
+    "cp": 677,
+    "ulice": "Lawton Street",
+    "mesto": "Groveville",
+    "psc": 52566
+  },
+  {
+    "cp": 703,
+    "ulice": "Verona Street",
+    "mesto": "Foxworth",
+    "psc": 73366
+  },
+  {
+    "cp": 379,
+    "ulice": "Tompkins Avenue",
+    "mesto": "Mahtowa",
+    "psc": 64243
+  },
+  {
+    "cp": 654,
+    "ulice": "Norfolk Street",
+    "mesto": "Bedias",
+    "psc": 86161
+  },
+  {
+    "cp": 595,
+    "ulice": "Court Square",
+    "mesto": "Waterloo",
+    "psc": 49884
+  },
+  {
+    "cp": 410,
+    "ulice": "Troy Avenue",
+    "mesto": "Cuylerville",
+    "psc": 96880
+  },
+  {
+    "cp": 128,
+    "ulice": "Moore Place",
+    "mesto": "Gratton",
+    "psc": 57558
+  },
+  {
+    "cp": 594,
+    "ulice": "Campus Road",
+    "mesto": "Nanafalia",
+    "psc": 43546
+  },
+  {
+    "cp": 468,
+    "ulice": "Ferry Place",
+    "mesto": "Washington",
+    "psc": 28941
+  },
+  {
+    "cp": 560,
+    "ulice": "Mersereau Court",
+    "mesto": "Williamson",
+    "psc": 93111
+  },
+  {
+    "cp": 243,
+    "ulice": "Conduit Boulevard",
+    "mesto": "Stewart",
+    "psc": 49463
+  },
+  {
+    "cp": 798,
+    "ulice": "Elmwood Avenue",
+    "mesto": "Boonville",
+    "psc": 99527
+  },
+  {
+    "cp": 368,
+    "ulice": "Berry Street",
+    "mesto": "Motley",
+    "psc": 67819
+  },
+  {
+    "cp": 360,
+    "ulice": "Seeley Street",
+    "mesto": "Southview",
+    "psc": 98043
+  },
+  {
+    "cp": 135,
+    "ulice": "McKibben Street",
+    "mesto": "Chloride",
+    "psc": 25192
+  },
+  {
+    "cp": 409,
+    "ulice": "Strong Place",
+    "mesto": "Cresaptown",
+    "psc": 53502
+  },
+  {
+    "cp": 948,
+    "ulice": "Ocean Court",
+    "mesto": "Bellfountain",
+    "psc": 86496
+  },
+  {
+    "cp": 792,
+    "ulice": "Saratoga Avenue",
+    "mesto": "Whitewater",
+    "psc": 57549
+  },
+  {
+    "cp": 844,
+    "ulice": "Bennet Court",
+    "mesto": "Neahkahnie",
+    "psc": 37361
+  },
+  {
+    "cp": 426,
+    "ulice": "McClancy Place",
+    "mesto": "Crisman",
+    "psc": 65480
+  },
+  {
+    "cp": 558,
+    "ulice": "Cox Place",
+    "mesto": "Coloma",
+    "psc": 31943
+  },
+  {
+    "cp": 948,
+    "ulice": "Linden Boulevard",
+    "mesto": "Dixonville",
+    "psc": 33408
+  },
+  {
+    "cp": 650,
+    "ulice": "School Lane",
+    "mesto": "Bordelonville",
+    "psc": 76702
+  },
+  {
+    "cp": 843,
+    "ulice": "Downing Street",
+    "mesto": "Grahamtown",
+    "psc": 44160
+  },
+  {
+    "cp": 515,
+    "ulice": "Gelston Avenue",
+    "mesto": "Indio",
+    "psc": 20221
+  },
+  {
+    "cp": 833,
+    "ulice": "Vandam Street",
+    "mesto": "Canby",
+    "psc": 59638
+  },
+  {
+    "cp": 361,
+    "ulice": "Granite Street",
+    "mesto": "Ogema",
+    "psc": 71867
+  },
+  {
+    "cp": 148,
+    "ulice": "Cortelyou Road",
+    "mesto": "Eastvale",
+    "psc": 64176
+  },
+  {
+    "cp": 405,
+    "ulice": "George Street",
+    "mesto": "Osmond",
+    "psc": 34597
+  },
+  {
+    "cp": 726,
+    "ulice": "Middagh Street",
+    "mesto": "Salunga",
+    "psc": 31287
+  },
+  {
+    "cp": 787,
+    "ulice": "Seigel Street",
+    "mesto": "Richville",
+    "psc": 36655
+  },
+  {
+    "cp": 289,
+    "ulice": "Waldorf Court",
+    "mesto": "Thynedale",
+    "psc": 13219
+  },
+  {
+    "cp": 936,
+    "ulice": "Devon Avenue",
+    "mesto": "Santel",
+    "psc": 21437
+  },
+  {
+    "cp": 479,
+    "ulice": "Durland Place",
+    "mesto": "Austinburg",
+    "psc": 54022
+  },
+  {
+    "cp": 962,
+    "ulice": "Fleet Walk",
+    "mesto": "Fingerville",
+    "psc": 31835
+  },
+  {
+    "cp": 646,
+    "ulice": "Beach Place",
+    "mesto": "Ellerslie",
+    "psc": 58046
+  },
+  {
+    "cp": 436,
+    "ulice": "Cozine Avenue",
+    "mesto": "Graball",
+    "psc": 61019
+  },
+  {
+    "cp": 942,
+    "ulice": "Doscher Street",
+    "mesto": "Westphalia",
+    "psc": 99689
+  },
+  {
+    "cp": 173,
+    "ulice": "Schaefer Street",
+    "mesto": "Stockwell",
+    "psc": 27325
+  },
+  {
+    "cp": 896,
+    "ulice": "Interborough Parkway",
+    "mesto": "Homeland",
+    "psc": 28644
+  },
+  {
+    "cp": 296,
+    "ulice": "Turnbull Avenue",
+    "mesto": "Dixie",
+    "psc": 83212
+  },
+  {
+    "cp": 790,
+    "ulice": "Seabring Street",
+    "mesto": "Condon",
+    "psc": 89196
+  },
+  {
+    "cp": 638,
+    "ulice": "Albee Square",
+    "mesto": "Berlin",
+    "psc": 88013
+  },
+  {
+    "cp": 709,
+    "ulice": "Revere Place",
+    "mesto": "Yorklyn",
+    "psc": 11063
+  },
+  {
+    "cp": 213,
+    "ulice": "Jardine Place",
+    "mesto": "Riviera",
+    "psc": 20065
+  },
+  {
+    "cp": 423,
+    "ulice": "Elm Avenue",
+    "mesto": "Nash",
+    "psc": 96748
+  },
+  {
+    "cp": 661,
+    "ulice": "Mill Street",
+    "mesto": "Accoville",
+    "psc": 67146
+  },
+  {
+    "cp": 367,
+    "ulice": "Bergen Street",
+    "mesto": "Duryea",
+    "psc": 67119
+  },
+  {
+    "cp": 734,
+    "ulice": "Allen Avenue",
+    "mesto": "Hatteras",
+    "psc": 10747
+  },
+  {
+    "cp": 871,
+    "ulice": "Montague Terrace",
+    "mesto": "Kieler",
+    "psc": 99191
+  },
+  {
+    "cp": 273,
+    "ulice": "Glenmore Avenue",
+    "mesto": "Sterling",
+    "psc": 62691
+  },
+  {
+    "cp": 732,
+    "ulice": "Wakeman Place",
+    "mesto": "Albrightsville",
+    "psc": 77410
+  },
+  {
+    "cp": 829,
+    "ulice": "Debevoise Street",
+    "mesto": "Watchtower",
+    "psc": 85803
+  },
+  {
+    "cp": 166,
+    "ulice": "High Street",
+    "mesto": "Mapletown",
+    "psc": 36579
+  },
+  {
+    "cp": 653,
+    "ulice": "Ryder Avenue",
+    "mesto": "Volta",
+    "psc": 39600
+  },
+  {
+    "cp": 116,
+    "ulice": "Dunham Place",
+    "mesto": "Jugtown",
+    "psc": 19680
+  },
+  {
+    "cp": 120,
+    "ulice": "Ide Court",
+    "mesto": "Downsville",
+    "psc": 34787
+  },
+  {
+    "cp": 616,
+    "ulice": "Calyer Street",
+    "mesto": "Thatcher",
+    "psc": 15865
+  },
+  {
+    "cp": 260,
+    "ulice": "Woods Place",
+    "mesto": "Starks",
+    "psc": 52560
+  },
+  {
+    "cp": 251,
+    "ulice": "Trucklemans Lane",
+    "mesto": "Flintville",
+    "psc": 64600
+  },
+  {
+    "cp": 196,
+    "ulice": "Division Place",
+    "mesto": "Eggertsville",
+    "psc": 98080
+  },
+  {
+    "cp": 475,
+    "ulice": "Cyrus Avenue",
+    "mesto": "Eureka",
+    "psc": 38382
+  },
+  {
+    "cp": 942,
+    "ulice": "Montieth Street",
+    "mesto": "Crenshaw",
+    "psc": 80108
+  },
+  {
+    "cp": 282,
+    "ulice": "Hoyts Lane",
+    "mesto": "Irwin",
+    "psc": 64537
+  },
+  {
+    "cp": 762,
+    "ulice": "Stillwell Avenue",
+    "mesto": "Bladensburg",
+    "psc": 71808
+  },
+  {
+    "cp": 412,
+    "ulice": "Brown Street",
+    "mesto": "Oberlin",
+    "psc": 86497
+  },
+  {
+    "cp": 239,
+    "ulice": "Carlton Avenue",
+    "mesto": "Wollochet",
+    "psc": 98972
+  },
+  {
+    "cp": 982,
+    "ulice": "Borinquen Pl",
+    "mesto": "Riverton",
+    "psc": 75367
+  },
+  {
+    "cp": 563,
+    "ulice": "Lamont Court",
+    "mesto": "Cornfields",
+    "psc": 96565
+  },
+  {
+    "cp": 168,
+    "ulice": "River Street",
+    "mesto": "Choctaw",
+    "psc": 81689
+  },
+  {
+    "cp": 662,
+    "ulice": "Onderdonk Avenue",
+    "mesto": "Konterra",
+    "psc": 61055
+  },
+  {
+    "cp": 242,
+    "ulice": "Flatlands Avenue",
+    "mesto": "Finderne",
+    "psc": 10736
+  },
+  {
+    "cp": 555,
+    "ulice": "Oceanic Avenue",
+    "mesto": "Westmoreland",
+    "psc": 41084
+  },
+  {
+    "cp": 450,
+    "ulice": "Calder Place",
+    "mesto": "Russellville",
+    "psc": 25894
+  },
+  {
+    "cp": 121,
+    "ulice": "Bartlett Street",
+    "mesto": "Shaft",
+    "psc": 75863
+  },
+  {
+    "cp": 611,
+    "ulice": "Arlington Place",
+    "mesto": "Ezel",
+    "psc": 34398
+  },
+  {
+    "cp": 879,
+    "ulice": "Lefferts Avenue",
+    "mesto": "Trinway",
+    "psc": 60492
+  },
+  {
+    "cp": 484,
+    "ulice": "Debevoise Avenue",
+    "mesto": "Chaparrito",
+    "psc": 12326
+  },
+  {
+    "cp": 899,
+    "ulice": "Kingsland Avenue",
+    "mesto": "Kerby",
+    "psc": 15616
+  },
+  {
+    "cp": 274,
+    "ulice": "National Drive",
+    "mesto": "Winston",
+    "psc": 90054
+  },
+  {
+    "cp": 449,
+    "ulice": "Bayview Place",
+    "mesto": "Clarence",
+    "psc": 95146
+  },
+  {
+    "cp": 614,
+    "ulice": "Nostrand Avenue",
+    "mesto": "Loveland",
+    "psc": 39843
+  },
+  {
+    "cp": 732,
+    "ulice": "Stillwell Place",
+    "mesto": "Jardine",
+    "psc": 55406
+  },
+  {
+    "cp": 664,
+    "ulice": "Glen Street",
+    "mesto": "Springville",
+    "psc": 19745
+  },
+  {
+    "cp": 455,
+    "ulice": "Putnam Avenue",
+    "mesto": "Jenkinsville",
+    "psc": 87489
+  },
+  {
+    "cp": 822,
+    "ulice": "Jefferson Street",
+    "mesto": "Cochranville",
+    "psc": 69376
+  },
+  {
+    "cp": 468,
+    "ulice": "Pilling Street",
+    "mesto": "Florence",
+    "psc": 72631
+  },
+  {
+    "cp": 393,
+    "ulice": "Fiske Place",
+    "mesto": "Matheny",
+    "psc": 39145
+  },
+  {
+    "cp": 888,
+    "ulice": "Brooklyn Avenue",
+    "mesto": "Toftrees",
+    "psc": 79467
+  },
+  {
+    "cp": 736,
+    "ulice": "Boerum Street",
+    "mesto": "Neibert",
+    "psc": 58241
+  },
+  {
+    "cp": 521,
+    "ulice": "Just Court",
+    "mesto": "Edgar",
+    "psc": 82521
+  },
+  {
+    "cp": 507,
+    "ulice": "Lorimer Street",
+    "mesto": "Aberdeen",
+    "psc": 76399
+  },
+  {
+    "cp": 983,
+    "ulice": "Ditmas Avenue",
+    "mesto": "Ilchester",
+    "psc": 62897
+  },
+  {
+    "cp": 515,
+    "ulice": "Langham Street",
+    "mesto": "Madrid",
+    "psc": 36783
+  },
+  {
+    "cp": 742,
+    "ulice": "Landis Court",
+    "mesto": "Baker",
+    "psc": 75850
+  },
+  {
+    "cp": 353,
+    "ulice": "Kenmore Terrace",
+    "mesto": "Rockbridge",
+    "psc": 34316
+  },
+  {
+    "cp": 352,
+    "ulice": "Schroeders Avenue",
+    "mesto": "Macdona",
+    "psc": 96334
+  },
+  {
+    "cp": 813,
+    "ulice": "Bethel Loop",
+    "mesto": "Fedora",
+    "psc": 67496
+  },
+  {
+    "cp": 548,
+    "ulice": "Locust Avenue",
+    "mesto": "Thomasville",
+    "psc": 17888
+  },
+  {
+    "cp": 462,
+    "ulice": "Box Street",
+    "mesto": "Joes",
+    "psc": 71958
+  },
+  {
+    "cp": 318,
+    "ulice": "Fane Court",
+    "mesto": "Fresno",
+    "psc": 28922
+  },
+  {
+    "cp": 653,
+    "ulice": "Nautilus Avenue",
+    "mesto": "Morriston",
+    "psc": 50848
+  },
+  {
+    "cp": 296,
+    "ulice": "Thornton Street",
+    "mesto": "Wheaton",
+    "psc": 87373
+  },
+  {
+    "cp": 431,
+    "ulice": "Chase Court",
+    "mesto": "Alamo",
+    "psc": 96767
+  },
+  {
+    "cp": 530,
+    "ulice": "Dooley Street",
+    "mesto": "Summertown",
+    "psc": 82133
+  },
+  {
+    "cp": 885,
+    "ulice": "Orange Street",
+    "mesto": "Dragoon",
+    "psc": 55404
+  },
+  {
+    "cp": 211,
+    "ulice": "Tennis Court",
+    "mesto": "Barstow",
+    "psc": 21970
+  },
+  {
+    "cp": 950,
+    "ulice": "Cooper Street",
+    "mesto": "Jackpot",
+    "psc": 47635
+  },
+  {
+    "cp": 831,
+    "ulice": "Willow Street",
+    "mesto": "Turpin",
+    "psc": 20718
+  },
+  {
+    "cp": 553,
+    "ulice": "Gerald Court",
+    "mesto": "Emison",
+    "psc": 58298
+  },
+  {
+    "cp": 722,
+    "ulice": "Lawrence Avenue",
+    "mesto": "Belva",
+    "psc": 53386
+  },
+  {
+    "cp": 936,
+    "ulice": "Dobbin Street",
+    "mesto": "Chicopee",
+    "psc": 29705
+  },
+  {
+    "cp": 905,
+    "ulice": "Montauk Avenue",
+    "mesto": "Elizaville",
+    "psc": 19842
+  },
+  {
+    "cp": 102,
+    "ulice": "Poplar Avenue",
+    "mesto": "Lupton",
+    "psc": 77254
+  },
+  {
+    "cp": 981,
+    "ulice": "Whitty Lane",
+    "mesto": "Sanborn",
+    "psc": 86641
+  },
+  {
+    "cp": 947,
+    "ulice": "Preston Court",
+    "mesto": "Forestburg",
+    "psc": 81007
+  },
+  {
+    "cp": 217,
+    "ulice": "Flatbush Avenue",
+    "mesto": "Garnet",
+    "psc": 12740
+  },
+  {
+    "cp": 902,
+    "ulice": "Summit Street",
+    "mesto": "Felt",
+    "psc": 29223
+  },
+  {
+    "cp": 386,
+    "ulice": "Gaylord Drive",
+    "mesto": "Goldfield",
+    "psc": 96057
+  },
+  {
+    "cp": 306,
+    "ulice": "Stuart Street",
+    "mesto": "Brandywine",
+    "psc": 46815
+  },
+  {
+    "cp": 434,
+    "ulice": "Bancroft Place",
+    "mesto": "Kraemer",
+    "psc": 99103
+  },
+  {
+    "cp": 506,
+    "ulice": "Ridge Court",
+    "mesto": "Faywood",
+    "psc": 89167
+  },
+  {
+    "cp": 108,
+    "ulice": "Tudor Terrace",
+    "mesto": "Onton",
+    "psc": 42772
+  },
+  {
+    "cp": 433,
+    "ulice": "Fanchon Place",
+    "mesto": "Ripley",
+    "psc": 94373
+  },
+  {
+    "cp": 956,
+    "ulice": "Matthews Place",
+    "mesto": "Woodburn",
+    "psc": 96908
+  },
+  {
+    "cp": 730,
+    "ulice": "Cumberland Street",
+    "mesto": "Cutter",
+    "psc": 13656
+  },
+  {
+    "cp": 596,
+    "ulice": "Kent Avenue",
+    "mesto": "Hemlock",
+    "psc": 97959
+  },
+  {
+    "cp": 396,
+    "ulice": "Schenck Street",
+    "mesto": "Stagecoach",
+    "psc": 92993
+  },
+  {
+    "cp": 256,
+    "ulice": "Cook Street",
+    "mesto": "Drummond",
+    "psc": 43731
+  },
+  {
+    "cp": 501,
+    "ulice": "Coyle Street",
+    "mesto": "Crown",
+    "psc": 13979
+  },
+  {
+    "cp": 220,
+    "ulice": "Albemarle Terrace",
+    "mesto": "Verdi",
+    "psc": 86804
+  },
+  {
+    "cp": 502,
+    "ulice": "Tapscott Street",
+    "mesto": "Dennard",
+    "psc": 76185
+  },
+  {
+    "cp": 155,
+    "ulice": "Moffat Street",
+    "mesto": "Jennings",
+    "psc": 99864
+  },
+  {
+    "cp": 802,
+    "ulice": "Berkeley Place",
+    "mesto": "Whitestone",
+    "psc": 84877
+  },
+  {
+    "cp": 673,
+    "ulice": "Highland Boulevard",
+    "mesto": "Hollins",
+    "psc": 23543
+  },
+  {
+    "cp": 432,
+    "ulice": "Sullivan Place",
+    "mesto": "Whipholt",
+    "psc": 18697
+  },
+  {
+    "cp": 469,
+    "ulice": "Independence Avenue",
+    "mesto": "Chesterfield",
+    "psc": 75243
+  },
+  {
+    "cp": 390,
+    "ulice": "Main Street",
+    "mesto": "Leroy",
+    "psc": 21223
+  },
+  {
+    "cp": 402,
+    "ulice": "Essex Street",
+    "mesto": "Slovan",
+    "psc": 96921
+  },
+  {
+    "cp": 354,
+    "ulice": "Williams Place",
+    "mesto": "Wolcott",
+    "psc": 38165
+  },
+  {
+    "cp": 487,
+    "ulice": "Merit Court",
+    "mesto": "Cleary",
+    "psc": 69615
+  },
+  {
+    "cp": 912,
+    "ulice": "Bank Street",
+    "mesto": "Saticoy",
+    "psc": 13854
+  },
+  {
+    "cp": 301,
+    "ulice": "Brightwater Avenue",
+    "mesto": "Lowgap",
+    "psc": 38109
+  },
+  {
+    "cp": 221,
+    "ulice": "Baltic Street",
+    "mesto": "Logan",
+    "psc": 15684
+  },
+  {
+    "cp": 767,
+    "ulice": "Horace Court",
+    "mesto": "Glasgow",
+    "psc": 44459
+  },
+  {
+    "cp": 472,
+    "ulice": "Newel Street",
+    "mesto": "Hiseville",
+    "psc": 84418
+  },
+  {
+    "cp": 435,
+    "ulice": "Schenck Avenue",
+    "mesto": "Ruffin",
+    "psc": 74116
+  },
+  {
+    "cp": 745,
+    "ulice": "Bijou Avenue",
+    "mesto": "Holtville",
+    "psc": 47730
+  },
+  {
+    "cp": 759,
+    "ulice": "Centre Street",
+    "mesto": "Eagletown",
+    "psc": 42701
+  },
+  {
+    "cp": 336,
+    "ulice": "Lenox Road",
+    "mesto": "Jacumba",
+    "psc": 52733
+  },
+  {
+    "cp": 870,
+    "ulice": "Cobek Court",
+    "mesto": "Talpa",
+    "psc": 53710
+  },
+  {
+    "cp": 663,
+    "ulice": "Nassau Avenue",
+    "mesto": "Bannock",
+    "psc": 36526
+  },
+  {
+    "cp": 381,
+    "ulice": "Louis Place",
+    "mesto": "Coultervillle",
+    "psc": 98204
+  },
+  {
+    "cp": 310,
+    "ulice": "Sutter Avenue",
+    "mesto": "Kennedyville",
+    "psc": 61734
+  },
+  {
+    "cp": 309,
+    "ulice": "Mill Avenue",
+    "mesto": "Oceola",
+    "psc": 68950
+  },
+  {
+    "cp": 722,
+    "ulice": "Jefferson Avenue",
+    "mesto": "Norwood",
+    "psc": 24880
+  },
+  {
+    "cp": 164,
+    "ulice": "Java Street",
+    "mesto": "Guilford",
+    "psc": 70033
+  },
+  {
+    "cp": 742,
+    "ulice": "Bushwick Court",
+    "mesto": "Needmore",
+    "psc": 42572
+  },
+  {
+    "cp": 457,
+    "ulice": "Kane Street",
+    "mesto": "Bend",
+    "psc": 16011
+  },
+  {
+    "cp": 362,
+    "ulice": "Kiely Place",
+    "mesto": "Tonopah",
+    "psc": 40250
+  },
+  {
+    "cp": 401,
+    "ulice": "Willoughby Avenue",
+    "mesto": "Umapine",
+    "psc": 47071
+  },
+  {
+    "cp": 615,
+    "ulice": "Hanson Place",
+    "mesto": "Witmer",
+    "psc": 51794
+  },
+  {
+    "cp": 133,
+    "ulice": "Post Court",
+    "mesto": "Klondike",
+    "psc": 33194
+  },
+  {
+    "cp": 499,
+    "ulice": "Pershing Loop",
+    "mesto": "Welch",
+    "psc": 90368
+  },
+  {
+    "cp": 512,
+    "ulice": "Hoyt Street",
+    "mesto": "Monument",
+    "psc": 96086
+  },
+  {
+    "cp": 141,
+    "ulice": "Willow Place",
+    "mesto": "Kingstowne",
+    "psc": 71672
+  },
+  {
+    "cp": 928,
+    "ulice": "Highland Avenue",
+    "mesto": "Cloverdale",
+    "psc": 91766
+  },
+  {
+    "cp": 692,
+    "ulice": "Lyme Avenue",
+    "mesto": "Waumandee",
+    "psc": 63976
+  },
+  {
+    "cp": 405,
+    "ulice": "Clymer Street",
+    "mesto": "Tyhee",
+    "psc": 38437
+  },
+  {
+    "cp": 927,
+    "ulice": "Troutman Street",
+    "mesto": "Galesville",
+    "psc": 95558
+  },
+  {
+    "cp": 575,
+    "ulice": "Oriental Boulevard",
+    "mesto": "Darrtown",
+    "psc": 99898
+  },
+  {
+    "cp": 807,
+    "ulice": "Cadman Plaza",
+    "mesto": "Gasquet",
+    "psc": 64302
+  },
+  {
+    "cp": 619,
+    "ulice": "Bedford Avenue",
+    "mesto": "Gordon",
+    "psc": 93260
+  },
+  {
+    "cp": 900,
+    "ulice": "Roebling Street",
+    "mesto": "Chamizal",
+    "psc": 47342
+  },
+  {
+    "cp": 930,
+    "ulice": "Indiana Place",
+    "mesto": "Guthrie",
+    "psc": 39586
+  },
+  {
+    "cp": 417,
+    "ulice": "Front Street",
+    "mesto": "Hessville",
+    "psc": 31870
+  },
+  {
+    "cp": 386,
+    "ulice": "Hegeman Avenue",
+    "mesto": "Haena",
+    "psc": 22504
+  },
+  {
+    "cp": 116,
+    "ulice": "Hastings Street",
+    "mesto": "Kapowsin",
+    "psc": 62132
+  },
+  {
+    "cp": 714,
+    "ulice": "Dunne Place",
+    "mesto": "Ahwahnee",
+    "psc": 32043
+  },
+  {
+    "cp": 166,
+    "ulice": "Anchorage Place",
+    "mesto": "Beyerville",
+    "psc": 12747
+  },
+  {
+    "cp": 327,
+    "ulice": "Tompkins Place",
+    "mesto": "Connerton",
+    "psc": 39342
+  },
+  {
+    "cp": 277,
+    "ulice": "Alice Court",
+    "mesto": "Gambrills",
+    "psc": 87678
+  },
+  {
+    "cp": 742,
+    "ulice": "Bay Street",
+    "mesto": "Devon",
+    "psc": 65093
+  },
+  {
+    "cp": 121,
+    "ulice": "Forest Place",
+    "mesto": "Fairmount",
+    "psc": 79554
+  },
+  {
+    "cp": 824,
+    "ulice": "Hinsdale Street",
+    "mesto": "Hasty",
+    "psc": 77905
+  },
+  {
+    "cp": 892,
+    "ulice": "Croton Loop",
+    "mesto": "Taycheedah",
+    "psc": 97782
+  },
+  {
+    "cp": 936,
+    "ulice": "Harbor Lane",
+    "mesto": "Kula",
+    "psc": 78504
+  },
+  {
+    "cp": 879,
+    "ulice": "India Street",
+    "mesto": "Brownsville",
+    "psc": 33677
+  },
+  {
+    "cp": 561,
+    "ulice": "Cooke Court",
+    "mesto": "Websterville",
+    "psc": 94833
+  },
+  {
+    "cp": 891,
+    "ulice": "Ivan Court",
+    "mesto": "Catherine",
+    "psc": 63491
+  },
+  {
+    "cp": 108,
+    "ulice": "Carroll Street",
+    "mesto": "Brantleyville",
+    "psc": 60051
+  },
+  {
+    "cp": 891,
+    "ulice": "Conselyea Street",
+    "mesto": "Kenmar",
+    "psc": 93983
+  },
+  {
+    "cp": 715,
+    "ulice": "Strickland Avenue",
+    "mesto": "Bradenville",
+    "psc": 34964
+  },
+  {
+    "cp": 321,
+    "ulice": "Miller Place",
+    "mesto": "Churchill",
+    "psc": 72717
+  },
+  {
+    "cp": 404,
+    "ulice": "Harway Avenue",
+    "mesto": "Hampstead",
+    "psc": 63237
+  },
+  {
+    "cp": 314,
+    "ulice": "Joralemon Street",
+    "mesto": "Ribera",
+    "psc": 25965
+  },
+  {
+    "cp": 359,
+    "ulice": "Cedar Street",
+    "mesto": "Allentown",
+    "psc": 25184
+  },
+  {
+    "cp": 785,
+    "ulice": "Columbus Place",
+    "mesto": "Evergreen",
+    "psc": 42348
+  },
+  {
+    "cp": 609,
+    "ulice": "Pierrepont Place",
+    "mesto": "Norfolk",
+    "psc": 25873
+  },
+  {
+    "cp": 951,
+    "ulice": "Devoe Street",
+    "mesto": "Caberfae",
+    "psc": 15742
+  },
+  {
+    "cp": 568,
+    "ulice": "Grand Avenue",
+    "mesto": "Buxton",
+    "psc": 25356
+  },
+  {
+    "cp": 540,
+    "ulice": "Grove Street",
+    "mesto": "Marshall",
+    "psc": 83774
+  },
+  {
+    "cp": 428,
+    "ulice": "Lefferts Place",
+    "mesto": "Hayden",
+    "psc": 92856
+  },
+  {
+    "cp": 704,
+    "ulice": "Bowery Street",
+    "mesto": "Malo",
+    "psc": 49117
+  },
+  {
+    "cp": 629,
+    "ulice": "Havemeyer Street",
+    "mesto": "Rockhill",
+    "psc": 58483
+  },
+  {
+    "cp": 870,
+    "ulice": "Irvington Place",
+    "mesto": "Sunbury",
+    "psc": 46249
+  },
+  {
+    "cp": 276,
+    "ulice": "Nolans Lane",
+    "mesto": "Enetai",
+    "psc": 39642
+  },
+  {
+    "cp": 241,
+    "ulice": "Monument Walk",
+    "mesto": "Bath",
+    "psc": 46854
+  },
+  {
+    "cp": 149,
+    "ulice": "Cropsey Avenue",
+    "mesto": "Hiko",
+    "psc": 21962
+  },
+  {
+    "cp": 595,
+    "ulice": "Wilson Street",
+    "mesto": "Chemung",
+    "psc": 77014
+  },
+  {
+    "cp": 334,
+    "ulice": "Clove Road",
+    "mesto": "Cannondale",
+    "psc": 55774
+  },
+  {
+    "cp": 965,
+    "ulice": "Dodworth Street",
+    "mesto": "Shelby",
+    "psc": 50542
+  },
+  {
+    "cp": 966,
+    "ulice": "Kossuth Place",
+    "mesto": "Bowie",
+    "psc": 65656
+  },
+  {
+    "cp": 900,
+    "ulice": "Himrod Street",
+    "mesto": "Beason",
+    "psc": 26393
+  },
+  {
+    "cp": 373,
+    "ulice": "Dakota Place",
+    "mesto": "Groton",
+    "psc": 60499
+  },
+  {
+    "cp": 683,
+    "ulice": "Monroe Place",
+    "mesto": "Rosine",
+    "psc": 30610
+  },
+  {
+    "cp": 206,
+    "ulice": "Schweikerts Walk",
+    "mesto": "Williston",
+    "psc": 27110
+  },
+  {
+    "cp": 732,
+    "ulice": "Lafayette Walk",
+    "mesto": "Harleigh",
+    "psc": 85706
+  },
+  {
+    "cp": 560,
+    "ulice": "Schenectady Avenue",
+    "mesto": "Croom",
+    "psc": 40707
+  },
+  {
+    "cp": 760,
+    "ulice": "Moultrie Street",
+    "mesto": "Iberia",
+    "psc": 70259
+  },
+  {
+    "cp": 113,
+    "ulice": "Rock Street",
+    "mesto": "Omar",
+    "psc": 70818
+  },
+  {
+    "cp": 810,
+    "ulice": "Norman Avenue",
+    "mesto": "Frizzleburg",
+    "psc": 45034
+  },
+  {
+    "cp": 730,
+    "ulice": "Chapel Street",
+    "mesto": "Wildwood",
+    "psc": 57947
+  },
+  {
+    "cp": 632,
+    "ulice": "Metropolitan Avenue",
+    "mesto": "Roderfield",
+    "psc": 54375
+  },
+  {
+    "cp": 986,
+    "ulice": "Hanover Place",
+    "mesto": "Norvelt",
+    "psc": 72698
+  },
+  {
+    "cp": 721,
+    "ulice": "Boardwalk ",
+    "mesto": "Elfrida",
+    "psc": 92263
+  },
+  {
+    "cp": 267,
+    "ulice": "Bristol Street",
+    "mesto": "Springhill",
+    "psc": 43255
+  },
+  {
+    "cp": 333,
+    "ulice": "Furman Street",
+    "mesto": "Thermal",
+    "psc": 43704
+  },
+  {
+    "cp": 970,
+    "ulice": "Celeste Court",
+    "mesto": "Lithium",
+    "psc": 60020
+  },
+  {
+    "cp": 833,
+    "ulice": "Jay Street",
+    "mesto": "Freeburn",
+    "psc": 92983
+  },
+  {
+    "cp": 443,
+    "ulice": "Dover Street",
+    "mesto": "Mayfair",
+    "psc": 91359
+  },
+  {
+    "cp": 167,
+    "ulice": "Tabor Court",
+    "mesto": "Brutus",
+    "psc": 29901
+  },
+  {
+    "cp": 753,
+    "ulice": "Nelson Street",
+    "mesto": "Floriston",
+    "psc": 44192
+  },
+  {
+    "cp": 133,
+    "ulice": "Menahan Street",
+    "mesto": "Bartley",
+    "psc": 51550
+  },
+  {
+    "cp": 927,
+    "ulice": "Neptune Avenue",
+    "mesto": "Calpine",
+    "psc": 89707
+  },
+  {
+    "cp": 332,
+    "ulice": "Herzl Street",
+    "mesto": "Martinsville",
+    "psc": 26576
+  },
+  {
+    "cp": 748,
+    "ulice": "Dumont Avenue",
+    "mesto": "Harold",
+    "psc": 41885
+  },
+  {
+    "cp": 856,
+    "ulice": "Furman Avenue",
+    "mesto": "Jessie",
+    "psc": 42653
+  },
+  {
+    "cp": 697,
+    "ulice": "Bayard Street",
+    "mesto": "Grantville",
+    "psc": 99430
+  },
+  {
+    "cp": 108,
+    "ulice": "Fountain Avenue",
+    "mesto": "Warsaw",
+    "psc": 61315
+  },
+  {
+    "cp": 987,
+    "ulice": "Dictum Court",
+    "mesto": "Avoca",
+    "psc": 36909
+  },
+  {
+    "cp": 251,
+    "ulice": "Delmonico Place",
+    "mesto": "Strong",
+    "psc": 60711
+  },
+  {
+    "cp": 328,
+    "ulice": "Eldert Lane",
+    "mesto": "Homeworth",
+    "psc": 96217
+  },
+  {
+    "cp": 212,
+    "ulice": "Little Street",
+    "mesto": "Cartwright",
+    "psc": 31668
+  },
+  {
+    "cp": 832,
+    "ulice": "Russell Street",
+    "mesto": "Esmont",
+    "psc": 98118
+  },
+  {
+    "cp": 383,
+    "ulice": "Humboldt Street",
+    "mesto": "Johnsonburg",
+    "psc": 72028
+  },
+  {
+    "cp": 324,
+    "ulice": "Boynton Place",
+    "mesto": "Bainbridge",
+    "psc": 74012
+  },
+  {
+    "cp": 796,
+    "ulice": "Metrotech Courtr",
+    "mesto": "Cliff",
+    "psc": 19339
+  },
+  {
+    "cp": 348,
+    "ulice": "Hudson Avenue",
+    "mesto": "Skyland",
+    "psc": 24053
+  },
+  {
+    "cp": 404,
+    "ulice": "Keen Court",
+    "mesto": "Inkerman",
+    "psc": 60420
+  },
+  {
+    "cp": 978,
+    "ulice": "Sutton Street",
+    "mesto": "Wacissa",
+    "psc": 16213
+  },
+  {
+    "cp": 903,
+    "ulice": "Hancock Street",
+    "mesto": "Mathews",
+    "psc": 75805
+  },
+  {
+    "cp": 327,
+    "ulice": "Colby Court",
+    "mesto": "Veguita",
+    "psc": 27618
+  },
+  {
+    "cp": 579,
+    "ulice": "Evergreen Avenue",
+    "mesto": "Zortman",
+    "psc": 18889
+  },
+  {
+    "cp": 974,
+    "ulice": "Melba Court",
+    "mesto": "Marbury",
+    "psc": 60844
+  },
+  {
+    "cp": 244,
+    "ulice": "Veronica Place",
+    "mesto": "Williams",
+    "psc": 66599
+  },
+  {
+    "cp": 706,
+    "ulice": "Harman Street",
+    "mesto": "Charco",
+    "psc": 67907
+  },
+  {
+    "cp": 752,
+    "ulice": "Everit Street",
+    "mesto": "Chilton",
+    "psc": 65220
+  },
+  {
+    "cp": 651,
+    "ulice": "Truxton Street",
+    "mesto": "Caspar",
+    "psc": 23415
+  },
+  {
+    "cp": 551,
+    "ulice": "Rockaway Avenue",
+    "mesto": "Winesburg",
+    "psc": 23567
+  },
+  {
+    "cp": 107,
+    "ulice": "Stewart Street",
+    "mesto": "Hegins",
+    "psc": 19578
+  },
+  {
+    "cp": 694,
+    "ulice": "Woodhull Street",
+    "mesto": "Moraida",
+    "psc": 73328
+  },
+  {
+    "cp": 891,
+    "ulice": "Hutchinson Court",
+    "mesto": "Cobbtown",
+    "psc": 73292
+  },
+  {
+    "cp": 807,
+    "ulice": "Clifton Place",
+    "mesto": "Alden",
+    "psc": 56982
+  },
+  {
+    "cp": 287,
+    "ulice": "Clara Street",
+    "mesto": "Morgandale",
+    "psc": 10464
+  },
+  {
+    "cp": 141,
+    "ulice": "Townsend Street",
+    "mesto": "Sunnyside",
+    "psc": 78023
+  },
+  {
+    "cp": 398,
+    "ulice": "Oriental Court",
+    "mesto": "Sexton",
+    "psc": 26303
+  },
+  {
+    "cp": 993,
+    "ulice": "Clifford Place",
+    "mesto": "Loomis",
+    "psc": 54683
+  },
+  {
+    "cp": 749,
+    "ulice": "Stockholm Street",
+    "mesto": "Brazos",
+    "psc": 81473
+  },
+  {
+    "cp": 648,
+    "ulice": "Portal Street",
+    "mesto": "Conestoga",
+    "psc": 59183
+  },
+  {
+    "cp": 253,
+    "ulice": "Williams Avenue",
+    "mesto": "Marne",
+    "psc": 97582
+  },
+  {
+    "cp": 610,
+    "ulice": "Newport Street",
+    "mesto": "Clinton",
+    "psc": 80435
+  },
+  {
+    "cp": 621,
+    "ulice": "Clermont Avenue",
+    "mesto": "Grill",
+    "psc": 78920
+  },
+  {
+    "cp": 216,
+    "ulice": "Wogan Terrace",
+    "mesto": "Cataract",
+    "psc": 65582
+  },
+  {
+    "cp": 823,
+    "ulice": "Surf Avenue",
+    "mesto": "Geyserville",
+    "psc": 46518
+  },
+  {
+    "cp": 194,
+    "ulice": "Clinton Avenue",
+    "mesto": "Stouchsburg",
+    "psc": 26614
+  },
+  {
+    "cp": 443,
+    "ulice": "Kings Hwy",
+    "mesto": "Herbster",
+    "psc": 84507
+  },
+  {
+    "cp": 322,
+    "ulice": "Sumner Place",
+    "mesto": "Dalton",
+    "psc": 37244
+  },
+  {
+    "cp": 836,
+    "ulice": "Huntington Street",
+    "mesto": "Glenville",
+    "psc": 28294
+  },
+  {
+    "cp": 140,
+    "ulice": "Wyona Street",
+    "mesto": "Henrietta",
+    "psc": 59281
+  },
+  {
+    "cp": 593,
+    "ulice": "Louisa Street",
+    "mesto": "Farmers",
+    "psc": 56956
+  },
+  {
+    "cp": 924,
+    "ulice": "Holt Court",
+    "mesto": "Greenbackville",
+    "psc": 84795
+  },
+  {
+    "cp": 251,
+    "ulice": "Lloyd Street",
+    "mesto": "Tilleda",
+    "psc": 17270
+  },
+  {
+    "cp": 559,
+    "ulice": "Hunts Lane",
+    "mesto": "Blue",
+    "psc": 32451
+  },
+  {
+    "cp": 762,
+    "ulice": "Guider Avenue",
+    "mesto": "Newkirk",
+    "psc": 38220
+  },
+  {
+    "cp": 604,
+    "ulice": "Jodie Court",
+    "mesto": "Lopezo",
+    "psc": 52417
+  },
+  {
+    "cp": 694,
+    "ulice": "Kay Court",
+    "mesto": "Cavalero",
+    "psc": 32842
+  },
+  {
+    "cp": 267,
+    "ulice": "Stuyvesant Avenue",
+    "mesto": "Tivoli",
+    "psc": 15084
+  },
+  {
+    "cp": 577,
+    "ulice": "Cherry Street",
+    "mesto": "Blackgum",
+    "psc": 38949
+  },
+  {
+    "cp": 631,
+    "ulice": "Jerome Street",
+    "mesto": "Tecolotito",
+    "psc": 82116
+  },
+  {
+    "cp": 394,
+    "ulice": "Concord Street",
+    "mesto": "Greenwich",
+    "psc": 82652
+  },
+  {
+    "cp": 595,
+    "ulice": "Ashford Street",
+    "mesto": "Herald",
+    "psc": 79939
+  },
+  {
+    "cp": 331,
+    "ulice": "Hooper Street",
+    "mesto": "Denio",
+    "psc": 70210
+  },
+  {
+    "cp": 982,
+    "ulice": "Sunnyside Court",
+    "mesto": "Allensworth",
+    "psc": 48954
+  },
+  {
+    "cp": 940,
+    "ulice": "Ralph Avenue",
+    "mesto": "Rodman",
+    "psc": 81347
+  },
+  {
+    "cp": 421,
+    "ulice": "Campus Place",
+    "mesto": "Linwood",
+    "psc": 98167
+  },
+  {
+    "cp": 836,
+    "ulice": "Suydam Street",
+    "mesto": "Wakulla",
+    "psc": 76493
+  },
+  {
+    "cp": 811,
+    "ulice": "Williamsburg Street",
+    "mesto": "Sparkill",
+    "psc": 15158
+  },
+  {
+    "cp": 597,
+    "ulice": "Union Street",
+    "mesto": "Bartonsville",
+    "psc": 20614
+  },
+  {
+    "cp": 571,
+    "ulice": "Bainbridge Street",
+    "mesto": "Vernon",
+    "psc": 40191
+  },
+  {
+    "cp": 364,
+    "ulice": "Forbell Street",
+    "mesto": "Vaughn",
+    "psc": 36749
+  },
+  {
+    "cp": 810,
+    "ulice": "Manhattan Avenue",
+    "mesto": "Gloucester",
+    "psc": 21890
+  },
+  {
+    "cp": 254,
+    "ulice": "Whitney Avenue",
+    "mesto": "Goochland",
+    "psc": 69655
+  },
+  {
+    "cp": 176,
+    "ulice": "Greene Avenue",
+    "mesto": "Delshire",
+    "psc": 41598
+  },
+  {
+    "cp": 249,
+    "ulice": "Prince Street",
+    "mesto": "Chautauqua",
+    "psc": 58384
+  },
+  {
+    "cp": 938,
+    "ulice": "Nixon Court",
+    "mesto": "Newry",
+    "psc": 32749
+  },
+  {
+    "cp": 844,
+    "ulice": "Duryea Place",
+    "mesto": "Venice",
+    "psc": 96195
+  },
+  {
+    "cp": 893,
+    "ulice": "Lewis Avenue",
+    "mesto": "Gallina",
+    "psc": 62752
+  },
+  {
+    "cp": 344,
+    "ulice": "Commercial Street",
+    "mesto": "Vale",
+    "psc": 77866
+  },
+  {
+    "cp": 780,
+    "ulice": "Blake Court",
+    "mesto": "Northridge",
+    "psc": 39313
+  },
+  {
+    "cp": 602,
+    "ulice": "Balfour Place",
+    "mesto": "Gerber",
+    "psc": 69132
+  },
+  {
+    "cp": 187,
+    "ulice": "Huron Street",
+    "mesto": "Darlington",
+    "psc": 65522
+  },
+  {
+    "cp": 968,
+    "ulice": "Ridge Boulevard",
+    "mesto": "Joppa",
+    "psc": 41957
+  },
+  {
+    "cp": 292,
+    "ulice": "Fenimore Street",
+    "mesto": "Tibbie",
+    "psc": 97723
+  },
+  {
+    "cp": 924,
+    "ulice": "Alabama Avenue",
+    "mesto": "Longbranch",
+    "psc": 78345
+  },
+  {
+    "cp": 953,
+    "ulice": "Grove Place",
+    "mesto": "Ada",
+    "psc": 47567
+  },
+  {
+    "cp": 152,
+    "ulice": "Johnson Street",
+    "mesto": "Deseret",
+    "psc": 71403
+  },
+  {
+    "cp": 101,
+    "ulice": "Dahill Road",
+    "mesto": "Waukeenah",
+    "psc": 34406
+  },
+  {
+    "cp": 177,
+    "ulice": "Midwood Street",
+    "mesto": "Freelandville",
+    "psc": 44142
+  },
+  {
+    "cp": 713,
+    "ulice": "Girard Street",
+    "mesto": "Vallonia",
+    "psc": 10958
+  },
+  {
+    "cp": 949,
+    "ulice": "Olive Street",
+    "mesto": "Hoagland",
+    "psc": 39042
+  },
+  {
+    "cp": 223,
+    "ulice": "Royce Street",
+    "mesto": "Corinne",
+    "psc": 23871
+  },
+  {
+    "cp": 738,
+    "ulice": "Claver Place",
+    "mesto": "Glendale",
+    "psc": 93719
+  },
+  {
+    "cp": 833,
+    "ulice": "Bergen Place",
+    "mesto": "Brownlee",
+    "psc": 38962
+  },
+  {
+    "cp": 230,
+    "ulice": "Robert Street",
+    "mesto": "Harviell",
+    "psc": 60713
+  },
+  {
+    "cp": 570,
+    "ulice": "Baughman Place",
+    "mesto": "Brambleton",
+    "psc": 99909
+  },
+  {
+    "cp": 739,
+    "ulice": "Kaufman Place",
+    "mesto": "Spokane",
+    "psc": 68734
+  },
+  {
+    "cp": 667,
+    "ulice": "Ocean Parkway",
+    "mesto": "Sutton",
+    "psc": 54572
+  },
+  {
+    "cp": 403,
+    "ulice": "Decatur Street",
+    "mesto": "Kohatk",
+    "psc": 52681
+  },
+  {
+    "cp": 479,
+    "ulice": "Sapphire Street",
+    "mesto": "Tilden",
+    "psc": 17825
+  },
+  {
+    "cp": 754,
+    "ulice": "Hubbard Street",
+    "mesto": "Wawona",
+    "psc": 25569
+  },
+  {
+    "cp": 270,
+    "ulice": "Windsor Place",
+    "mesto": "Roosevelt",
+    "psc": 11276
+  },
+  {
+    "cp": 671,
+    "ulice": "Myrtle Avenue",
+    "mesto": "Farmington",
+    "psc": 62134
+  },
+  {
+    "cp": 461,
+    "ulice": "Underhill Avenue",
+    "mesto": "Chical",
+    "psc": 36139
+  },
+  {
+    "cp": 701,
+    "ulice": "Garfield Place",
+    "mesto": "Richmond",
+    "psc": 10561
+  },
+  {
+    "cp": 487,
+    "ulice": "Vernon Avenue",
+    "mesto": "Dundee",
+    "psc": 37260
+  },
+  {
+    "cp": 253,
+    "ulice": "Terrace Place",
+    "mesto": "Carlton",
+    "psc": 80144
+  },
+  {
+    "cp": 230,
+    "ulice": "Kathleen Court",
+    "mesto": "Camino",
+    "psc": 20574
+  },
+  {
+    "cp": 489,
+    "ulice": "Tapscott Avenue",
+    "mesto": "Wiscon",
+    "psc": 81746
+  },
+  {
+    "cp": 349,
+    "ulice": "Cumberland Walk",
+    "mesto": "Hickory",
+    "psc": 30651
+  },
+  {
+    "cp": 995,
+    "ulice": "Dearborn Court",
+    "mesto": "Allendale",
+    "psc": 21382
+  },
+  {
+    "cp": 491,
+    "ulice": "Sands Street",
+    "mesto": "Gorham",
+    "psc": 69867
+  },
+  {
+    "cp": 572,
+    "ulice": "Ludlam Place",
+    "mesto": "Avalon",
+    "psc": 77389
+  },
+  {
+    "cp": 424,
+    "ulice": "Frost Street",
+    "mesto": "Fowlerville",
+    "psc": 20572
+  },
+  {
+    "cp": 947,
+    "ulice": "Hope Street",
+    "mesto": "Brandermill",
+    "psc": 27079
+  },
+  {
+    "cp": 888,
+    "ulice": "Poly Place",
+    "mesto": "Bowden",
+    "psc": 15637
+  },
+  {
+    "cp": 632,
+    "ulice": "Rost Place",
+    "mesto": "Cassel",
+    "psc": 49830
+  },
+  {
+    "cp": 416,
+    "ulice": "Macdougal Street",
+    "mesto": "Wikieup",
+    "psc": 85738
+  },
+  {
+    "cp": 115,
+    "ulice": "Gunther Place",
+    "mesto": "Cascades",
+    "psc": 53933
+  },
+  {
+    "cp": 315,
+    "ulice": "Scholes Street",
+    "mesto": "Dotsero",
+    "psc": 19510
+  },
+  {
+    "cp": 319,
+    "ulice": "Rewe Street",
+    "mesto": "Maybell",
+    "psc": 46765
+  },
+  {
+    "cp": 277,
+    "ulice": "Fair Street",
+    "mesto": "Edenburg",
+    "psc": 17387
+  },
+  {
+    "cp": 912,
+    "ulice": "Beverley Road",
+    "mesto": "Zarephath",
+    "psc": 26609
+  },
+  {
+    "cp": 798,
+    "ulice": "Diamond Street",
+    "mesto": "Valle",
+    "psc": 66114
+  },
+  {
+    "cp": 754,
+    "ulice": "Nevins Street",
+    "mesto": "Staples",
+    "psc": 16459
+  },
+  {
+    "cp": 163,
+    "ulice": "Irving Place",
+    "mesto": "Dahlen",
+    "psc": 46434
+  },
+  {
+    "cp": 861,
+    "ulice": "Batchelder Street",
+    "mesto": "Glenbrook",
+    "psc": 83411
+  },
+  {
+    "cp": 848,
+    "ulice": "Bowne Street",
+    "mesto": "Cumminsville",
+    "psc": 50180
+  },
+  {
+    "cp": 614,
+    "ulice": "Madison Street",
+    "mesto": "Gilmore",
+    "psc": 83670
+  },
+  {
+    "cp": 778,
+    "ulice": "Duryea Court",
+    "mesto": "Grapeview",
+    "psc": 97803
+  },
+  {
+    "cp": 119,
+    "ulice": "Eastern Parkway",
+    "mesto": "Nipinnawasee",
+    "psc": 53498
+  },
+  {
+    "cp": 126,
+    "ulice": "Powell Street",
+    "mesto": "Day",
+    "psc": 80120
+  },
+  {
+    "cp": 486,
+    "ulice": "Lawn Court",
+    "mesto": "Beaulieu",
+    "psc": 79905
+  },
+  {
+    "cp": 411,
+    "ulice": "Lincoln Place",
+    "mesto": "Sperryville",
+    "psc": 29745
+  },
+  {
+    "cp": 741,
+    "ulice": "Lafayette Avenue",
+    "mesto": "Virgie",
+    "psc": 32600
+  },
+  {
+    "cp": 801,
+    "ulice": "Dupont Street",
+    "mesto": "Bridgetown",
+    "psc": 67903
+  },
+  {
+    "cp": 936,
+    "ulice": "Opal Court",
+    "mesto": "Wintersburg",
+    "psc": 31335
+  },
+  {
+    "cp": 263,
+    "ulice": "Farragut Road",
+    "mesto": "Romeville",
+    "psc": 61685
+  },
+  {
+    "cp": 383,
+    "ulice": "Boerum Place",
+    "mesto": "Deltaville",
+    "psc": 79671
+  },
+  {
+    "cp": 342,
+    "ulice": "Gotham Avenue",
+    "mesto": "Rew",
+    "psc": 33694
+  },
+  {
+    "cp": 685,
+    "ulice": "Royce Place",
+    "mesto": "Biehle",
+    "psc": 51614
+  },
+  {
+    "cp": 768,
+    "ulice": "Ryerson Street",
+    "mesto": "Grenelefe",
+    "psc": 63803
+  },
+  {
+    "cp": 727,
+    "ulice": "Grant Avenue",
+    "mesto": "Waterview",
+    "psc": 85784
+  },
+  {
+    "cp": 272,
+    "ulice": "Karweg Place",
+    "mesto": "Byrnedale",
+    "psc": 20053
+  },
+  {
+    "cp": 911,
+    "ulice": "Lacon Court",
+    "mesto": "Cade",
+    "psc": 98425
+  },
+  {
+    "cp": 721,
+    "ulice": "Brooklyn Road",
+    "mesto": "Sheatown",
+    "psc": 11288
+  },
+  {
+    "cp": 323,
+    "ulice": "Belvidere Street",
+    "mesto": "Elwood",
+    "psc": 52154
+  },
+  {
+    "cp": 125,
+    "ulice": "Baycliff Terrace",
+    "mesto": "Oneida",
+    "psc": 90323
+  },
+  {
+    "cp": 338,
+    "ulice": "King Street",
+    "mesto": "Abrams",
+    "psc": 33701
+  },
+  {
+    "cp": 369,
+    "ulice": "Herkimer Place",
+    "mesto": "Barronett",
+    "psc": 39138
+  },
+  {
+    "cp": 543,
+    "ulice": "Legion Street",
+    "mesto": "Salix",
+    "psc": 58215
+  },
+  {
+    "cp": 263,
+    "ulice": "Livonia Avenue",
+    "mesto": "Loretto",
+    "psc": 44320
+  },
+  {
+    "cp": 525,
+    "ulice": "Nova Court",
+    "mesto": "Haring",
+    "psc": 34875
+  },
+  {
+    "cp": 375,
+    "ulice": "Gold Street",
+    "mesto": "Escondida",
+    "psc": 77439
+  },
+  {
+    "cp": 283,
+    "ulice": "Linden Street",
+    "mesto": "Kilbourne",
+    "psc": 12752
+  },
+  {
+    "cp": 449,
+    "ulice": "Bassett Avenue",
+    "mesto": "Manchester",
+    "psc": 51483
+  },
+  {
+    "cp": 581,
+    "ulice": "Bergen Avenue",
+    "mesto": "Ventress",
+    "psc": 13771
+  },
+  {
+    "cp": 654,
+    "ulice": "Dekalb Avenue",
+    "mesto": "Crayne",
+    "psc": 36108
+  },
+  {
+    "cp": 459,
+    "ulice": "Milton Street",
+    "mesto": "Alafaya",
+    "psc": 17850
+  },
+  {
+    "cp": 705,
+    "ulice": "Sheffield Avenue",
+    "mesto": "Mappsville",
+    "psc": 71743
+  },
+  {
+    "cp": 459,
+    "ulice": "Ainslie Street",
+    "mesto": "Wyano",
+    "psc": 59091
+  },
+  {
+    "cp": 712,
+    "ulice": "Bryant Street",
+    "mesto": "Bison",
+    "psc": 34266
+  },
+  {
+    "cp": 537,
+    "ulice": "Conover Street",
+    "mesto": "Rivers",
+    "psc": 52283
+  },
+  {
+    "cp": 711,
+    "ulice": "Linwood Street",
+    "mesto": "Dola",
+    "psc": 52007
+  },
+  {
+    "cp": 490,
+    "ulice": "Forrest Street",
+    "mesto": "Fillmore",
+    "psc": 41709
+  },
+  {
+    "cp": 344,
+    "ulice": "McKinley Avenue",
+    "mesto": "Dodge",
+    "psc": 78753
+  },
+  {
+    "cp": 532,
+    "ulice": "Orient Avenue",
+    "mesto": "Roy",
+    "psc": 98878
+  },
+  {
+    "cp": 426,
+    "ulice": "Luquer Street",
+    "mesto": "Tetherow",
+    "psc": 43872
+  },
+  {
+    "cp": 851,
+    "ulice": "Fleet Street",
+    "mesto": "Frystown",
+    "psc": 84234
+  },
+  {
+    "cp": 660,
+    "ulice": "Hart Place",
+    "mesto": "Cedarville",
+    "psc": 49514
+  },
+  {
+    "cp": 174,
+    "ulice": "Highlawn Avenue",
+    "mesto": "Cliffside",
+    "psc": 14773
+  },
+  {
+    "cp": 393,
+    "ulice": "Bradford Street",
+    "mesto": "Hoehne",
+    "psc": 63289
+  },
+  {
+    "cp": 720,
+    "ulice": "Throop Avenue",
+    "mesto": "Hilltop",
+    "psc": 62132
+  },
+  {
+    "cp": 880,
+    "ulice": "Chestnut Avenue",
+    "mesto": "Brecon",
+    "psc": 23331
+  },
+  {
+    "cp": 810,
+    "ulice": "Holmes Lane",
+    "mesto": "Hinsdale",
+    "psc": 38229
+  },
+  {
+    "cp": 550,
+    "ulice": "Grattan Street",
+    "mesto": "Cetronia",
+    "psc": 88153
+  },
+  {
+    "cp": 741,
+    "ulice": "Lincoln Road",
+    "mesto": "Sedley",
+    "psc": 12503
+  },
+  {
+    "cp": 511,
+    "ulice": "Farragut Place",
+    "mesto": "Breinigsville",
+    "psc": 71464
+  },
+  {
+    "cp": 542,
+    "ulice": "Williams Court",
+    "mesto": "Islandia",
+    "psc": 16335
+  },
+  {
+    "cp": 320,
+    "ulice": "Temple Court",
+    "mesto": "Munjor",
+    "psc": 69122
+  },
+  {
+    "cp": 176,
+    "ulice": "Kansas Place",
+    "mesto": "Kempton",
+    "psc": 93336
+  },
+  {
+    "cp": 244,
+    "ulice": "Coffey Street",
+    "mesto": "Dupuyer",
+    "psc": 30330
+  },
+  {
+    "cp": 627,
+    "ulice": "Adams Street",
+    "mesto": "Berwind",
+    "psc": 22571
+  },
+  {
+    "cp": 615,
+    "ulice": "Havens Place",
+    "mesto": "Derwood",
+    "psc": 56462
+  },
+  {
+    "cp": 892,
+    "ulice": "Nichols Avenue",
+    "mesto": "Strykersville",
+    "psc": 71852
+  },
+  {
+    "cp": 271,
+    "ulice": "Pitkin Avenue",
+    "mesto": "Roberts",
+    "psc": 82990
+  },
+  {
+    "cp": 271,
+    "ulice": "Sedgwick Street",
+    "mesto": "Moscow",
+    "psc": 93147
+  },
+  {
+    "cp": 301,
+    "ulice": "Seagate Avenue",
+    "mesto": "Calverton",
+    "psc": 93725
+  },
+  {
+    "cp": 151,
+    "ulice": "Bedell Lane",
+    "mesto": "Smock",
+    "psc": 87578
+  },
+  {
+    "cp": 632,
+    "ulice": "Amboy Street",
+    "mesto": "Vicksburg",
+    "psc": 22048
+  },
+  {
+    "cp": 779,
+    "ulice": "Matthews Court",
+    "mesto": "Stonybrook",
+    "psc": 57341
+  },
+  {
+    "cp": 352,
+    "ulice": "Varick Avenue",
+    "mesto": "Naomi",
+    "psc": 14618
+  },
+  {
+    "cp": 115,
+    "ulice": "Lorraine Street",
+    "mesto": "Bentonville",
+    "psc": 38679
+  },
+  {
+    "cp": 326,
+    "ulice": "Barwell Terrace",
+    "mesto": "Coral",
+    "psc": 25611
+  },
+  {
+    "cp": 381,
+    "ulice": "Kensington Street",
+    "mesto": "Benson",
+    "psc": 95200
+  },
+  {
+    "cp": 600,
+    "ulice": "Foster Avenue",
+    "mesto": "Dunlo",
+    "psc": 15233
+  },
+  {
+    "cp": 410,
+    "ulice": "Bevy Court",
+    "mesto": "Sisquoc",
+    "psc": 89711
+  },
+  {
+    "cp": 933,
+    "ulice": "Locust Street",
+    "mesto": "Jeff",
+    "psc": 93810
+  },
+  {
+    "cp": 128,
+    "ulice": "Fairview Place",
+    "mesto": "Echo",
+    "psc": 66173
+  },
+  {
+    "cp": 417,
+    "ulice": "Emmons Avenue",
+    "mesto": "Sunwest",
+    "psc": 14423
+  },
+  {
+    "cp": 320,
+    "ulice": "Prospect Avenue",
+    "mesto": "Collins",
+    "psc": 57606
+  },
+  {
+    "cp": 313,
+    "ulice": "Village Road",
+    "mesto": "Fivepointville",
+    "psc": 57383
+  },
+  {
+    "cp": 452,
+    "ulice": "Lester Court",
+    "mesto": "Yardville",
+    "psc": 25371
+  },
+  {
+    "cp": 285,
+    "ulice": "Eagle Street",
+    "mesto": "Waterford",
+    "psc": 55877
+  },
+  {
+    "cp": 870,
+    "ulice": "Sackman Street",
+    "mesto": "Soudan",
+    "psc": 83647
+  },
+  {
+    "cp": 239,
+    "ulice": "Visitation Place",
+    "mesto": "Weeksville",
+    "psc": 30165
+  },
+  {
+    "cp": 860,
+    "ulice": "Cypress Avenue",
+    "mesto": "Springdale",
+    "psc": 78518
+  },
+  {
+    "cp": 634,
+    "ulice": "Grand Street",
+    "mesto": "Camas",
+    "psc": 86048
+  },
+  {
+    "cp": 986,
+    "ulice": "Vermont Street",
+    "mesto": "Rosewood",
+    "psc": 65693
+  },
+  {
+    "cp": 391,
+    "ulice": "Rose Street",
+    "mesto": "Weogufka",
+    "psc": 39878
+  },
+  {
+    "cp": 808,
+    "ulice": "McKibbin Street",
+    "mesto": "Waverly",
+    "psc": 39164
+  },
+  {
+    "cp": 868,
+    "ulice": "Meadow Street",
+    "mesto": "Gilgo",
+    "psc": 19652
+  },
+  {
+    "cp": 775,
+    "ulice": "Bogart Street",
+    "mesto": "Elrama",
+    "psc": 66696
+  },
+  {
+    "cp": 432,
+    "ulice": "Coleman Street",
+    "mesto": "Westerville",
+    "psc": 86767
+  },
+  {
+    "cp": 175,
+    "ulice": "Division Avenue",
+    "mesto": "Golconda",
+    "psc": 86367
+  },
+  {
+    "cp": 952,
+    "ulice": "Heyward Street",
+    "mesto": "Crumpler",
+    "psc": 19448
+  },
+  {
+    "cp": 152,
+    "ulice": "Remsen Avenue",
+    "mesto": "Juarez",
+    "psc": 41271
+  },
+  {
+    "cp": 713,
+    "ulice": "Gerry Street",
+    "mesto": "Terlingua",
+    "psc": 75408
+  },
+  {
+    "cp": 469,
+    "ulice": "Alton Place",
+    "mesto": "Oley",
+    "psc": 23240
+  },
+  {
+    "cp": 555,
+    "ulice": "Wyckoff Avenue",
+    "mesto": "Edgewater",
+    "psc": 33536
+  },
+  {
+    "cp": 169,
+    "ulice": "Bergen Court",
+    "mesto": "Kirk",
+    "psc": 32911
+  },
+  {
+    "cp": 802,
+    "ulice": "Hemlock Street",
+    "mesto": "Why",
+    "psc": 28343
+  },
+  {
+    "cp": 944,
+    "ulice": "Ocean Avenue",
+    "mesto": "Smeltertown",
+    "psc": 11412
+  },
+  {
+    "cp": 169,
+    "ulice": "Hart Street",
+    "mesto": "Matthews",
+    "psc": 13888
+  },
+  {
+    "cp": 887,
+    "ulice": "Thomas Street",
+    "mesto": "Ryderwood",
+    "psc": 44557
+  },
+  {
+    "cp": 332,
+    "ulice": "Franklin Street",
+    "mesto": "Chesapeake",
+    "psc": 41279
+  },
+  {
+    "cp": 448,
+    "ulice": "Riverdale Avenue",
+    "mesto": "Grimsley",
+    "psc": 13705
+  },
+  {
+    "cp": 432,
+    "ulice": "Quentin Street",
+    "mesto": "Concho",
+    "psc": 29761
+  },
+  {
+    "cp": 118,
+    "ulice": "Chauncey Street",
+    "mesto": "Tampico",
+    "psc": 24901
+  },
+  {
+    "cp": 360,
+    "ulice": "Kenmore Court",
+    "mesto": "Riceville",
+    "psc": 27256
+  },
+  {
+    "cp": 920,
+    "ulice": "Elton Street",
+    "mesto": "Cotopaxi",
+    "psc": 62295
+  },
+  {
+    "cp": 700,
+    "ulice": "Noble Street",
+    "mesto": "Axis",
+    "psc": 75485
+  },
+  {
+    "cp": 831,
+    "ulice": "Beaumont Street",
+    "mesto": "Nogal",
+    "psc": 30746
+  },
+  {
+    "cp": 212,
+    "ulice": "Aviation Road",
+    "mesto": "Holcombe",
+    "psc": 25062
+  },
+  {
+    "cp": 555,
+    "ulice": "Ovington Avenue",
+    "mesto": "Campo",
+    "psc": 47809
+  },
+  {
+    "cp": 421,
+    "ulice": "Gardner Avenue",
+    "mesto": "Blandburg",
+    "psc": 10346
+  },
+  {
+    "cp": 484,
+    "ulice": "Irwin Street",
+    "mesto": "Conway",
+    "psc": 84216
+  },
+  {
+    "cp": 288,
+    "ulice": "Crescent Street",
+    "mesto": "Hillsboro",
+    "psc": 56906
+  },
+  {
+    "cp": 926,
+    "ulice": "Lawrence Street",
+    "mesto": "Kidder",
+    "psc": 79775
+  },
+  {
+    "cp": 410,
+    "ulice": "Lexington Avenue",
+    "mesto": "Shrewsbury",
+    "psc": 51270
+  },
+  {
+    "cp": 891,
+    "ulice": "Court Street",
+    "mesto": "Frierson",
+    "psc": 47193
+  },
+  {
+    "cp": 287,
+    "ulice": "Knickerbocker Avenue",
+    "mesto": "Independence",
+    "psc": 67864
+  },
+  {
+    "cp": 161,
+    "ulice": "Wortman Avenue",
+    "mesto": "Highland",
+    "psc": 81719
+  },
+  {
+    "cp": 707,
+    "ulice": "Clay Street",
+    "mesto": "Olney",
+    "psc": 66225
+  },
+  {
+    "cp": 737,
+    "ulice": "Roder Avenue",
+    "mesto": "Chelsea",
+    "psc": 66839
+  },
+  {
+    "cp": 972,
+    "ulice": "Dahl Court",
+    "mesto": "Summerset",
+    "psc": 31888
+  },
+  {
+    "cp": 158,
+    "ulice": "Knapp Street",
+    "mesto": "Kenwood",
+    "psc": 89765
+  },
+  {
+    "cp": 620,
+    "ulice": "Hubbard Place",
+    "mesto": "Harrodsburg",
+    "psc": 18194
+  },
+  {
+    "cp": 798,
+    "ulice": "Ford Street",
+    "mesto": "Nettie",
+    "psc": 16643
+  },
+  {
+    "cp": 954,
+    "ulice": "Beaver Street",
+    "mesto": "Nicholson",
+    "psc": 85259
+  },
+  {
+    "cp": 249,
+    "ulice": "Varick Street",
+    "mesto": "Colton",
+    "psc": 68032
+  },
+  {
+    "cp": 659,
+    "ulice": "Hopkins Street",
+    "mesto": "Orviston",
+    "psc": 23356
+  },
+  {
+    "cp": 706,
+    "ulice": "Otsego Street",
+    "mesto": "Elbert",
+    "psc": 46968
+  },
+  {
+    "cp": 128,
+    "ulice": "Prospect Place",
+    "mesto": "Yonah",
+    "psc": 87089
+  },
+  {
+    "cp": 431,
+    "ulice": "Dunne Court",
+    "mesto": "Carbonville",
+    "psc": 11001
+  },
+  {
+    "cp": 694,
+    "ulice": "Butler Street",
+    "mesto": "Gibbsville",
+    "psc": 43844
+  },
+  {
+    "cp": 225,
+    "ulice": "Rapelye Street",
+    "mesto": "Fairview",
+    "psc": 15873
+  },
+  {
+    "cp": 490,
+    "ulice": "Harrison Place",
+    "mesto": "Graniteville",
+    "psc": 67934
+  },
+  {
+    "cp": 245,
+    "ulice": "Exeter Street",
+    "mesto": "Stevens",
+    "psc": 78008
+  },
+  {
+    "cp": 403,
+    "ulice": "Holly Street",
+    "mesto": "Kent",
+    "psc": 11973
+  },
+  {
+    "cp": 243,
+    "ulice": "Quincy Street",
+    "mesto": "Savannah",
+    "psc": 13787
+  },
+  {
+    "cp": 584,
+    "ulice": "Montauk Court",
+    "mesto": "Hartsville/Hartley",
+    "psc": 30665
+  },
+  {
+    "cp": 183,
+    "ulice": "Prescott Place",
+    "mesto": "Boykin",
+    "psc": 11956
+  },
+  {
+    "cp": 811,
+    "ulice": "Joval Court",
+    "mesto": "Belleview",
+    "psc": 90185
+  },
+  {
+    "cp": 967,
+    "ulice": "Albany Avenue",
+    "mesto": "Clay",
+    "psc": 36500
+  },
+  {
+    "cp": 260,
+    "ulice": "Grace Court",
+    "mesto": "Hardyville",
+    "psc": 53508
+  },
+  {
+    "cp": 998,
+    "ulice": "Vanderveer Place",
+    "mesto": "Beechmont",
+    "psc": 25028
+  },
+  {
+    "cp": 881,
+    "ulice": "Bleecker Street",
+    "mesto": "Leeper",
+    "psc": 27730
+  }
+]
