@@ -103,7 +103,19 @@
 <li class="toctree-l1"><a class="reference internal" href="5.html">Skript vytvářející databázové schéma</a></li>
 <li class="toctree-l1"><a class="reference internal" href="6.html">Skript vytvářející dodatečná integritní omezení</a></li>
 <li class="toctree-l1"><a class="reference internal" href="7.html">Skript pro naplnění tabulky testovacími daty</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="">Skript provádějící dotazy</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">Skript provádějící dotazy</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#vypis-vsech-vypujcek-pro-daneho-klienta">Výpis všech výpůjček pro daného klienta</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#dotaz">Dotaz</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#vypis">Výpis</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#vypis-vsech-pujcenych-vozidel-a-s-poctem-dnu-do-konce-vypujcky">Výpis všech půjčených vozidel a s počtem dnů do konce výpůjčky.</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id1">Dotaz</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id2">Výpis</a></li>
+</ul>
+</li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="9.html">Test integritních omezení</a></li>
 <li class="toctree-l1"><a class="reference internal" href="10.html">Skript pro vytvoření balíčku (package) a procedur „business logiky“</a></li>
 </ul>
@@ -145,113 +157,125 @@
             
   <div class="section" id="skript-provadejici-dotazy">
 <h1>Skript provádějící dotazy<a class="headerlink" href="#skript-provadejici-dotazy" title="Trvalý odkaz na tento nadpis">¶</a></h1>
-<ul class="simple">
-<li>Výpis všech výpůjček pro daného klienta</li>
-</ul>
-<div class="highlight-sql"><div class="highlight"><pre>SELECT * FROM VYPUJCKA JOIN zakaznik ON vypujcka.id_zakaznik = zakaznik.id WHERE zakaznik.jmeno = &#39;Buckley Stark&#39;
-
-ID ZACATEK                      KONEC                        DATUM_SJEDNANI               DATUM_VRACENI                ID_ZAKAZNIK CISLO_POJISTKY
-___________________________________________________________________________________________________________________________________
-1686 04.05.15 00:24:21,000000000  02.06.15 10:20:54,000000000  20.01.15 02:32:01,000000000  03.06.15 16:57:55,000000000          260 349745371
-3970 25.03.15 01:51:45,000000000  04.06.15 02:50:42,000000000  19.06.14 09:09:26,000000000  05.06.15 20:00:30,000000000          260 901504535
-5937 06.02.15 03:39:30,000000000  03.06.15 03:03:42,000000000  09.03.14 06:34:01,000000000  05.06.15 05:32:09,000000000          260 969181003
-8680 04.05.15 00:24:21,000000000  02.06.15 10:20:54,000000000  20.01.15 02:32:01,000000000  03.06.15 16:57:55,000000000          260 349745371
-
-Plan hash value: 755633740
-
-----------------------------------------------------------------------------------------------
-| Id  | Operation                    | Name          | Rows  | Bytes | Cost (%CPU)| Time     |
-----------------------------------------------------------------------------------------------
-|   0 | SELECT STATEMENT             |               |     1 |   124 |     4   (0)| 00:00:01 |
-|   1 |  NESTED LOOPS                |               |       |       |            |          |
-|   2 |   NESTED LOOPS               |               |     1 |   124 |     4   (0)| 00:00:01 |
-|   3 |    TABLE ACCESS FULL         | VYPUJCKA      |     1 |    45 |     3   (0)| 00:00:01 |
-|*  4 |    INDEX UNIQUE SCAN         | SYS_C00133168 |     1 |       |     0   (0)| 00:00:01 |
-|*  5 |   TABLE ACCESS BY INDEX ROWID| ZAKAZNIK      |     1 |    79 |     1   (0)| 00:00:01 |
-----------------------------------------------------------------------------------------------
-
-Predicate Information (identified by operation id):
----------------------------------------------------
-
-   4 - access(&quot;VYPUJCKA&quot;.&quot;ID_ZAKAZNIK&quot;=&quot;ZAKAZNIK&quot;.&quot;ID&quot;)
-   5 - filter(&quot;ZAKAZNIK&quot;.&quot;JMENO&quot;=&#39;Buckley Stark&#39;)
-
-
-- Výpis všech půjčených vozidel a s počtem dnů do konce výpůjčky.
-
-.. code-block:: sql
-
-    SELECT polozka_vypujcky.*, trunc(sysdate) - vypujcka.konec AS dnu_do_konce FROM polozka_vypujcky JOIN vypujcka ON polozka_vypujcky.id_vypujcka = vypujcka.id WHERE id_vozidlo IS NOT NULL and polozka_vypujcky.id &gt; 5000 ORDER BY dnu_do_konce DESC
-
-
-        ID ID_VYPUJCKA ID_VOZIDLO ID_MOTORKA DNU_DO_KONCE
----------- ----------- ---------- ---------- ------------
-     14990        6675       5324            6 23:58:27.0
-     11574        8989       4678            6 23:56:21.0
-      9335        6959       4467            6 23:56:1.0
-     19225        4782       2931            6 23:51:45.0
-     18770        4782       4829            6 23:51:45.0
-     14938        4782       3665            6 23:51:45.0
-     11810        6031       3943            6 23:51:44.0
-     13814        6031       2021            6 23:51:44.0
-      8932        6031       5551            6 23:51:44.0
-     19715        7279       2517            6 23:48:10.0
-     19086        7279        754            6 23:48:10.0
-     14217         285       1011            6 23:48:10.0
-     16790         285       1281            6 23:48:10.0
-     13618        9169       4386            6 23:47:3.0
-     17918        9169       3398            6 23:47:3.0
-      8180        9203       3632            6 23:45:4.0
-      9073        2209       1576            6 23:45:4.0
-     20119        2209       1679            6 23:45:4.0
-     18854        9203       4911            6 23:45:4.0
-      6764        9203       5664            6 23:45:4.0
-     11914        1898       4057            6 23:44:10.0
-     20633        8892        553            6 23:44:10.0
-      7045        8892       3317            6 23:44:10.0
-     17355        1306        583            6 23:43:30.0
-     19482        8300        450            6 23:43:30.0
-     20514        8300       1024            6 23:43:30.0
-     16424        8300       4678            6 23:43:30.0
-     18004        7077       2302            6 23:37:56.0
-     10868        4345       2732            6 23:37:5.0
-     13236        4345       1793            6 23:37:5.0
-      8425        4345       5868            6 23:37:5.0
-      7197        4345         52            6 23:37:5.0
-     12389        4345       4621            6 23:37:5.0
-      7531        8754         78            6 23:36:20.0
-     18922        8754       1403            6 23:36:20.0
-     15901        8754         25            6 23:36:20.0
-      7082        5678       5402            6 23:34:50.0
-     19160        5678        870            6 23:34:50.0
-      6290        9937       1049            6 23:32:43.0
-      6039        2943       2378            6 23:32:43.0
-      8553        9186       3486            6 23:27:59.0
-      9553        2192       4260            6 23:27:59.0
-     20469        2476        466            6 23:27:1.0
-      7820        4950       1159            6 23:26:36.0
-      9533        6306       3934            6 23:24:17.0
-     20666        6950       5746            6 23:23:0.0
-     13896        1850       1598            6 23:20:36.0
-
-
-
-
-     Plan hash value: 2039103391
-
----------------------------------------------------------------------------------------------------
-| Id  | Operation                      | Name             | Rows  | Bytes | Cost (%CPU)| Time     |
----------------------------------------------------------------------------------------------------
-|   0 | SELECT STATEMENT               |                  |     1 |    62 |     1 (100)| 00:00:01 |
-|   1 |  SORT ORDER BY                 |                  |     1 |    62 |     1 (100)| 00:00:01 |
-|   2 |   NESTED LOOPS                 |                  |       |       |            |          |
-|   3 |    NESTED LOOPS                |                  |     1 |    62 |     0   (0)| 00:00:01 |
-|*  4 |     TABLE ACCESS BY INDEX ROWID| POLOZKA_VYPUJCKY |     1 |    52 |     0   (0)| 00:00:01 |
-|*  5 |      INDEX RANGE SCAN          | SYS_C00133278    |     1 |       |     0   (0)| 00:00:01 |
-|*  6 |     INDEX UNIQUE SCAN          | SYS_C00133160    |     1 |       |     0   (0)| 00:00:01 |
-|   7 |    TABLE ACCESS BY INDEX ROWID | VYPUJCKA         |     1 |    10 |     0   (0)| 00:00:01 |
----------------------------------------------------------------------------------------------------
+<div class="section" id="vypis-vsech-vypujcek-pro-daneho-klienta">
+<h2>Výpis všech výpůjček pro daného klienta<a class="headerlink" href="#vypis-vsech-vypujcek-pro-daneho-klienta" title="Trvalý odkaz na tento nadpis">¶</a></h2>
+<div class="section" id="dotaz">
+<h3>Dotaz<a class="headerlink" href="#dotaz" title="Trvalý odkaz na tento nadpis">¶</a></h3>
+<div class="highlight-sql"><div class="highlight"><pre><span class="k">SELECT</span> <span class="o">*</span> <span class="k">FROM</span> <span class="n">VYPUJCKA</span> <span class="k">JOIN</span> <span class="n">zakaznik</span> <span class="k">ON</span> <span class="n">vypujcka</span><span class="p">.</span><span class="n">id_zakaznik</span> <span class="o">=</span> <span class="n">zakaznik</span><span class="p">.</span><span class="n">id</span> <span class="k">WHERE</span> <span class="n">zakaznik</span><span class="p">.</span><span class="n">jmeno</span> <span class="o">=</span> <span class="s1">&#39;Buckley Stark&#39;</span>
 </pre></div>
+</div>
+</div>
+<div class="section" id="vypis">
+<h3>Výpis<a class="headerlink" href="#vypis" title="Trvalý odkaz na tento nadpis">¶</a></h3>
+<div class="highlight-sql"><div class="highlight"><pre><span class="n">ID</span> <span class="n">ZACATEK</span>                      <span class="n">KONEC</span>                        <span class="n">DATUM_SJEDNANI</span>               <span class="n">DATUM_VRACENI</span>                <span class="n">ID_ZAKAZNIK</span> <span class="n">CISLO_POJISTKY</span>
+<span class="n">___________________________________________________________________________________________________________________________________</span>
+<span class="mi">1686</span> <span class="mi">04</span><span class="p">.</span><span class="mi">05</span><span class="p">.</span><span class="mi">15</span> <span class="mi">00</span><span class="p">:</span><span class="mi">24</span><span class="p">:</span><span class="mi">21</span><span class="p">,</span><span class="mi">000000000</span>  <span class="mi">02</span><span class="p">.</span><span class="mi">06</span><span class="p">.</span><span class="mi">15</span> <span class="mi">10</span><span class="p">:</span><span class="mi">20</span><span class="p">:</span><span class="mi">54</span><span class="p">,</span><span class="mi">000000000</span>  <span class="mi">20</span><span class="p">.</span><span class="mi">01</span><span class="p">.</span><span class="mi">15</span> <span class="mi">02</span><span class="p">:</span><span class="mi">32</span><span class="p">:</span><span class="mi">01</span><span class="p">,</span><span class="mi">000000000</span>  <span class="mi">03</span><span class="p">.</span><span class="mi">06</span><span class="p">.</span><span class="mi">15</span> <span class="mi">16</span><span class="p">:</span><span class="mi">57</span><span class="p">:</span><span class="mi">55</span><span class="p">,</span><span class="mi">000000000</span>          <span class="mi">260</span> <span class="mi">349745371</span>
+<span class="mi">3970</span> <span class="mi">25</span><span class="p">.</span><span class="mi">03</span><span class="p">.</span><span class="mi">15</span> <span class="mi">01</span><span class="p">:</span><span class="mi">51</span><span class="p">:</span><span class="mi">45</span><span class="p">,</span><span class="mi">000000000</span>  <span class="mi">04</span><span class="p">.</span><span class="mi">06</span><span class="p">.</span><span class="mi">15</span> <span class="mi">02</span><span class="p">:</span><span class="mi">50</span><span class="p">:</span><span class="mi">42</span><span class="p">,</span><span class="mi">000000000</span>  <span class="mi">19</span><span class="p">.</span><span class="mi">06</span><span class="p">.</span><span class="mi">14</span> <span class="mi">09</span><span class="p">:</span><span class="mi">09</span><span class="p">:</span><span class="mi">26</span><span class="p">,</span><span class="mi">000000000</span>  <span class="mi">05</span><span class="p">.</span><span class="mi">06</span><span class="p">.</span><span class="mi">15</span> <span class="mi">20</span><span class="p">:</span><span class="mi">00</span><span class="p">:</span><span class="mi">30</span><span class="p">,</span><span class="mi">000000000</span>          <span class="mi">260</span> <span class="mi">901504535</span>
+<span class="mi">5937</span> <span class="mi">06</span><span class="p">.</span><span class="mi">02</span><span class="p">.</span><span class="mi">15</span> <span class="mi">03</span><span class="p">:</span><span class="mi">39</span><span class="p">:</span><span class="mi">30</span><span class="p">,</span><span class="mi">000000000</span>  <span class="mi">03</span><span class="p">.</span><span class="mi">06</span><span class="p">.</span><span class="mi">15</span> <span class="mi">03</span><span class="p">:</span><span class="mi">03</span><span class="p">:</span><span class="mi">42</span><span class="p">,</span><span class="mi">000000000</span>  <span class="mi">09</span><span class="p">.</span><span class="mi">03</span><span class="p">.</span><span class="mi">14</span> <span class="mi">06</span><span class="p">:</span><span class="mi">34</span><span class="p">:</span><span class="mi">01</span><span class="p">,</span><span class="mi">000000000</span>  <span class="mi">05</span><span class="p">.</span><span class="mi">06</span><span class="p">.</span><span class="mi">15</span> <span class="mi">05</span><span class="p">:</span><span class="mi">32</span><span class="p">:</span><span class="mi">09</span><span class="p">,</span><span class="mi">000000000</span>          <span class="mi">260</span> <span class="mi">969181003</span>
+<span class="mi">8680</span> <span class="mi">04</span><span class="p">.</span><span class="mi">05</span><span class="p">.</span><span class="mi">15</span> <span class="mi">00</span><span class="p">:</span><span class="mi">24</span><span class="p">:</span><span class="mi">21</span><span class="p">,</span><span class="mi">000000000</span>  <span class="mi">02</span><span class="p">.</span><span class="mi">06</span><span class="p">.</span><span class="mi">15</span> <span class="mi">10</span><span class="p">:</span><span class="mi">20</span><span class="p">:</span><span class="mi">54</span><span class="p">,</span><span class="mi">000000000</span>  <span class="mi">20</span><span class="p">.</span><span class="mi">01</span><span class="p">.</span><span class="mi">15</span> <span class="mi">02</span><span class="p">:</span><span class="mi">32</span><span class="p">:</span><span class="mi">01</span><span class="p">,</span><span class="mi">000000000</span>  <span class="mi">03</span><span class="p">.</span><span class="mi">06</span><span class="p">.</span><span class="mi">15</span> <span class="mi">16</span><span class="p">:</span><span class="mi">57</span><span class="p">:</span><span class="mi">55</span><span class="p">,</span><span class="mi">000000000</span>          <span class="mi">260</span> <span class="mi">349745371</span>
+
+<span class="n">Plan</span> <span class="n">hash</span> <span class="n">value</span><span class="p">:</span> <span class="mi">755633740</span>
+
+<span class="c1">----------------------------------------------------------------------------------------------</span>
+<span class="o">|</span> <span class="n">Id</span>  <span class="o">|</span> <span class="k">Operation</span>                    <span class="o">|</span> <span class="n">Name</span>          <span class="o">|</span> <span class="k">Rows</span>  <span class="o">|</span> <span class="n">Bytes</span> <span class="o">|</span> <span class="n">Cost</span> <span class="p">(</span><span class="o">%</span><span class="n">CPU</span><span class="p">)</span><span class="o">|</span> <span class="n">Time</span>     <span class="o">|</span>
+<span class="c1">----------------------------------------------------------------------------------------------</span>
+<span class="o">|</span>   <span class="mi">0</span> <span class="o">|</span> <span class="k">SELECT</span> <span class="k">STATEMENT</span>             <span class="o">|</span>               <span class="o">|</span>     <span class="mi">1</span> <span class="o">|</span>   <span class="mi">124</span> <span class="o">|</span>     <span class="mi">4</span>   <span class="p">(</span><span class="mi">0</span><span class="p">)</span><span class="o">|</span> <span class="mi">00</span><span class="p">:</span><span class="mi">00</span><span class="p">:</span><span class="mi">01</span> <span class="o">|</span>
+<span class="o">|</span>   <span class="mi">1</span> <span class="o">|</span>  <span class="n">NESTED</span> <span class="n">LOOPS</span>                <span class="o">|</span>               <span class="o">|</span>       <span class="o">|</span>       <span class="o">|</span>            <span class="o">|</span>          <span class="o">|</span>
+<span class="o">|</span>   <span class="mi">2</span> <span class="o">|</span>   <span class="n">NESTED</span> <span class="n">LOOPS</span>               <span class="o">|</span>               <span class="o">|</span>     <span class="mi">1</span> <span class="o">|</span>   <span class="mi">124</span> <span class="o">|</span>     <span class="mi">4</span>   <span class="p">(</span><span class="mi">0</span><span class="p">)</span><span class="o">|</span> <span class="mi">00</span><span class="p">:</span><span class="mi">00</span><span class="p">:</span><span class="mi">01</span> <span class="o">|</span>
+<span class="o">|</span>   <span class="mi">3</span> <span class="o">|</span>    <span class="k">TABLE</span> <span class="k">ACCESS</span> <span class="k">FULL</span>         <span class="o">|</span> <span class="n">VYPUJCKA</span>      <span class="o">|</span>     <span class="mi">1</span> <span class="o">|</span>    <span class="mi">45</span> <span class="o">|</span>     <span class="mi">3</span>   <span class="p">(</span><span class="mi">0</span><span class="p">)</span><span class="o">|</span> <span class="mi">00</span><span class="p">:</span><span class="mi">00</span><span class="p">:</span><span class="mi">01</span> <span class="o">|</span>
+<span class="o">|*</span>  <span class="mi">4</span> <span class="o">|</span>    <span class="k">INDEX</span> <span class="k">UNIQUE</span> <span class="n">SCAN</span>         <span class="o">|</span> <span class="n">SYS_C00133168</span> <span class="o">|</span>     <span class="mi">1</span> <span class="o">|</span>       <span class="o">|</span>     <span class="mi">0</span>   <span class="p">(</span><span class="mi">0</span><span class="p">)</span><span class="o">|</span> <span class="mi">00</span><span class="p">:</span><span class="mi">00</span><span class="p">:</span><span class="mi">01</span> <span class="o">|</span>
+<span class="o">|*</span>  <span class="mi">5</span> <span class="o">|</span>   <span class="k">TABLE</span> <span class="k">ACCESS</span> <span class="k">BY</span> <span class="k">INDEX</span> <span class="n">ROWID</span><span class="o">|</span> <span class="n">ZAKAZNIK</span>      <span class="o">|</span>     <span class="mi">1</span> <span class="o">|</span>    <span class="mi">79</span> <span class="o">|</span>     <span class="mi">1</span>   <span class="p">(</span><span class="mi">0</span><span class="p">)</span><span class="o">|</span> <span class="mi">00</span><span class="p">:</span><span class="mi">00</span><span class="p">:</span><span class="mi">01</span> <span class="o">|</span>
+<span class="c1">----------------------------------------------------------------------------------------------</span>
+
+<span class="n">Predicate</span> <span class="n">Information</span> <span class="p">(</span><span class="n">identified</span> <span class="k">by</span> <span class="k">operation</span> <span class="n">id</span><span class="p">):</span>
+<span class="c1">---------------------------------------------------</span>
+
+   <span class="mi">4</span> <span class="o">-</span> <span class="k">access</span><span class="p">(</span><span class="ss">&quot;VYPUJCKA&quot;</span><span class="p">.</span><span class="ss">&quot;ID_ZAKAZNIK&quot;</span><span class="o">=</span><span class="ss">&quot;ZAKAZNIK&quot;</span><span class="p">.</span><span class="ss">&quot;ID&quot;</span><span class="p">)</span>
+   <span class="mi">5</span> <span class="o">-</span> <span class="n">filter</span><span class="p">(</span><span class="ss">&quot;ZAKAZNIK&quot;</span><span class="p">.</span><span class="ss">&quot;JMENO&quot;</span><span class="o">=</span><span class="s1">&#39;Buckley Stark&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="vypis-vsech-pujcenych-vozidel-a-s-poctem-dnu-do-konce-vypujcky">
+<h2>Výpis všech půjčených vozidel a s počtem dnů do konce výpůjčky.<a class="headerlink" href="#vypis-vsech-pujcenych-vozidel-a-s-poctem-dnu-do-konce-vypujcky" title="Trvalý odkaz na tento nadpis">¶</a></h2>
+<div class="section" id="id1">
+<h3>Dotaz<a class="headerlink" href="#id1" title="Trvalý odkaz na tento nadpis">¶</a></h3>
+<div class="highlight-sql"><div class="highlight"><pre><span class="k">SELECT</span> <span class="n">polozka_vypujcky</span><span class="p">.</span><span class="o">*</span><span class="p">,</span> <span class="n">trunc</span><span class="p">(</span><span class="n">sysdate</span><span class="p">)</span> <span class="o">-</span> <span class="n">vypujcka</span><span class="p">.</span><span class="n">konec</span> <span class="k">AS</span> <span class="n">dnu_do_konce</span> <span class="k">FROM</span> <span class="n">polozka_vypujcky</span> <span class="k">JOIN</span> <span class="n">vypujcka</span> <span class="k">ON</span> <span class="n">polozka_vypujcky</span><span class="p">.</span><span class="n">id_vypujcka</span> <span class="o">=</span> <span class="n">vypujcka</span><span class="p">.</span><span class="n">id</span> <span class="k">WHERE</span> <span class="n">id_vozidlo</span> <span class="k">IS</span> <span class="k">NOT</span> <span class="k">NULL</span> <span class="k">and</span> <span class="n">polozka_vypujcky</span><span class="p">.</span><span class="n">id</span> <span class="o">&gt;</span> <span class="mi">5000</span> <span class="k">ORDER</span> <span class="k">BY</span> <span class="n">dnu_do_konce</span> <span class="k">DESC</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id2">
+<h3>Výpis<a class="headerlink" href="#id2" title="Trvalý odkaz na tento nadpis">¶</a></h3>
+<div class="highlight-sql"><div class="highlight"><pre>        <span class="n">ID</span> <span class="n">ID_VYPUJCKA</span> <span class="n">ID_VOZIDLO</span> <span class="n">ID_MOTORKA</span> <span class="n">DNU_DO_KONCE</span>
+<span class="c1">---------- ----------- ---------- ---------- ------------</span>
+     <span class="mi">14990</span>        <span class="mi">6675</span>       <span class="mi">5324</span>            <span class="mi">6</span> <span class="mi">23</span><span class="p">:</span><span class="mi">58</span><span class="p">:</span><span class="mi">27</span><span class="p">.</span><span class="mi">0</span>
+     <span class="mi">11574</span>        <span class="mi">8989</span>       <span class="mi">4678</span>            <span class="mi">6</span> <span class="mi">23</span><span class="p">:</span><span class="mi">56</span><span class="p">:</span><span class="mi">21</span><span class="p">.</span><span class="mi">0</span>
+      <span class="mi">9335</span>        <span class="mi">6959</span>       <span class="mi">4467</span>            <span class="mi">6</span> <span class="mi">23</span><span class="p">:</span><span class="mi">56</span><span class="p">:</span><span class="mi">1</span><span class="p">.</span><span class="mi">0</span>
+     <span class="mi">19225</span>        <span class="mi">4782</span>       <span class="mi">2931</span>            <span class="mi">6</span> <span class="mi">23</span><span class="p">:</span><span class="mi">51</span><span class="p">:</span><span class="mi">45</span><span class="p">.</span><span class="mi">0</span>
+     <span class="mi">18770</span>        <span class="mi">4782</span>       <span class="mi">4829</span>            <span class="mi">6</span> <span class="mi">23</span><span class="p">:</span><span class="mi">51</span><span class="p">:</span><span class="mi">45</span><span class="p">.</span><span class="mi">0</span>
+     <span class="mi">14938</span>        <span class="mi">4782</span>       <span class="mi">3665</span>            <span class="mi">6</span> <span class="mi">23</span><span class="p">:</span><span class="mi">51</span><span class="p">:</span><span class="mi">45</span><span class="p">.</span><span class="mi">0</span>
+     <span class="mi">11810</span>        <span class="mi">6031</span>       <span class="mi">3943</span>            <span class="mi">6</span> <span class="mi">23</span><span class="p">:</span><span class="mi">51</span><span class="p">:</span><span class="mi">44</span><span class="p">.</span><span class="mi">0</span>
+     <span class="mi">13814</span>        <span class="mi">6031</span>       <span class="mi">2021</span>            <span class="mi">6</span> <span class="mi">23</span><span class="p">:</span><span class="mi">51</span><span class="p">:</span><span class="mi">44</span><span class="p">.</span><span class="mi">0</span>
+      <span class="mi">8932</span>        <span class="mi">6031</span>       <span class="mi">5551</span>            <span class="mi">6</span> <span class="mi">23</span><span class="p">:</span><span class="mi">51</span><span class="p">:</span><span class="mi">44</span><span class="p">.</span><span class="mi">0</span>
+     <span class="mi">19715</span>        <span class="mi">7279</span>       <span class="mi">2517</span>            <span class="mi">6</span> <span class="mi">23</span><span class="p">:</span><span class="mi">48</span><span class="p">:</span><span class="mi">10</span><span class="p">.</span><span class="mi">0</span>
+     <span class="mi">19086</span>        <span class="mi">7279</span>        <span class="mi">754</span>            <span class="mi">6</span> <span class="mi">23</span><span class="p">:</span><span class="mi">48</span><span class="p">:</span><span class="mi">10</span><span class="p">.</span><span class="mi">0</span>
+     <span class="mi">14217</span>         <span class="mi">285</span>       <span class="mi">1011</span>            <span class="mi">6</span> <span class="mi">23</span><span class="p">:</span><span class="mi">48</span><span class="p">:</span><span class="mi">10</span><span class="p">.</span><span class="mi">0</span>
+     <span class="mi">16790</span>         <span class="mi">285</span>       <span class="mi">1281</span>            <span class="mi">6</span> <span class="mi">23</span><span class="p">:</span><span class="mi">48</span><span class="p">:</span><span class="mi">10</span><span class="p">.</span><span class="mi">0</span>
+     <span class="mi">13618</span>        <span class="mi">9169</span>       <span class="mi">4386</span>            <span class="mi">6</span> <span class="mi">23</span><span class="p">:</span><span class="mi">47</span><span class="p">:</span><span class="mi">3</span><span class="p">.</span><span class="mi">0</span>
+     <span class="mi">17918</span>        <span class="mi">9169</span>       <span class="mi">3398</span>            <span class="mi">6</span> <span class="mi">23</span><span class="p">:</span><span class="mi">47</span><span class="p">:</span><span class="mi">3</span><span class="p">.</span><span class="mi">0</span>
+      <span class="mi">8180</span>        <span class="mi">9203</span>       <span class="mi">3632</span>            <span class="mi">6</span> <span class="mi">23</span><span class="p">:</span><span class="mi">45</span><span class="p">:</span><span class="mi">4</span><span class="p">.</span><span class="mi">0</span>
+      <span class="mi">9073</span>        <span class="mi">2209</span>       <span class="mi">1576</span>            <span class="mi">6</span> <span class="mi">23</span><span class="p">:</span><span class="mi">45</span><span class="p">:</span><span class="mi">4</span><span class="p">.</span><span class="mi">0</span>
+     <span class="mi">20119</span>        <span class="mi">2209</span>       <span class="mi">1679</span>            <span class="mi">6</span> <span class="mi">23</span><span class="p">:</span><span class="mi">45</span><span class="p">:</span><span class="mi">4</span><span class="p">.</span><span class="mi">0</span>
+     <span class="mi">18854</span>        <span class="mi">9203</span>       <span class="mi">4911</span>            <span class="mi">6</span> <span class="mi">23</span><span class="p">:</span><span class="mi">45</span><span class="p">:</span><span class="mi">4</span><span class="p">.</span><span class="mi">0</span>
+      <span class="mi">6764</span>        <span class="mi">9203</span>       <span class="mi">5664</span>            <span class="mi">6</span> <span class="mi">23</span><span class="p">:</span><span class="mi">45</span><span class="p">:</span><span class="mi">4</span><span class="p">.</span><span class="mi">0</span>
+     <span class="mi">11914</span>        <span class="mi">1898</span>       <span class="mi">4057</span>            <span class="mi">6</span> <span class="mi">23</span><span class="p">:</span><span class="mi">44</span><span class="p">:</span><span class="mi">10</span><span class="p">.</span><span class="mi">0</span>
+     <span class="mi">20633</span>        <span class="mi">8892</span>        <span class="mi">553</span>            <span class="mi">6</span> <span class="mi">23</span><span class="p">:</span><span class="mi">44</span><span class="p">:</span><span class="mi">10</span><span class="p">.</span><span class="mi">0</span>
+      <span class="mi">7045</span>        <span class="mi">8892</span>       <span class="mi">3317</span>            <span class="mi">6</span> <span class="mi">23</span><span class="p">:</span><span class="mi">44</span><span class="p">:</span><span class="mi">10</span><span class="p">.</span><span class="mi">0</span>
+     <span class="mi">17355</span>        <span class="mi">1306</span>        <span class="mi">583</span>            <span class="mi">6</span> <span class="mi">23</span><span class="p">:</span><span class="mi">43</span><span class="p">:</span><span class="mi">30</span><span class="p">.</span><span class="mi">0</span>
+     <span class="mi">19482</span>        <span class="mi">8300</span>        <span class="mi">450</span>            <span class="mi">6</span> <span class="mi">23</span><span class="p">:</span><span class="mi">43</span><span class="p">:</span><span class="mi">30</span><span class="p">.</span><span class="mi">0</span>
+     <span class="mi">20514</span>        <span class="mi">8300</span>       <span class="mi">1024</span>            <span class="mi">6</span> <span class="mi">23</span><span class="p">:</span><span class="mi">43</span><span class="p">:</span><span class="mi">30</span><span class="p">.</span><span class="mi">0</span>
+     <span class="mi">16424</span>        <span class="mi">8300</span>       <span class="mi">4678</span>            <span class="mi">6</span> <span class="mi">23</span><span class="p">:</span><span class="mi">43</span><span class="p">:</span><span class="mi">30</span><span class="p">.</span><span class="mi">0</span>
+     <span class="mi">18004</span>        <span class="mi">7077</span>       <span class="mi">2302</span>            <span class="mi">6</span> <span class="mi">23</span><span class="p">:</span><span class="mi">37</span><span class="p">:</span><span class="mi">56</span><span class="p">.</span><span class="mi">0</span>
+     <span class="mi">10868</span>        <span class="mi">4345</span>       <span class="mi">2732</span>            <span class="mi">6</span> <span class="mi">23</span><span class="p">:</span><span class="mi">37</span><span class="p">:</span><span class="mi">5</span><span class="p">.</span><span class="mi">0</span>
+     <span class="mi">13236</span>        <span class="mi">4345</span>       <span class="mi">1793</span>            <span class="mi">6</span> <span class="mi">23</span><span class="p">:</span><span class="mi">37</span><span class="p">:</span><span class="mi">5</span><span class="p">.</span><span class="mi">0</span>
+      <span class="mi">8425</span>        <span class="mi">4345</span>       <span class="mi">5868</span>            <span class="mi">6</span> <span class="mi">23</span><span class="p">:</span><span class="mi">37</span><span class="p">:</span><span class="mi">5</span><span class="p">.</span><span class="mi">0</span>
+      <span class="mi">7197</span>        <span class="mi">4345</span>         <span class="mi">52</span>            <span class="mi">6</span> <span class="mi">23</span><span class="p">:</span><span class="mi">37</span><span class="p">:</span><span class="mi">5</span><span class="p">.</span><span class="mi">0</span>
+     <span class="mi">12389</span>        <span class="mi">4345</span>       <span class="mi">4621</span>            <span class="mi">6</span> <span class="mi">23</span><span class="p">:</span><span class="mi">37</span><span class="p">:</span><span class="mi">5</span><span class="p">.</span><span class="mi">0</span>
+      <span class="mi">7531</span>        <span class="mi">8754</span>         <span class="mi">78</span>            <span class="mi">6</span> <span class="mi">23</span><span class="p">:</span><span class="mi">36</span><span class="p">:</span><span class="mi">20</span><span class="p">.</span><span class="mi">0</span>
+     <span class="mi">18922</span>        <span class="mi">8754</span>       <span class="mi">1403</span>            <span class="mi">6</span> <span class="mi">23</span><span class="p">:</span><span class="mi">36</span><span class="p">:</span><span class="mi">20</span><span class="p">.</span><span class="mi">0</span>
+     <span class="mi">15901</span>        <span class="mi">8754</span>         <span class="mi">25</span>            <span class="mi">6</span> <span class="mi">23</span><span class="p">:</span><span class="mi">36</span><span class="p">:</span><span class="mi">20</span><span class="p">.</span><span class="mi">0</span>
+      <span class="mi">7082</span>        <span class="mi">5678</span>       <span class="mi">5402</span>            <span class="mi">6</span> <span class="mi">23</span><span class="p">:</span><span class="mi">34</span><span class="p">:</span><span class="mi">50</span><span class="p">.</span><span class="mi">0</span>
+     <span class="mi">19160</span>        <span class="mi">5678</span>        <span class="mi">870</span>            <span class="mi">6</span> <span class="mi">23</span><span class="p">:</span><span class="mi">34</span><span class="p">:</span><span class="mi">50</span><span class="p">.</span><span class="mi">0</span>
+      <span class="mi">6290</span>        <span class="mi">9937</span>       <span class="mi">1049</span>            <span class="mi">6</span> <span class="mi">23</span><span class="p">:</span><span class="mi">32</span><span class="p">:</span><span class="mi">43</span><span class="p">.</span><span class="mi">0</span>
+      <span class="mi">6039</span>        <span class="mi">2943</span>       <span class="mi">2378</span>            <span class="mi">6</span> <span class="mi">23</span><span class="p">:</span><span class="mi">32</span><span class="p">:</span><span class="mi">43</span><span class="p">.</span><span class="mi">0</span>
+      <span class="mi">8553</span>        <span class="mi">9186</span>       <span class="mi">3486</span>            <span class="mi">6</span> <span class="mi">23</span><span class="p">:</span><span class="mi">27</span><span class="p">:</span><span class="mi">59</span><span class="p">.</span><span class="mi">0</span>
+      <span class="mi">9553</span>        <span class="mi">2192</span>       <span class="mi">4260</span>            <span class="mi">6</span> <span class="mi">23</span><span class="p">:</span><span class="mi">27</span><span class="p">:</span><span class="mi">59</span><span class="p">.</span><span class="mi">0</span>
+     <span class="mi">20469</span>        <span class="mi">2476</span>        <span class="mi">466</span>            <span class="mi">6</span> <span class="mi">23</span><span class="p">:</span><span class="mi">27</span><span class="p">:</span><span class="mi">1</span><span class="p">.</span><span class="mi">0</span>
+      <span class="mi">7820</span>        <span class="mi">4950</span>       <span class="mi">1159</span>            <span class="mi">6</span> <span class="mi">23</span><span class="p">:</span><span class="mi">26</span><span class="p">:</span><span class="mi">36</span><span class="p">.</span><span class="mi">0</span>
+      <span class="mi">9533</span>        <span class="mi">6306</span>       <span class="mi">3934</span>            <span class="mi">6</span> <span class="mi">23</span><span class="p">:</span><span class="mi">24</span><span class="p">:</span><span class="mi">17</span><span class="p">.</span><span class="mi">0</span>
+     <span class="mi">20666</span>        <span class="mi">6950</span>       <span class="mi">5746</span>            <span class="mi">6</span> <span class="mi">23</span><span class="p">:</span><span class="mi">23</span><span class="p">:</span><span class="mi">0</span><span class="p">.</span><span class="mi">0</span>
+     <span class="mi">13896</span>        <span class="mi">1850</span>       <span class="mi">1598</span>            <span class="mi">6</span> <span class="mi">23</span><span class="p">:</span><span class="mi">20</span><span class="p">:</span><span class="mi">36</span><span class="p">.</span><span class="mi">0</span>
+
+
+
+
+     <span class="n">Plan</span> <span class="n">hash</span> <span class="n">value</span><span class="p">:</span> <span class="mi">2039103391</span>
+
+<span class="c1">---------------------------------------------------------------------------------------------------</span>
+<span class="o">|</span> <span class="n">Id</span>  <span class="o">|</span> <span class="k">Operation</span>                      <span class="o">|</span> <span class="n">Name</span>             <span class="o">|</span> <span class="k">Rows</span>  <span class="o">|</span> <span class="n">Bytes</span> <span class="o">|</span> <span class="n">Cost</span> <span class="p">(</span><span class="o">%</span><span class="n">CPU</span><span class="p">)</span><span class="o">|</span> <span class="n">Time</span>     <span class="o">|</span>
+<span class="c1">---------------------------------------------------------------------------------------------------</span>
+<span class="o">|</span>   <span class="mi">0</span> <span class="o">|</span> <span class="k">SELECT</span> <span class="k">STATEMENT</span>               <span class="o">|</span>                  <span class="o">|</span>     <span class="mi">1</span> <span class="o">|</span>    <span class="mi">62</span> <span class="o">|</span>     <span class="mi">1</span> <span class="p">(</span><span class="mi">100</span><span class="p">)</span><span class="o">|</span> <span class="mi">00</span><span class="p">:</span><span class="mi">00</span><span class="p">:</span><span class="mi">01</span> <span class="o">|</span>
+<span class="o">|</span>   <span class="mi">1</span> <span class="o">|</span>  <span class="n">SORT</span> <span class="k">ORDER</span> <span class="k">BY</span>                 <span class="o">|</span>                  <span class="o">|</span>     <span class="mi">1</span> <span class="o">|</span>    <span class="mi">62</span> <span class="o">|</span>     <span class="mi">1</span> <span class="p">(</span><span class="mi">100</span><span class="p">)</span><span class="o">|</span> <span class="mi">00</span><span class="p">:</span><span class="mi">00</span><span class="p">:</span><span class="mi">01</span> <span class="o">|</span>
+<span class="o">|</span>   <span class="mi">2</span> <span class="o">|</span>   <span class="n">NESTED</span> <span class="n">LOOPS</span>                 <span class="o">|</span>                  <span class="o">|</span>       <span class="o">|</span>       <span class="o">|</span>            <span class="o">|</span>          <span class="o">|</span>
+<span class="o">|</span>   <span class="mi">3</span> <span class="o">|</span>    <span class="n">NESTED</span> <span class="n">LOOPS</span>                <span class="o">|</span>                  <span class="o">|</span>     <span class="mi">1</span> <span class="o">|</span>    <span class="mi">62</span> <span class="o">|</span>     <span class="mi">0</span>   <span class="p">(</span><span class="mi">0</span><span class="p">)</span><span class="o">|</span> <span class="mi">00</span><span class="p">:</span><span class="mi">00</span><span class="p">:</span><span class="mi">01</span> <span class="o">|</span>
+<span class="o">|*</span>  <span class="mi">4</span> <span class="o">|</span>     <span class="k">TABLE</span> <span class="k">ACCESS</span> <span class="k">BY</span> <span class="k">INDEX</span> <span class="n">ROWID</span><span class="o">|</span> <span class="n">POLOZKA_VYPUJCKY</span> <span class="o">|</span>     <span class="mi">1</span> <span class="o">|</span>    <span class="mi">52</span> <span class="o">|</span>     <span class="mi">0</span>   <span class="p">(</span><span class="mi">0</span><span class="p">)</span><span class="o">|</span> <span class="mi">00</span><span class="p">:</span><span class="mi">00</span><span class="p">:</span><span class="mi">01</span> <span class="o">|</span>
+<span class="o">|*</span>  <span class="mi">5</span> <span class="o">|</span>      <span class="k">INDEX</span> <span class="n">RANGE</span> <span class="n">SCAN</span>          <span class="o">|</span> <span class="n">SYS_C00133278</span>    <span class="o">|</span>     <span class="mi">1</span> <span class="o">|</span>       <span class="o">|</span>     <span class="mi">0</span>   <span class="p">(</span><span class="mi">0</span><span class="p">)</span><span class="o">|</span> <span class="mi">00</span><span class="p">:</span><span class="mi">00</span><span class="p">:</span><span class="mi">01</span> <span class="o">|</span>
+<span class="o">|*</span>  <span class="mi">6</span> <span class="o">|</span>     <span class="k">INDEX</span> <span class="k">UNIQUE</span> <span class="n">SCAN</span>          <span class="o">|</span> <span class="n">SYS_C00133160</span>    <span class="o">|</span>     <span class="mi">1</span> <span class="o">|</span>       <span class="o">|</span>     <span class="mi">0</span>   <span class="p">(</span><span class="mi">0</span><span class="p">)</span><span class="o">|</span> <span class="mi">00</span><span class="p">:</span><span class="mi">00</span><span class="p">:</span><span class="mi">01</span> <span class="o">|</span>
+<span class="o">|</span>   <span class="mi">7</span> <span class="o">|</span>    <span class="k">TABLE</span> <span class="k">ACCESS</span> <span class="k">BY</span> <span class="k">INDEX</span> <span class="n">ROWID</span> <span class="o">|</span> <span class="n">VYPUJCKA</span>         <span class="o">|</span>     <span class="mi">1</span> <span class="o">|</span>    <span class="mi">10</span> <span class="o">|</span>     <span class="mi">0</span>   <span class="p">(</span><span class="mi">0</span><span class="p">)</span><span class="o">|</span> <span class="mi">00</span><span class="p">:</span><span class="mi">00</span><span class="p">:</span><span class="mi">01</span> <span class="o">|</span>
+<span class="c1">---------------------------------------------------------------------------------------------------</span>
+</pre></div>
+</div>
+</div>
 </div>
 </div>
 
