@@ -10,7 +10,7 @@ Triviální
 - Každá výpůjčka musí mít vyplněné číslo pojistné smlouvy.
 - PSČ má délku 6.
 - Číslo občanského průkazu(OP) nesmí být prázdné.
-- VIN kód nesmí být prázdný
+- VIN kód nesmí být prázdný a musí být unikátní
 
 Netriviální
 ===========

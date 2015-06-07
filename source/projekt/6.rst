@@ -23,3 +23,6 @@ Skript vytvářející dodatečná integritní omezení
       BEGIN
         kontrola_polozky(:new.id_vozidlo,:new.id_motorka);
       END;
+
+
+TODO: unikatni CONSTRAINT pro motorky a auta
