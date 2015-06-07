@@ -5,6 +5,8 @@ Test integritních omezení
 
 
 .. code-block:: sql
+    INSERT INTO polozka_vypujcky (id_vypujcka, id_motorka, id_vozidlo ) VALUES ('9999',NULL,NULL);
+
 
     One error saving changes to table "JOSEFJA1"."POLOZKA_VYPUJCKY":
     Row 51: ORA-20000: Polozka objednavky neobsahuje ani vozidlo ani motorku!
