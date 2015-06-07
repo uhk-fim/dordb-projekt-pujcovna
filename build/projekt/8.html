@@ -103,17 +103,7 @@
 <li class="toctree-l1"><a class="reference internal" href="5.html">Skript vytvářející databázové schéma</a></li>
 <li class="toctree-l1"><a class="reference internal" href="6.html">Skript vytvářející dodatečná integritní omezení</a></li>
 <li class="toctree-l1"><a class="reference internal" href="7.html">Skript pro naplnění tabulky testovacími daty</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="">Skript provádějící dotazy</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#id-zacatek-konec-datum-sjednani-datum-vraceni-id-zakaznik-cislo-pojistky">ID ZACATEK                      KONEC                        DATUM_SJEDNANI               DATUM_VRACENI                ID_ZAKAZNIK CISLO_POJISTKY</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id-operation-name-rows-bytes-cost-cpu-time">| Id  | Operation                    | Name          | Rows  | Bytes | Cost (%CPU)| Time     |</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#predicate-information-identified-by-operation-id">Predicate Information (identified by operation id):</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="#id1">| Id  | Operation                      | Name             | Rows  | Bytes | Cost (%CPU)| Time     |</a></li>
-</ul>
-</li>
-</ul>
-</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">Skript provádějící dotazy</a></li>
 <li class="toctree-l1"><a class="reference internal" href="9.html">Test integritních omezení</a></li>
 <li class="toctree-l1"><a class="reference internal" href="10.html">Skript pro vytvoření balíčku (package) a procedur „business logiky“</a></li>
 </ul>
@@ -158,120 +148,110 @@
 <ul class="simple">
 <li>Výpis všech výpůjček pro daného klienta</li>
 </ul>
-<div class="highlight-sql"><div class="highlight"><pre><span class="k">SELECT</span> <span class="o">*</span> <span class="k">FROM</span> <span class="n">VYPUJCKA</span> <span class="k">JOIN</span> <span class="n">zakaznik</span> <span class="k">ON</span> <span class="n">vypujcka</span><span class="p">.</span><span class="n">id_zakaznik</span> <span class="o">=</span> <span class="n">zakaznik</span><span class="p">.</span><span class="n">id</span> <span class="k">WHERE</span> <span class="n">zakaznik</span><span class="p">.</span><span class="n">jmeno</span> <span class="o">=</span> <span class="s1">&#39;Buckley Stark&#39;</span>
-</pre></div>
-</div>
-<div class="section" id="id-zacatek-konec-datum-sjednani-datum-vraceni-id-zakaznik-cislo-pojistky">
-<h2>ID ZACATEK                      KONEC                        DATUM_SJEDNANI               DATUM_VRACENI                ID_ZAKAZNIK CISLO_POJISTKY<a class="headerlink" href="#id-zacatek-konec-datum-sjednani-datum-vraceni-id-zakaznik-cislo-pojistky" title="Trvalý odkaz na tento nadpis">¶</a></h2>
-<p>1686 04.05.15 00:24:21,000000000  02.06.15 10:20:54,000000000  20.01.15 02:32:01,000000000  03.06.15 16:57:55,000000000          260 349745371
+<div class="highlight-sql"><div class="highlight"><pre>SELECT * FROM VYPUJCKA JOIN zakaznik ON vypujcka.id_zakaznik = zakaznik.id WHERE zakaznik.jmeno = &#39;Buckley Stark&#39;
+
+ID ZACATEK                      KONEC                        DATUM_SJEDNANI               DATUM_VRACENI                ID_ZAKAZNIK CISLO_POJISTKY
+___________________________________________________________________________________________________________________________________
+1686 04.05.15 00:24:21,000000000  02.06.15 10:20:54,000000000  20.01.15 02:32:01,000000000  03.06.15 16:57:55,000000000          260 349745371
 3970 25.03.15 01:51:45,000000000  04.06.15 02:50:42,000000000  19.06.14 09:09:26,000000000  05.06.15 20:00:30,000000000          260 901504535
 5937 06.02.15 03:39:30,000000000  03.06.15 03:03:42,000000000  09.03.14 06:34:01,000000000  05.06.15 05:32:09,000000000          260 969181003
-8680 04.05.15 00:24:21,000000000  02.06.15 10:20:54,000000000  20.01.15 02:32:01,000000000  03.06.15 16:57:55,000000000          260 349745371</p>
-<p>Plan hash value: 755633740</p>
-<div class="section" id="id-operation-name-rows-bytes-cost-cpu-time">
-<h3>| Id  | Operation                    | Name          | Rows  | Bytes | Cost (%CPU)| Time     |<a class="headerlink" href="#id-operation-name-rows-bytes-cost-cpu-time" title="Trvalý odkaz na tento nadpis">¶</a></h3>
-<div class="line-block">
-<div class="line">0 | SELECT STATEMENT             |               |     1 |   124 |     4   (0)| 00:00:01 |</div>
-<div class="line">1 |  NESTED LOOPS                |               |       |       |            |          |</div>
-<div class="line">2 |   NESTED LOOPS               |               |     1 |   124 |     4   (0)| 00:00:01 |</div>
-<div class="line">3 |    TABLE ACCESS FULL         | VYPUJCKA      |     1 |    45 |     3   (0)| 00:00:01 |</div>
-</div>
-<p><a href="#id2"><span class="problematic" id="id3">|*  4 |    INDEX UNIQUE SCAN         | SYS_C00133168 |     1 |       |     0   (0)|</span></a> 00:00:01 |
-<a href="#id4"><span class="problematic" id="id5">|*  5 |   TABLE ACCESS BY INDEX ROWID|</span></a> ZAKAZNIK      |     1 |    79 |     1   (0)| 00:00:01 |
-&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;-</p>
-<div class="section" id="predicate-information-identified-by-operation-id">
-<h4>Predicate Information (identified by operation id):<a class="headerlink" href="#predicate-information-identified-by-operation-id" title="Trvalý odkaz na tento nadpis">¶</a></h4>
-<blockquote>
-<div>4 - access(&#8220;VYPUJCKA&#8221;.&#8221;ID_ZAKAZNIK&#8221;=&#8221;ZAKAZNIK&#8221;.&#8221;ID&#8221;)
-5 - filter(&#8220;ZAKAZNIK&#8221;.&#8221;JMENO&#8221;=&#8217;Buckley Stark&#8217;)</div></blockquote>
-<ul class="simple">
-<li>Výpis všech půjčených vozidel a s počtem dnů do konce výpůjčky.</li>
-</ul>
-<div class="highlight-sql"><div class="highlight"><pre><span class="k">SELECT</span> <span class="n">polozka_vypujcky</span><span class="p">.</span><span class="o">*</span><span class="p">,</span> <span class="n">trunc</span><span class="p">(</span><span class="n">sysdate</span><span class="p">)</span> <span class="o">-</span> <span class="n">vypujcka</span><span class="p">.</span><span class="n">konec</span> <span class="k">AS</span> <span class="n">dnu_do_konce</span> <span class="k">FROM</span> <span class="n">polozka_vypujcky</span> <span class="k">JOIN</span> <span class="n">vypujcka</span> <span class="k">ON</span> <span class="n">polozka_vypujcky</span><span class="p">.</span><span class="n">id_vypujcka</span> <span class="o">=</span> <span class="n">vypujcka</span><span class="p">.</span><span class="n">id</span> <span class="k">WHERE</span> <span class="n">id_vozidlo</span> <span class="k">IS</span> <span class="k">NOT</span> <span class="k">NULL</span> <span class="k">and</span> <span class="n">polozka_vypujcky</span><span class="p">.</span><span class="n">id</span> <span class="o">&gt;</span> <span class="mi">5000</span> <span class="k">ORDER</span> <span class="k">BY</span> <span class="n">dnu_do_konce</span> <span class="k">DESC</span>
+8680 04.05.15 00:24:21,000000000  02.06.15 10:20:54,000000000  20.01.15 02:32:01,000000000  03.06.15 16:57:55,000000000          260 349745371
+
+Plan hash value: 755633740
+
+----------------------------------------------------------------------------------------------
+| Id  | Operation                    | Name          | Rows  | Bytes | Cost (%CPU)| Time     |
+----------------------------------------------------------------------------------------------
+|   0 | SELECT STATEMENT             |               |     1 |   124 |     4   (0)| 00:00:01 |
+|   1 |  NESTED LOOPS                |               |       |       |            |          |
+|   2 |   NESTED LOOPS               |               |     1 |   124 |     4   (0)| 00:00:01 |
+|   3 |    TABLE ACCESS FULL         | VYPUJCKA      |     1 |    45 |     3   (0)| 00:00:01 |
+|*  4 |    INDEX UNIQUE SCAN         | SYS_C00133168 |     1 |       |     0   (0)| 00:00:01 |
+|*  5 |   TABLE ACCESS BY INDEX ROWID| ZAKAZNIK      |     1 |    79 |     1   (0)| 00:00:01 |
+----------------------------------------------------------------------------------------------
+
+Predicate Information (identified by operation id):
+---------------------------------------------------
+
+   4 - access(&quot;VYPUJCKA&quot;.&quot;ID_ZAKAZNIK&quot;=&quot;ZAKAZNIK&quot;.&quot;ID&quot;)
+   5 - filter(&quot;ZAKAZNIK&quot;.&quot;JMENO&quot;=&#39;Buckley Stark&#39;)
 
 
-    <span class="n">ID</span> <span class="n">ID_VYPUJCKA</span> <span class="n">ID_VOZIDLO</span> <span class="n">ID_MOTORKA</span> <span class="n">DNU_DO_KONCE</span>
-</pre></div>
-</div>
-<dl class="docutils">
-<dt>&#8212;&#8212;&#8212;- &#8212;&#8212;&#8212;&#8211; &#8212;&#8212;&#8212;- &#8212;&#8212;&#8212;- &#8212;&#8212;&#8212;&#8212;</dt>
-<dd><p class="first">14990        6675       5324            6 23:58:27.0
-11574        8989       4678            6 23:56:21.0</p>
-<blockquote>
-<div>9335        6959       4467            6 23:56:1.0</div></blockquote>
-<p>19225        4782       2931            6 23:51:45.0
-18770        4782       4829            6 23:51:45.0
-14938        4782       3665            6 23:51:45.0
-11810        6031       3943            6 23:51:44.0
-13814        6031       2021            6 23:51:44.0</p>
-<blockquote>
-<div>8932        6031       5551            6 23:51:44.0</div></blockquote>
-<p>19715        7279       2517            6 23:48:10.0
-19086        7279        754            6 23:48:10.0
-14217         285       1011            6 23:48:10.0
-16790         285       1281            6 23:48:10.0
-13618        9169       4386            6 23:47:3.0
-17918        9169       3398            6 23:47:3.0</p>
-<blockquote>
-<div>8180        9203       3632            6 23:45:4.0
-9073        2209       1576            6 23:45:4.0</div></blockquote>
-<p>20119        2209       1679            6 23:45:4.0
-18854        9203       4911            6 23:45:4.0</p>
-<blockquote>
-<div>6764        9203       5664            6 23:45:4.0</div></blockquote>
-<p>11914        1898       4057            6 23:44:10.0
-20633        8892        553            6 23:44:10.0</p>
-<blockquote>
-<div>7045        8892       3317            6 23:44:10.0</div></blockquote>
-<p>17355        1306        583            6 23:43:30.0
-19482        8300        450            6 23:43:30.0
-20514        8300       1024            6 23:43:30.0
-16424        8300       4678            6 23:43:30.0
-18004        7077       2302            6 23:37:56.0
-10868        4345       2732            6 23:37:5.0
-13236        4345       1793            6 23:37:5.0</p>
-<blockquote>
-<div>8425        4345       5868            6 23:37:5.0
-7197        4345         52            6 23:37:5.0</div></blockquote>
-<dl class="docutils">
-<dt>12389        4345       4621            6 23:37:5.0</dt>
-<dd>7531        8754         78            6 23:36:20.0</dd>
-</dl>
-<p>18922        8754       1403            6 23:36:20.0
-15901        8754         25            6 23:36:20.0</p>
-<blockquote>
-<div>7082        5678       5402            6 23:34:50.0</div></blockquote>
-<dl class="docutils">
-<dt>19160        5678        870            6 23:34:50.0</dt>
-<dd>6290        9937       1049            6 23:32:43.0
-6039        2943       2378            6 23:32:43.0
-8553        9186       3486            6 23:27:59.0
-9553        2192       4260            6 23:27:59.0</dd>
-<dt>20469        2476        466            6 23:27:1.0</dt>
-<dd>7820        4950       1159            6 23:26:36.0
-9533        6306       3934            6 23:24:17.0</dd>
-</dl>
-<p>20666        6950       5746            6 23:23:0.0
-13896        1850       1598            6 23:20:36.0</p>
-<p class="last">Plan hash value: 2039103391</p>
-</dd>
-</dl>
-</div>
-</div>
-<div class="section" id="id1">
-<h3>| Id  | Operation                      | Name             | Rows  | Bytes | Cost (%CPU)| Time     |<a class="headerlink" href="#id1" title="Trvalý odkaz na tento nadpis">¶</a></h3>
-<div class="line-block">
-<div class="line">0 | SELECT STATEMENT               |                  |     1 |    62 |     1 (100)| 00:00:01 |</div>
-<div class="line">1 |  SORT ORDER BY                 |                  |     1 |    62 |     1 (100)| 00:00:01 |</div>
-<div class="line">2 |   NESTED LOOPS                 |                  |       |       |            |          |</div>
-<div class="line">3 |    NESTED LOOPS                |                  |     1 |    62 |     0   (0)| 00:00:01 |</div>
-</div>
-<p><a href="#id6"><span class="problematic" id="id7">|*  4 |     TABLE ACCESS BY INDEX ROWID|</span></a> POLOZKA_VYPUJCKY |     1 |    52 |     0   (0)| 00:00:01 |
-<a href="#id8"><span class="problematic" id="id9">|*  5 |      INDEX RANGE SCAN          | SYS_C00133278    |     1 |       |     0   (0)|</span></a> 00:00:01 |
-<a href="#id10"><span class="problematic" id="id11">|*  6 |     INDEX UNIQUE SCAN          | SYS_C00133160    |     1 |       |     0   (0)|</span></a> 00:00:01 |
+- Výpis všech půjčených vozidel a s počtem dnů do konce výpůjčky.
+
+.. code-block:: sql
+
+    SELECT polozka_vypujcky.*, trunc(sysdate) - vypujcka.konec AS dnu_do_konce FROM polozka_vypujcky JOIN vypujcka ON polozka_vypujcky.id_vypujcka = vypujcka.id WHERE id_vozidlo IS NOT NULL and polozka_vypujcky.id &gt; 5000 ORDER BY dnu_do_konce DESC
+
+
+        ID ID_VYPUJCKA ID_VOZIDLO ID_MOTORKA DNU_DO_KONCE
+---------- ----------- ---------- ---------- ------------
+     14990        6675       5324            6 23:58:27.0
+     11574        8989       4678            6 23:56:21.0
+      9335        6959       4467            6 23:56:1.0
+     19225        4782       2931            6 23:51:45.0
+     18770        4782       4829            6 23:51:45.0
+     14938        4782       3665            6 23:51:45.0
+     11810        6031       3943            6 23:51:44.0
+     13814        6031       2021            6 23:51:44.0
+      8932        6031       5551            6 23:51:44.0
+     19715        7279       2517            6 23:48:10.0
+     19086        7279        754            6 23:48:10.0
+     14217         285       1011            6 23:48:10.0
+     16790         285       1281            6 23:48:10.0
+     13618        9169       4386            6 23:47:3.0
+     17918        9169       3398            6 23:47:3.0
+      8180        9203       3632            6 23:45:4.0
+      9073        2209       1576            6 23:45:4.0
+     20119        2209       1679            6 23:45:4.0
+     18854        9203       4911            6 23:45:4.0
+      6764        9203       5664            6 23:45:4.0
+     11914        1898       4057            6 23:44:10.0
+     20633        8892        553            6 23:44:10.0
+      7045        8892       3317            6 23:44:10.0
+     17355        1306        583            6 23:43:30.0
+     19482        8300        450            6 23:43:30.0
+     20514        8300       1024            6 23:43:30.0
+     16424        8300       4678            6 23:43:30.0
+     18004        7077       2302            6 23:37:56.0
+     10868        4345       2732            6 23:37:5.0
+     13236        4345       1793            6 23:37:5.0
+      8425        4345       5868            6 23:37:5.0
+      7197        4345         52            6 23:37:5.0
+     12389        4345       4621            6 23:37:5.0
+      7531        8754         78            6 23:36:20.0
+     18922        8754       1403            6 23:36:20.0
+     15901        8754         25            6 23:36:20.0
+      7082        5678       5402            6 23:34:50.0
+     19160        5678        870            6 23:34:50.0
+      6290        9937       1049            6 23:32:43.0
+      6039        2943       2378            6 23:32:43.0
+      8553        9186       3486            6 23:27:59.0
+      9553        2192       4260            6 23:27:59.0
+     20469        2476        466            6 23:27:1.0
+      7820        4950       1159            6 23:26:36.0
+      9533        6306       3934            6 23:24:17.0
+     20666        6950       5746            6 23:23:0.0
+     13896        1850       1598            6 23:20:36.0
+
+
+
+
+     Plan hash value: 2039103391
+
+---------------------------------------------------------------------------------------------------
+| Id  | Operation                      | Name             | Rows  | Bytes | Cost (%CPU)| Time     |
+---------------------------------------------------------------------------------------------------
+|   0 | SELECT STATEMENT               |                  |     1 |    62 |     1 (100)| 00:00:01 |
+|   1 |  SORT ORDER BY                 |                  |     1 |    62 |     1 (100)| 00:00:01 |
+|   2 |   NESTED LOOPS                 |                  |       |       |            |          |
+|   3 |    NESTED LOOPS                |                  |     1 |    62 |     0   (0)| 00:00:01 |
+|*  4 |     TABLE ACCESS BY INDEX ROWID| POLOZKA_VYPUJCKY |     1 |    52 |     0   (0)| 00:00:01 |
+|*  5 |      INDEX RANGE SCAN          | SYS_C00133278    |     1 |       |     0   (0)| 00:00:01 |
+|*  6 |     INDEX UNIQUE SCAN          | SYS_C00133160    |     1 |       |     0   (0)| 00:00:01 |
 |   7 |    TABLE ACCESS BY INDEX ROWID | VYPUJCKA         |     1 |    10 |     0   (0)| 00:00:01 |
-&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;</p>
-</div>
+---------------------------------------------------------------------------------------------------
+</pre></div>
 </div>
 </div>
 
