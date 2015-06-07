@@ -1,0 +1,19 @@
+
+==================
+Integritní omezení
+==================
+
+Triviální
+=========
+
+- Kubatura vozidla je celé kladné číslo.
+- Každá výpůjčka musí mít vyplněné číslo pojistné smlouvy.
+- PSČ má délku 6.
+- Číslo občanského průkazu(OP) nesmí být prázdné.
+- VIN kód nesmí být prázdný
+
+Netriviální
+===========
+
+- Položka výpůjčky musí obsahovat právě jedno auto nebo motorku.
+- Začátek výpůjčky musí být dříve, než je její konec.

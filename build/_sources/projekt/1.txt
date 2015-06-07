@@ -3,6 +3,7 @@
 E-R diagram
 ===========
 
+:download:`skript pro tvorbu databázového schématu <../images/er-pujcovna.png>`.
 
 Diagram
 =======
@@ -10,9 +11,3 @@ Diagram
 .. image:: ../images/er-pujcovna.png
     :align: center
     :alt: E-R diagram
-
-
-Origiál
-=======
-
-`Originál <../_images/er-pujcovna.png>`_
