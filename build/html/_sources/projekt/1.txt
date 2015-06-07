@@ -1,0 +1,18 @@
+
+===========
+E-R diagram
+===========
+
+
+Diagram
+=======
+
+.. image:: ../images/er-pujcovna.png
+    :align: center
+    :alt: E-R diagram
+
+
+Origiál
+=======
+
+`Originál <../_images/er-pujcovna.png>`_

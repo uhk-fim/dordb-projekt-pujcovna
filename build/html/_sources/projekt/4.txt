@@ -1,0 +1,9 @@
+
+=========================
+Slovně formulované dotazy
+=========================
+
+- Výpis všech výpůjček pro daného klienta
+- Výpis všech půjčených vozidel a s počtem dnů do konce výpůjčky.
+- Výpis všech nevrácených výpůjček po datumu vrácení
+- Vyhledání vozidla nebo motocyklu pro dané parametry

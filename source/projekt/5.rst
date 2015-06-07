@@ -3,6 +3,8 @@
 Skript vytvářející databázové schéma
 ====================================
 
+:download:`skript pro tvorbu databázového schématu <../files/scheme.sql>`.
+
 .. code-block:: sql
 
     CREATE TABLE adresa (
