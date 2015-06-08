@@ -8,10 +8,16 @@ Skript vytvářející dodatečná integritní omezení
     ALTER TABLE vypujcka
     ADD CONSTRAINT date_check check (zacatek <= konec);
 
+    ALTER TABLE MOTORKA
+    ADD CONSTRAINT MOTORKA_UK1 UNIQUE (VIN);
+
+    ALTER TABLE VOZIDLO
+    ADD CONSTRAINT MOTORKA_UK1 UNIQUE (VIN);
+
     CREATE OR REPLACE PROCEDURE kontrola_polozky (id_motorka in number, id_vozidlo in number) AS
     kapacita number;
     BEGIN
-     IF (id_motorka is null || id_vozidlo is null) then
+     IF (id_motorka is null AND id_vozidlo is null) then
       raise_application_error(-20000, 'Polozka objednavky neobsahuje ani vozidlo ani motorku!');
      END IF;
     END;

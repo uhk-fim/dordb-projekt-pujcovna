@@ -3,8 +3,11 @@
 Test integritních omezení
 =========================
 
+Položka výpůjčky musí obsahovat právě jedno auto nebo motorku
+=======================================
 
 .. code-block:: sql
+
     INSERT INTO polozka_vypujcky (id_vypujcka, id_motorka, id_vozidlo ) VALUES ('9999',NULL,NULL);
 
 
@@ -13,4 +16,49 @@ Test integritních omezení
     ORA-06512: na "JOSEFJA1.KONTROLA_POLOZKY", line 5
     ORA-06512: na "JOSEFJA1.TRIG_KONTROLA_POLOZKY_VYPUJCKY", line 2
     ORA-04088: chyba během provádění triggeru 'JOSEFJA1.TRIG_KONTROLA_POLOZKY_VYPUJCKY'
+    ORA-06512: na line 1
+
+Začátek výpůjčky musí být dříve, než je její konec
+=======================================
+
+.. code-block:: sql
+
+    INSERT INTO "JOSEFJA1"."VYPUJCKA" (ZACATEK, KONEC, DATUM_SJEDNANI, ID_ZAKAZNIK, CISLO_POJISTKY) VALUES (TO_TIMESTAMP('08.06.15 10:09:35,210000000', 'DD.MM.RR HH24:MI:SS,FF'), TO_TIMESTAMP('08.05.15 10:09:44,890000000', 'DD.MM.RR HH24:MI:SS,FF'), TO_TIMESTAMP('08.06.15 10:09:58,710000000', 'DD.MM.RR HH24:MI:SS,FF'), '3000', '12417886175')
+    
+
+    ORA-02290: kontrolní omezení (JOSEFJA1.DATE_CHECK) porušeno
+    ORA-06512: na line 1
+    One error saving changes to table "JOSEFJA1"."VYPUJCKA":
+    Row 51: ORA-02290: kontrolní omezení (JOSEFJA1.DATE_CHECK) porušeno
+    ORA-06512: na line 1
+
+Každá výpůjčka musí mít vyplněné číslo pojistné smlouvy.
+=======================================
+
+.. code-block:: sql
+
+    INSERT INTO "JOSEFJA1"."VYPUJCKA" (ZACATEK, KONEC, DATUM_SJEDNANI, ID_ZAKAZNIK) VALUES (TO_TIMESTAMP('08.06.15 10:13:01,564000000', 'DD.MM.RR HH24:MI:SS,FF'), TO_TIMESTAMP('08.06.15 10:13:04,850000000', 'DD.MM.RR HH24:MI:SS,FF'), TO_TIMESTAMP('08.06.15 10:13:07,589000000', 'DD.MM.RR HH24:MI:SS,FF'), '1245')
+
+
+    ORA-01400: do ("JOSEFJA1"."VYPUJCKA"."CISLO_POJISTKY") nelze vložit hodnotu NULL
+    ORA-06512: na line 1
+
+    One error saving changes to table "JOSEFJA1"."VYPUJCKA":
+    Row 51: ORA-01400: do ("JOSEFJA1"."VYPUJCKA"."CISLO_POJISTKY") nelze vložit hodnotu NULL
+    ORA-06512: na line 1
+
+VIN kód nesmí být prázdný a musí být unikátní
+======================================
+
+..code-block:: sql
+
+
+    INSERT INTO "JOSEFJA1"."MOTORKA" (SPZ, VIN, TAKT_MOTORU, CENA_DEN, ID_BARVA, ID_KUBATURA, ID_TYP_MOTORKY, ID_PREVODOVKA, ID_OZNACENI) VALUES ('xxuigiug', 'existujici-vinko', '2', '490', '20', '1', '22', '1', '900')
+
+    ORA-00001: nesplněna podmínka jedinečnosti (JOSEFJA1.SYS_C00133123)
+    ORA-06512: na line 1
+
+
+    One error saving changes to table "JOSEFJA1"."MOTORKA":
+    Row 4: ORA-00001: nesplněna podmínka jedinečnosti (JOSEFJA1.SYS_C00133123)
     ORA-06512: na line 1
