@@ -12,6 +12,7 @@ Autoři:
 
 .. toctree::
    :maxdepth: 2
+   :numbered:
 
    projekt/1
    projekt/2
