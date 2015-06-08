@@ -38,7 +38,7 @@ Výpis
     |   2 |   NESTED LOOPS               |                    |     1 |   124 |     4   (0)| 00:00:01 |
     |   3 |    TABLE ACCESS FULL         | VYPUJCKA_OBJ_TABLE |     1 |    45 |     3   (0)| 00:00:01 |
     |*  4 |    INDEX UNIQUE SCAN         | SYS_C00133168      |     1 |       |     0   (0)| 00:00:01 |
-    |*  5 |   TABLE ACCESS BY INDEX ROWID| ZAKAZNIK           |     1 |    79 |     1   (0)| 00:00:01 |
+    |*  5 |   TABLE ACCESS BY INDEX ROWID| ZAKAZNIK_OBJ_TABLE |     1 |    79 |     1   (0)| 00:00:01 |
     ---------------------------------------------------------------------------------------------------
      
     Predicate Information (identified by operation id):
@@ -120,16 +120,16 @@ Výpis
          Plan hash value: 2039103391
      
     ---------------------------------------------------------------------------------------------------
-    | Id  | Operation                      | Name               | Rows  | Bytes | Cost (%CPU)| Time     |
+    | Id  | Operation                      | Name                         | Rows  | Bytes | Cost (%CPU)| Time     |
     ---------------------------------------------------------------------------------------------------
-    |   0 | SELECT STATEMENT               |                    |     1 |    62 |     1 (100)| 00:00:01 |
-    |   1 |  SORT ORDER BY                 |                    |     1 |    62 |     1 (100)| 00:00:01 |
-    |   2 |   NESTED LOOPS                 |                    |       |       |            |          |
-    |   3 |    NESTED LOOPS                |                    |     1 |    62 |     0   (0)| 00:00:01 |
-    |*  4 |     TABLE ACCESS BY INDEX ROWID| POLOZKA_VYPUJCKY   |     1 |    52 |     0   (0)| 00:00:01 |
-    |*  5 |      INDEX RANGE SCAN          | SYS_C00133278      |     1 |       |     0   (0)| 00:00:01 |
-    |*  6 |     INDEX UNIQUE SCAN          | SYS_C00133160      |     1 |       |     0   (0)| 00:00:01 |
-    |   7 |    TABLE ACCESS BY INDEX ROWID | VYPUJCKA_OBJ_TABLE |     1 |    10 |     0   (0)| 00:00:01 |
+    |   0 | SELECT STATEMENT               |                              |     1 |    62 |     1 (100)| 00:00:01 |
+    |   1 |  SORT ORDER BY                 |                              |     1 |    62 |     1 (100)| 00:00:01 |
+    |   2 |   NESTED LOOPS                 |                              |       |       |            |          |
+    |   3 |    NESTED LOOPS                |                              |     1 |    62 |     0   (0)| 00:00:01 |
+    |*  4 |     TABLE ACCESS BY INDEX ROWID| POLOZKA_VYPUJCKY_OBJ_TABLE   |     1 |    52 |     0   (0)| 00:00:01 |
+    |*  5 |      INDEX RANGE SCAN          | SYS_C00133278                |     1 |       |     0   (0)| 00:00:01 |
+    |*  6 |     INDEX UNIQUE SCAN          | SYS_C00133160                |     1 |       |     0   (0)| 00:00:01 |
+    |   7 |    TABLE ACCESS BY INDEX ROWID | VYPUJCKA_OBJ_TABLE           |     1 |    10 |     0   (0)| 00:00:01 |
     ---------------------------------------------------------------------------------------------------
 
 
