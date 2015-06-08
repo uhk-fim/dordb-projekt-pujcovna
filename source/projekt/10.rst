@@ -2,3 +2,39 @@
 ===================================================================
 Skript pro vytvoření balíčku (package) a procedur „business logiky“
 ===================================================================
+
+zobrazPochybneZakazniky(pocet_nevraceni)
+========================================
+
+CREATE OR REPLACE PROCEDURE zobrazPochybneZakazniky(pocet_nevraceni IN number) IS
+BEGIN
+  FOR v_record IN (
+    SELECT count(v.id) as nevracenych, v.id_zakaznik INTO nevracenych, id FROM vypujcka v 
+    JOIN ZAKAZNIK z ON v.id_zakaznik = z.id
+    WHERE v.konec < v.datum_vraceni OR v.datum_vraceni is NULL 
+    GROUP BY v.id_zakaznik 
+    HAVING count(v.id) > pocet_nevraceni) LOOP
+    dbms_output.put_line('id_zakaznika=' || v_record.id_zakaznik || ', pocet nevracenych=' || v_record.nevracenych);
+  END LOOP;
+END zobrazPochybneZakazniky;
+
+
+zkontrolujZakaznika(id_zakaznika)
+================================
+
+.. code-block::: sql
+
+    CREATE OR REPLACE FUNCTION zkontroluj_zakaznika (id_zakaznika IN number) 
+      RETURN boolean
+      IS
+      pocet_nevracenych number;
+      zakazan number;
+    BEGIN
+      SELECT count(*) INTO pocet_nevracenych FROM vypujcka WHERE id_zakaznik = id_zakaznika and konec < sysdate AND datum_vraceni is NULL;
+      SELECT zakazano INTO zakazan FROM zakaznik WHERE id = id_zakaznika;
+      if pocet_nevracenych = 0 and zakazan != 0 then
+      return true;
+      else
+      return false;
+      end if;
+    END zkontroluj_zakaznika;
