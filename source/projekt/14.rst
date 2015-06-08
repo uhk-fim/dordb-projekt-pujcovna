@@ -1,7 +1,7 @@
 
-=================================================
-Skript, který provede navržených pět dotazů znovu
-=================================================
+===========================================
+Skript, který provede navržené dotazy znovu
+===========================================
 
 .. tentokrát nad objektovými tabulkami (operace Join bude nahrazena využitím objektových referencí a dereferencí atd.)
 .. - požadovaný výstup stejně jako v „neobjektové“ verzi
