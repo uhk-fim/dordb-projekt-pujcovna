@@ -3,12 +3,21 @@
 Skript pro vytvoření balíčku (package) a procedur „business logiky“
 ===================================================================
 
-vytvorVypujcku(spz, id_zakaznika)
-=================================
-
 .. code-block:: sql
-    
-    CREATE OR REPLACE PROCEDURE vytvorVypujcku(p_spz IN varchar2, id_zakaznika IN number) IS 
+
+    CREATE OR REPLACE
+    PACKAGE automotopujcovna_api as
+    procedure vytvor_vypujcku (p_spz IN number, id_zakaznika IN number);
+    procedure zobraz_pochybne_zakazniky(pocet_nevraceni IN number);
+    function zkontroluj_zakaznika (id_zakaznika IN number) return boolean;
+    end automotopujcovna_api;
+
+   
+    CREATE OR REPLACE
+    PACKAGE BODY automotopujcovna_api as
+    idNoveVypujcky number;
+
+    PROCEDURE vytvor_vypujcku(p_spz IN varchar2, id_zakaznika IN number) IS 
     id_vozmot number;
     motorka boolean;
     dostupne number;
@@ -23,12 +32,12 @@ vytvorVypujcku(spz, id_zakaznika)
         end if;
         if not motorka then
           SELECT id INTO dostupne FROM polozka_vypujcky pv JOIN vypujcka v ON pv.id_vypujcka = v.id WHERE pv.id_vozidlo = id_vozmot AND v.datum_vraceni <=sysdate;
-          INSERT INTO vypujcka (ZACATEK,KONEC,DATUM_SJEDNANI,ID_ZAKAZNIK,CISLO_POJISTKY) VALUES (sysdate, sysdate+7, sysdate, id_zakaznika,'DGUGEUZGS') returning ID into vypujcka_id;
-          INSERT INTO polozka_vypujcky (id_vozidlo, id_vypujcka) VALUES (id_vozmot, vypujcka_id);
+          INSERT INTO vypujcka (ZACATEK,KONEC,DATUM_SJEDNANI,ID_ZAKAZNIK,CISLO_POJISTKY) VALUES (sysdate, sysdate+7, sysdate, id_zakaznika,'DGUGEUZGS') returning ID into idNoveVypujcky;
+          INSERT INTO polozka_vypujcky (id_vozidlo, id_vypujcka) VALUES (id_vozmot, idNoveVypujcky);
         else
           SELECT id INTO dostupne FROM polozka_vypujcky pv JOIN vypujcka v ON pv.id_vypujcka = v.id WHERE pv.id_motorka = id_vozmot AND v.datum_vraceni <=sysdate;
-           INSERT INTO vypujcka (ZACATEK,KONEC,DATUM_SJEDNANI,ID_ZAKAZNIK,CISLO_POJISTKY) VALUES (sysdate, sysdate+7, sysdate, id_zakaznika,'DGUGEUZGS') returning ID into vypujcka_id;
-          INSERT INTO polozka_vypujcky (id_motorka, id_vypujcka) VALUES (id_vozmot, vypujcka_id);
+           INSERT INTO vypujcka (ZACATEK,KONEC,DATUM_SJEDNANI,ID_ZAKAZNIK,CISLO_POJISTKY) VALUES (sysdate, sysdate+7, sysdate, id_zakaznika,'DGUGEUZGS') returning ID into idNoveVypujcky;
+          INSERT INTO polozka_vypujcky (id_motorka, id_vypujcka) VALUES (id_vozmot, idNoveVypujcky);
         end if;
         
         dbms_output.put_line('Vypujcka vytvorena!');
@@ -38,14 +47,7 @@ vytvorVypujcku(spz, id_zakaznika)
       
     END vytvorVypujcku;
 
-
-
-zobrazPochybneZakazniky(pocet_nevraceni)
-========================================
-
-.. code-block:: sql
-
-    CREATE OR REPLACE PROCEDURE zobrazPochybneZakazniky(pocet_nevraceni IN number) IS
+    CREATE OR REPLACE PROCEDURE zobraz_pochybne_zakazniky(pocet_nevraceni IN number) IS
     BEGIN
       FOR v_record IN (
         SELECT count(v.id) as nevracenych, v.id_zakaznik INTO nevracenych, id FROM vypujcka v 
@@ -58,12 +60,7 @@ zobrazPochybneZakazniky(pocet_nevraceni)
     END zobrazPochybneZakazniky;
 
 
-zkontrolujZakaznika(id_zakaznika)
-================================
-
-.. code-block:: sql
-
-    CREATE OR REPLACE FUNCTION zkontroluj_zakaznika (id_zakaznika IN number) 
+     FUNCTION zkontroluj_zakaznika (id_zakaznika IN number) 
       RETURN boolean
       IS
       pocet_nevracenych number;
@@ -77,3 +74,4 @@ zkontrolujZakaznika(id_zakaznika)
       return false;
       end if;
     END zkontroluj_zakaznika;
+    END automotopujcovna_api;
