@@ -155,8 +155,27 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="10.html">10. Skript pro vytvoření balíčku (package) a procedur „business logiky“</a></li>
-<li class="toctree-l1"><a class="reference internal" href="11.html">11. Testovací skript pro obě procedury, včetně souvisejících dotazů, které ověří, že každá procedura provedla to co měla</a></li>
-<li class="toctree-l1"><a class="reference internal" href="12.html">12. Doplnění schématu o odvozené hodnoty</a></li>
+<li class="toctree-l1"><a class="reference internal" href="11.html">11. Testovací skript pro obě procedury, včetně souvisejících dotazů, které ověří, že každá procedura provedla to co měla</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="11.html#procedura-vytvor-vypujcku">11.1. Procedura vytvor_vypujcku</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="11.html#pred-zavolanim">11.1.1. Před zavoláním</a></li>
+<li class="toctree-l3"><a class="reference internal" href="11.html#volani-procedury">11.1.2. Volání procedury</a></li>
+<li class="toctree-l3"><a class="reference internal" href="11.html#vysledek">11.1.3. Výsledek</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="11.html#procedura-zobraz-pochybne-zakazniky">11.2. Procedura zobraz_pochybne_zakazniky</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="11.html#id1">11.2.1. Volání procedury</a></li>
+<li class="toctree-l3"><a class="reference internal" href="11.html#id2">11.2.2. Výsledek</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="12.html">12. Doplnění schématu o odvozené hodnoty</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="12.html#doplneni-sloupce">12.1. Doplnění sloupce</a></li>
+<li class="toctree-l2"><a class="reference internal" href="12.html#procedura">12.2. Procedura</a></li>
+<li class="toctree-l2"><a class="reference internal" href="12.html#trigger">12.3. Trigger</a></li>
+<li class="toctree-l2"><a class="reference internal" href="12.html#data">12.4. Data</a></li>
+</ul>
+</li>
 <li class="toctree-l1 current"><a class="current reference internal" href="">13. Skript, který vytvoří úložiště ještě jednou v „objektové“ podobě</a></li>
 <li class="toctree-l1"><a class="reference internal" href="14.html">14. Skript, který provede navržených pět dotazů znovu</a></li>
 <li class="toctree-l1"><a class="reference internal" href="15.html">15. Navrhněte slovně fakta a dimenze pro datový sklad vycházející z vaší databáze</a></li>
@@ -199,6 +218,169 @@
             
   <div class="section" id="skript-ktery-vytvori-uloziste-jeste-jednou-v-objektove-podobe">
 <h1>13. Skript, který vytvoří úložiště ještě jednou v „objektové“ podobě<a class="headerlink" href="#skript-ktery-vytvori-uloziste-jeste-jednou-v-objektove-podobe" title="Trvalý odkaz na tento nadpis">¶</a></h1>
+<div class="highlight-sql"><div class="highlight"><pre><span class="k">CREATE</span> <span class="k">TYPE</span> <span class="n">adresa_typ</span> <span class="k">AS</span> <span class="k">OBJECT</span> <span class="p">(</span>
+<span class="n">id</span>           <span class="nb">NUMBER</span><span class="p">,</span>
+<span class="n">cp</span>          <span class="nb">NUMBER</span><span class="p">,</span>
+<span class="n">ulice</span>      <span class="n">VARCHAR2</span><span class="p">(</span><span class="mi">30</span><span class="p">),</span>
+<span class="n">obec</span>          <span class="n">VARCHAR2</span><span class="p">(</span><span class="mi">30</span><span class="p">),</span>
+<span class="n">psc</span>          <span class="n">VARCHAR2</span><span class="p">(</span><span class="mi">6</span><span class="p">),</span>
+<span class="k">MAP</span> <span class="n">MEMBER</span> <span class="k">FUNCTION</span> <span class="n">get_id</span> <span class="k">RETURN</span> <span class="nb">NUMBER</span><span class="p">,</span>
+<span class="n">MEMBER</span> <span class="k">PROCEDURE</span> <span class="n">display_details</span> <span class="p">(</span> <span class="k">SELF</span> <span class="k">IN</span> <span class="k">OUT</span> <span class="n">NOCOPY</span> <span class="n">adresa_typ</span> <span class="p">));</span>
+<span class="o">/</span>
+
+<span class="k">CREATE</span> <span class="k">TYPE</span> <span class="n">BODY</span> <span class="n">adresa_typ</span> <span class="k">AS</span>
+  <span class="k">MAP</span> <span class="n">MEMBER</span> <span class="k">FUNCTION</span> <span class="n">get_id</span> <span class="k">RETURN</span> <span class="nb">NUMBER</span> <span class="k">IS</span>
+  <span class="k">BEGIN</span>
+    <span class="k">RETURN</span> <span class="n">id</span><span class="p">;</span>
+  <span class="k">END</span><span class="p">;</span>
+  <span class="n">MEMBER</span> <span class="k">PROCEDURE</span> <span class="n">display_details</span> <span class="p">(</span> <span class="k">SELF</span> <span class="k">IN</span> <span class="k">OUT</span> <span class="n">NOCOPY</span> <span class="n">adresa_typ</span> <span class="p">)</span> <span class="k">IS</span>
+  <span class="k">BEGIN</span>
+    <span class="n">DBMS_OUTPUT</span><span class="p">.</span><span class="n">PUT_LINE</span><span class="p">(</span><span class="n">TO_CHAR</span><span class="p">(</span><span class="n">id</span><span class="p">)</span> <span class="o">||</span> <span class="s1">&#39; &#39;</span> <span class="o">||</span> <span class="n">ulice</span> <span class="o">||</span> <span class="s1">&#39; &#39;</span> <span class="o">||</span> <span class="n">cp</span><span class="p">);</span>
+    <span class="n">DBMS_OUTPUT</span><span class="p">.</span><span class="n">PUT_LINE</span><span class="p">(</span><span class="n">obec</span> <span class="o">||</span> <span class="s1">&#39; &#39;</span>  <span class="o">||</span> <span class="n">psc</span><span class="p">);</span>
+  <span class="k">END</span><span class="p">;</span>
+<span class="k">END</span><span class="p">;</span>
+<span class="o">/</span>
+
+<span class="k">CREATE</span> <span class="k">TYPE</span> <span class="n">barva_typ</span> <span class="k">AS</span> <span class="k">OBJECT</span> <span class="p">(</span>
+<span class="n">id</span>           <span class="nb">NUMBER</span><span class="p">,</span>
+<span class="n">typ_laku</span>    <span class="n">VARCHAR2</span><span class="p">(</span><span class="mi">20</span><span class="p">),</span>
+<span class="n">barva</span>      <span class="n">VARCHAR2</span><span class="p">(</span><span class="mi">30</span><span class="p">));</span>
+<span class="o">/</span>
+<span class="k">CREATE</span> <span class="k">TYPE</span> <span class="n">karoserie_typ</span> <span class="k">AS</span> <span class="k">OBJECT</span> <span class="p">(</span>
+<span class="n">id</span>            <span class="nb">NUMBER</span><span class="p">,</span>
+<span class="n">typ_karoserie</span> <span class="n">VARCHAR2</span><span class="p">(</span><span class="mi">20</span><span class="p">));</span>
+<span class="o">/</span>
+<span class="k">CREATE</span> <span class="k">TYPE</span> <span class="n">prevodovka_typ</span> <span class="k">AS</span> <span class="k">OBJECT</span> <span class="p">(</span>
+<span class="n">id</span>            <span class="nb">NUMBER</span><span class="p">,</span>
+<span class="n">typ_prevodovky</span> <span class="n">VARCHAR2</span><span class="p">(</span><span class="mi">20</span><span class="p">));</span>
+<span class="o">/</span>
+<span class="k">CREATE</span> <span class="k">TYPE</span> <span class="n">kubatura_typ</span> <span class="k">AS</span> <span class="k">OBJECT</span> <span class="p">(</span>
+<span class="n">id</span>           <span class="nb">NUMBER</span><span class="p">,</span>
+<span class="n">kubatura</span>    <span class="n">VARCHAR2</span><span class="p">(</span><span class="mi">20</span><span class="p">),</span>
+<span class="n">ridicske_opravneni</span>  <span class="n">VARCHAR2</span><span class="p">(</span><span class="mi">3</span><span class="p">));</span>
+<span class="o">/</span>
+<span class="k">CREATE</span> <span class="k">TYPE</span> <span class="n">typ_motorky_typ</span> <span class="k">AS</span> <span class="k">OBJECT</span> <span class="p">(</span>
+<span class="n">id</span>           <span class="nb">NUMBER</span><span class="p">,</span>
+<span class="n">druh</span>    <span class="n">VARCHAR2</span><span class="p">(</span><span class="mi">20</span><span class="p">));</span>
+<span class="o">/</span>
+<span class="k">CREATE</span> <span class="k">TYPE</span> <span class="n">polozka_vypujcky_typ</span> <span class="k">AS</span> <span class="k">OBJECT</span> <span class="p">(</span>
+<span class="n">id</span>           <span class="nb">NUMBER</span><span class="p">,</span>
+<span class="n">id_vozidla</span>  <span class="nb">NUMBER</span><span class="p">,</span>
+<span class="n">id_motorka</span> <span class="nb">NUMBER</span><span class="p">);</span>
+<span class="o">/</span>
+<span class="k">CREATE</span> <span class="k">TYPE</span> <span class="n">pohon_typ</span> <span class="k">AS</span> <span class="k">OBJECT</span><span class="p">(</span>
+<span class="n">id</span>    <span class="nb">NUMBER</span><span class="p">,</span>
+<span class="n">typ_pohonu</span> <span class="n">VARCHAR2</span><span class="p">(</span><span class="mi">20</span><span class="p">));</span>
+<span class="o">/</span>
+<span class="k">CREATE</span> <span class="k">TYPE</span> <span class="n">oznaceni_typ</span> <span class="k">AS</span> <span class="k">OBJECT</span><span class="p">(</span>
+<span class="n">id</span>    <span class="nb">NUMBER</span><span class="p">,</span>
+<span class="n">vyrobce</span>   <span class="n">VARCHAR2</span><span class="p">(</span><span class="mi">40</span><span class="p">),</span>
+<span class="n">nazev</span>     <span class="n">VARCHAR2</span><span class="p">(</span><span class="mi">40</span><span class="p">));</span>
+<span class="o">/</span>
+
+<span class="k">CREATE</span> <span class="k">TYPE</span> <span class="n">vozidlo_typ</span> <span class="k">AS</span> <span class="k">OBJECT</span><span class="p">(</span>
+<span class="n">id</span>      <span class="nb">NUMBER</span><span class="p">,</span>
+<span class="n">spz</span>     <span class="n">VARCHAR2</span><span class="p">(</span><span class="mi">40</span><span class="p">),</span>
+<span class="n">barva</span>   <span class="n">barva_typ</span><span class="p">,</span>
+<span class="n">karoserie</span> <span class="n">karoserie_typ</span><span class="p">,</span>
+<span class="n">prevodovka</span> <span class="n">prevodovka_typ</span><span class="p">,</span>
+<span class="n">oznaceni</span>  <span class="n">oznaceni_typ</span><span class="p">,</span>
+<span class="n">pohon</span> <span class="n">pohon_typ</span><span class="p">,</span>
+<span class="n">vin</span> <span class="n">varchar2</span><span class="p">(</span><span class="mi">80</span><span class="p">),</span>
+<span class="n">pocet_mist</span> <span class="nb">NUMBER</span><span class="p">,</span>
+<span class="n">strana_rizeni</span> <span class="n">VARCHAR2</span><span class="p">(</span><span class="mi">20</span><span class="p">),</span>
+<span class="n">cena_den</span> <span class="nb">NUMBER</span><span class="p">),</span>
+<span class="k">MAP</span> <span class="n">MEMBER</span> <span class="k">FUNCTION</span> <span class="n">get_id</span> <span class="k">RETURN</span> <span class="nb">NUMBER</span><span class="p">,</span>
+<span class="n">MEMBER</span> <span class="k">PROCEDURE</span> <span class="n">display_details</span> <span class="p">(</span> <span class="k">SELF</span> <span class="k">IN</span> <span class="k">OUT</span> <span class="n">NOCOPY</span> <span class="n">vozidlo_typ</span> <span class="p">));</span>
+<span class="o">/</span>
+
+<span class="k">CREATE</span> <span class="k">TYPE</span> <span class="n">BODY</span> <span class="n">vozidlo_typ</span> <span class="k">AS</span>
+  <span class="k">MAP</span> <span class="n">MEMBER</span> <span class="k">FUNCTION</span> <span class="n">get_id</span> <span class="k">RETURN</span> <span class="nb">NUMBER</span> <span class="k">IS</span>
+  <span class="k">BEGIN</span>
+    <span class="k">RETURN</span> <span class="n">id</span><span class="p">;</span>
+  <span class="k">END</span><span class="p">;</span>
+  <span class="n">MEMBER</span> <span class="k">PROCEDURE</span> <span class="n">display_details</span> <span class="p">(</span> <span class="k">SELF</span> <span class="k">IN</span> <span class="k">OUT</span> <span class="n">NOCOPY</span> <span class="n">vozidlo_typ</span> <span class="p">)</span> <span class="k">IS</span>
+  <span class="k">BEGIN</span>
+    <span class="n">DBMS_OUTPUT</span><span class="p">.</span><span class="n">PUT_LINE</span><span class="p">(</span><span class="n">TO_CHAR</span><span class="p">(</span><span class="n">id</span><span class="p">)</span> <span class="o">||</span> <span class="s1">&#39; &#39;</span> <span class="o">||</span> <span class="n">spz</span><span class="p">);</span>
+  <span class="k">END</span><span class="p">;</span>
+<span class="k">END</span><span class="p">;</span>
+<span class="o">/</span>
+
+<span class="k">CREATE</span> <span class="k">TYPE</span> <span class="n">motorka_typ</span> <span class="k">AS</span> <span class="k">OBJECT</span><span class="p">(</span>
+<span class="n">id</span>      <span class="nb">NUMBER</span><span class="p">,</span>
+<span class="n">spz</span>     <span class="n">VARCHAR2</span><span class="p">(</span><span class="mi">40</span><span class="p">),</span>
+<span class="n">barva</span>   <span class="n">barva_typ</span><span class="p">,</span>
+<span class="n">prevodovka</span> <span class="n">prevodovka_typ</span><span class="p">,</span>
+<span class="n">oznaceni</span>  <span class="n">oznaceni_typ</span><span class="p">,</span>
+<span class="n">kubatura</span>  <span class="n">kubatura_typ</span><span class="p">,</span>
+<span class="n">typ_motorky</span> <span class="n">typ_motorky_typ</span><span class="p">,</span>
+<span class="n">vin</span> <span class="n">varchar2</span><span class="p">(</span><span class="mi">80</span><span class="p">),</span>
+<span class="n">takt_motoru</span> <span class="nb">NUMBER</span><span class="p">,</span>
+<span class="n">cena_den</span> <span class="nb">NUMBER</span><span class="p">,</span>
+<span class="k">MAP</span> <span class="n">MEMBER</span> <span class="k">FUNCTION</span> <span class="n">get_id</span> <span class="k">RETURN</span> <span class="nb">NUMBER</span><span class="p">,</span>
+<span class="n">MEMBER</span> <span class="k">PROCEDURE</span> <span class="n">display_details</span> <span class="p">(</span> <span class="k">SELF</span> <span class="k">IN</span> <span class="k">OUT</span> <span class="n">NOCOPY</span> <span class="n">vozidlo_typ</span> <span class="p">));</span>
+<span class="o">/</span>
+
+<span class="k">CREATE</span> <span class="k">TYPE</span> <span class="n">BODY</span> <span class="n">motorka_typ</span> <span class="k">AS</span>
+  <span class="k">MAP</span> <span class="n">MEMBER</span> <span class="k">FUNCTION</span> <span class="n">get_id</span> <span class="k">RETURN</span> <span class="nb">NUMBER</span> <span class="k">IS</span>
+  <span class="k">BEGIN</span>
+    <span class="k">RETURN</span> <span class="n">id</span><span class="p">;</span>
+  <span class="k">END</span><span class="p">;</span>
+  <span class="n">MEMBER</span> <span class="k">PROCEDURE</span> <span class="n">display_details</span> <span class="p">(</span> <span class="k">SELF</span> <span class="k">IN</span> <span class="k">OUT</span> <span class="n">NOCOPY</span> <span class="n">motorka_typ</span> <span class="p">)</span> <span class="k">IS</span>
+  <span class="k">BEGIN</span>
+    <span class="n">DBMS_OUTPUT</span><span class="p">.</span><span class="n">PUT_LINE</span><span class="p">(</span><span class="n">TO_CHAR</span><span class="p">(</span><span class="n">id</span><span class="p">)</span> <span class="o">||</span> <span class="s1">&#39; &#39;</span> <span class="o">||</span> <span class="n">spz</span><span class="p">);</span>
+  <span class="k">END</span><span class="p">;</span>
+<span class="k">END</span><span class="p">;</span>
+<span class="o">/</span>
+
+<span class="k">CREATE</span> <span class="k">TYPE</span> <span class="n">zakaznik_typ</span> <span class="k">AS</span> <span class="k">OBJECT</span><span class="p">(</span>
+<span class="n">id</span> <span class="nb">NUMBER</span><span class="p">,</span>
+<span class="n">adresa</span> <span class="n">adresa_typ</span><span class="p">,</span>
+<span class="n">jmeno</span> <span class="n">varchar2</span><span class="p">(</span><span class="mi">60</span><span class="p">),</span>
+<span class="n">cisloOP</span> <span class="n">varchar2</span><span class="p">(</span><span class="mi">60</span><span class="p">),</span>
+<span class="n">email</span> <span class="n">varchar2</span><span class="p">(</span><span class="mi">60</span><span class="p">),</span>
+<span class="n">telefon</span> <span class="n">varchar2</span><span class="p">(</span><span class="mi">20</span><span class="p">),</span>
+<span class="n">zakazan</span> <span class="nb">number</span><span class="p">,</span>
+<span class="k">MAP</span> <span class="n">MEMBER</span> <span class="k">FUNCTION</span> <span class="n">get_id</span> <span class="k">RETURN</span> <span class="nb">NUMBER</span><span class="p">,</span>
+<span class="n">MEMBER</span> <span class="k">PROCEDURE</span> <span class="n">display_details</span> <span class="p">(</span> <span class="k">SELF</span> <span class="k">IN</span> <span class="k">OUT</span> <span class="n">NOCOPY</span> <span class="n">zakaznik_typ</span> <span class="p">));</span>
+<span class="o">/</span>
+
+<span class="k">CREATE</span> <span class="k">TYPE</span> <span class="n">BODY</span> <span class="n">zakaznik_typ</span> <span class="k">AS</span>
+  <span class="k">MAP</span> <span class="n">MEMBER</span> <span class="k">FUNCTION</span> <span class="n">get_id</span> <span class="k">RETURN</span> <span class="nb">NUMBER</span> <span class="k">IS</span>
+  <span class="k">BEGIN</span>
+    <span class="k">RETURN</span> <span class="n">id</span><span class="p">;</span>
+  <span class="k">END</span><span class="p">;</span>
+  <span class="n">MEMBER</span> <span class="k">PROCEDURE</span> <span class="n">display_details</span> <span class="p">(</span> <span class="k">SELF</span> <span class="k">IN</span> <span class="k">OUT</span> <span class="n">NOCOPY</span> <span class="n">zakaznik_typ</span> <span class="p">)</span> <span class="k">IS</span>
+  <span class="k">BEGIN</span>
+    <span class="n">DBMS_OUTPUT</span><span class="p">.</span><span class="n">PUT_LINE</span><span class="p">(</span><span class="n">TO_CHAR</span><span class="p">(</span><span class="n">id</span><span class="p">)</span> <span class="o">||</span> <span class="s1">&#39; &#39;</span> <span class="o">||</span> <span class="n">jmeno</span> <span class="o">||</span> <span class="s1">&#39; &#39;</span> <span class="o">||</span> <span class="n">email</span><span class="p">);</span>
+  <span class="k">END</span><span class="p">;</span>
+<span class="k">END</span><span class="p">;</span>
+<span class="o">/</span>
+
+<span class="k">CREATE</span> <span class="k">TYPE</span> <span class="n">vypujcka_typ</span> <span class="k">AS</span> <span class="k">OBJECT</span><span class="p">(</span>
+<span class="n">id</span> <span class="nb">NUMBER</span><span class="p">,</span>
+<span class="n">zakaznik</span> <span class="n">zakaznik_typ</span><span class="p">,</span>
+<span class="n">zacatek</span> <span class="nb">DATE</span><span class="p">,</span>
+<span class="n">konec</span> <span class="nb">DATE</span><span class="p">,</span>
+<span class="n">datum_sjednani</span> <span class="nb">DATE</span><span class="p">,</span>
+<span class="n">datum_vraceni</span> <span class="nb">DATE</span><span class="p">,</span>
+<span class="k">MAP</span> <span class="n">MEMBER</span> <span class="k">FUNCTION</span> <span class="n">get_id</span> <span class="k">RETURN</span> <span class="nb">NUMBER</span><span class="p">,</span>
+<span class="n">MEMBER</span> <span class="k">PROCEDURE</span> <span class="n">display_details</span> <span class="p">(</span> <span class="k">SELF</span> <span class="k">IN</span> <span class="k">OUT</span> <span class="n">NOCOPY</span> <span class="n">vypujcka_typ</span> <span class="p">));</span>
+<span class="o">/</span>
+
+<span class="k">CREATE</span> <span class="k">TYPE</span> <span class="n">BODY</span> <span class="n">vypujcka_typ</span> <span class="k">AS</span>
+  <span class="k">MAP</span> <span class="n">MEMBER</span> <span class="k">FUNCTION</span> <span class="n">get_id</span> <span class="k">RETURN</span> <span class="nb">NUMBER</span> <span class="k">IS</span>
+  <span class="k">BEGIN</span>
+    <span class="k">RETURN</span> <span class="n">id</span><span class="p">;</span>
+  <span class="k">END</span><span class="p">;</span>
+  <span class="n">MEMBER</span> <span class="k">PROCEDURE</span> <span class="n">display_details</span> <span class="p">(</span> <span class="k">SELF</span> <span class="k">IN</span> <span class="k">OUT</span> <span class="n">NOCOPY</span> <span class="n">vypujcka_typ</span> <span class="p">)</span> <span class="k">IS</span>
+  <span class="k">BEGIN</span>
+    <span class="n">DBMS_OUTPUT</span><span class="p">.</span><span class="n">PUT_LINE</span><span class="p">(</span><span class="n">TO_CHAR</span><span class="p">(</span><span class="n">id</span><span class="p">)</span> <span class="o">||</span> <span class="s1">&#39; &#39;</span> <span class="o">||</span> <span class="n">zacatek</span> <span class="o">||</span> <span class="s1">&#39; &#39;</span> <span class="o">||</span> <span class="n">konec</span><span class="p">);</span>
+  <span class="k">END</span><span class="p">;</span>
+<span class="k">END</span><span class="p">;</span>
+<span class="o">/</span>
+</pre></div>
+</div>
 </div>
 
 

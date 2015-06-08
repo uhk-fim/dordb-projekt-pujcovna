@@ -54,7 +54,7 @@ Dotaz
 
 .. code-block:: sql
 
-    SELECT polozka_vypujcky.*, trunc(sysdate) - vypujcka.konec AS dnu_do_konce FROM polozka_vypujcky JOIN vypujcka ON polozka_vypujcky.id_vypujcka = vypujcka.id WHERE id_vozidlo IS NOT NULL and polozka_vypujcky.id > 5000 ORDER BY dnu_do_konce DESC 
+    SELECT polozka_vypujcky.*, trunc(sysdate) - vypujcka.konec AS dnu_do_konce FROM polozka_vypujcky JOIN vypujcka ON polozka_vypujcky.id_vypujcka = vypujcka.id WHERE id_vozidlo IS NOT NULL ORDER BY dnu_do_konce DESC 
 
 Výpis
 -----
@@ -207,11 +207,6 @@ Výpis
      
        3 - filter("OZNACENI"."NAZEV"='STS' AND "OZNACENI"."VYROBCE"='Cadillac')
        4 - access("VOZIDLO"."ID_OZNACENI"="OZNACENI"."ID")
-
-
-
-TODO: Porovnání alternativních dotazů: dotazy_alt.sql
-- dotaz používající poddotazy se ukázal jako mnohem méně náročný (cost 19), než dotaz využívající spojení tabulek (cost 40) 
 
 
 
