@@ -6,3 +6,6 @@ Doplnění schématu o odvozené hodnoty
 .. Skript, který doplní do zvolené tabulky schématu sloupec, který bude obsahovat odvozené
 .. hodnoty (průměrný plat zaměstnance v rámci oddělní apod.) – tyto hodnoty budou
 .. automaticky aktualizovány pomocí triggerů
+
+Databáze obsahuje dodatečné trigery(procedury) pro automatické dopočítávání hodnot, které vyplývají ze zbytku dat v databázi.
+Pro nás je nejdůležitější samotné stáří vozidla, které indikuje konec životnosti a tedy nutnost obměny daného vozu či motorky. Pro tyto potřeby obsahuje databáze trigger na výpočet stáří vozidla. Výstup z ní říká kolik dní do konce životnosti automobilu zbývá a je dále používán v analýze výhodnosti vozidla popsané v sekci 15.
