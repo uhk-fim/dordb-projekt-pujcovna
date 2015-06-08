@@ -82,19 +82,24 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="3.html">3. Business logika</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="3.html#zobraznevracenevypujckykdatu">3.1. zobrazNevraceneVypujckyKDatu()</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="3.html#vytvorvypujcku">3.1. vytvorVypujcku()</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="3.html#parametry">3.1.1. Parametry</a></li>
 <li class="toctree-l3"><a class="reference internal" href="3.html#navratova-hodnota">3.1.2. Návratová hodnota</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="3.html#zobrazpochybnezakazniky">3.2. zobrazPochybneZakazniky()</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="3.html#zobraznevracenevypujckykdatu">3.2. zobrazNevraceneVypujckyKDatu()</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="3.html#id1">3.2.1. Parametry</a></li>
 <li class="toctree-l3"><a class="reference internal" href="3.html#id2">3.2.2. Návratová hodnota</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="3.html#zkontrolujzakaznika">3.3. zkontrolujZakaznika()</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="3.html#zobrazpochybnezakazniky">3.3. zobrazPochybneZakazniky()</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="3.html#id3">3.3.1. Parametry</a></li>
 <li class="toctree-l3"><a class="reference internal" href="3.html#id4">3.3.2. Návratová hodnota</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="3.html#zkontrolujzakaznika">3.4. zkontrolujZakaznika()</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="3.html#id5">3.4.1. Parametry</a></li>
+<li class="toctree-l3"><a class="reference internal" href="3.html#id6">3.4.2. Návratová hodnota</a></li>
 </ul>
 </li>
 </ul>
@@ -114,11 +119,56 @@
 <li class="toctree-l3"><a class="reference internal" href="8.html#id2">8.2.2. Výpis</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="8.html#vypis-vsech-nevracenych-vypujcek-po-datumu-vraceni">8.3. Výpis všech nevrácených výpůjček po datumu vrácení</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="8.html#id3">8.3.1. Dotaz</a></li>
+<li class="toctree-l3"><a class="reference internal" href="8.html#id4">8.3.2. Výpis</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="9.html">9. Test integritních omezení</a></li>
+<li class="toctree-l2"><a class="reference internal" href="8.html#vyhledani-vozidla-nebo-motocyklu-pro-dane-parametry">8.4. Vyhledání vozidla nebo motocyklu pro dané parametry</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="8.html#id5">8.4.1. Dotaz</a></li>
+<li class="toctree-l3"><a class="reference internal" href="8.html#id6">8.4.2. Výpis</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="9.html">9. Testy integritních omezení</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="9.html#polozka-vypujcky-musi-obsahovat-prave-jedno-auto-nebo-motorku">9.1. Položka výpůjčky musí obsahovat právě jedno auto nebo motorku</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="9.html#dotaz">9.1.1. Dotaz</a></li>
+<li class="toctree-l3"><a class="reference internal" href="9.html#chyba">9.1.2. Chyba</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="9.html#zacatek-vypujcky-musi-byt-drive-nez-je-jeji-konec">9.2. Začátek výpůjčky musí být dříve, než je její konec</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="9.html#id1">9.2.1. Dotaz</a></li>
+<li class="toctree-l3"><a class="reference internal" href="9.html#id2">9.2.2. Chyba</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="9.html#kazda-vypujcka-musi-mit-vyplnene-cislo-pojistne-smlouvy">9.3. Každá výpůjčka musí mít vyplněné číslo pojistné smlouvy.</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="9.html#id3">9.3.1. Dotaz</a></li>
+<li class="toctree-l3"><a class="reference internal" href="9.html#id4">9.3.2. Chyba</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="9.html#vin-kod-nesmi-byt-prazdny-a-musi-byt-unikatni">9.4. VIN kód nesmí být prázdný a musí být unikátní</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="9.html#id5">9.4.1. Dotaz</a></li>
+<li class="toctree-l3"><a class="reference internal" href="9.html#id6">9.4.2. Chyba</a></li>
+</ul>
+</li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="10.html">10. Skript pro vytvoření balíčku (package) a procedur „business logiky“</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="">11. Testovací skript pro obě procedury, včetně souvisejících dotazů, které ověří, že každá procedura provedla to co měla</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">11. Testovací skript pro obě procedury, včetně souvisejících dotazů, které ověří, že každá procedura provedla to co měla</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#procedura-vytvor-vypujcku">11.1. Procedura vytvor_vypujcku</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#pred-zavolanim">11.1.1. Před zavoláním</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#volani-procedury">11.1.2. Volání procedury</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#vysledek">11.1.3. Výsledek</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#procedura-zobraz-pochybne-zakazniky">11.2. Procedura zobraz_pochybne_zakazniky</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id1">11.2.1. Volání procedury</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id2">11.2.2. Výsledek</a></li>
+</ul>
+</li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="12.html">12. Doplnění schématu o odvozené hodnoty</a></li>
 <li class="toctree-l1"><a class="reference internal" href="13.html">13. Skript, který vytvoří úložiště ještě jednou v „objektové“ podobě</a></li>
 <li class="toctree-l1"><a class="reference internal" href="14.html">14. Skript, který provede navržených pět dotazů znovu</a></li>
@@ -162,6 +212,80 @@
             
   <div class="section" id="testovaci-skript-pro-obe-procedury-vcetne-souvisejicich-dotazu-ktere-overi-ze-kazda-procedura-provedla-to-co-mela">
 <h1>11. Testovací skript pro obě procedury, včetně souvisejících dotazů, které ověří, že každá procedura provedla to co měla<a class="headerlink" href="#testovaci-skript-pro-obe-procedury-vcetne-souvisejicich-dotazu-ktere-overi-ze-kazda-procedura-provedla-to-co-mela" title="Trvalý odkaz na tento nadpis">¶</a></h1>
+<div class="section" id="procedura-vytvor-vypujcku">
+<h2>11.1. Procedura vytvor_vypujcku<a class="headerlink" href="#procedura-vytvor-vypujcku" title="Trvalý odkaz na tento nadpis">¶</a></h2>
+<p>Procedura má za úkol vytvořit vypůjčku pro daného zákazníka a SPZ vozidla nebo motorky.
+Před vytvořením je zkontrolován zákazník (jestli nemá nevrácené vozidlo po termínu nebo není zakázán kvůli špatným zkušenostem).
+Je také ověřena dostupnost vozidla, v případě nesplnění těchto podmínek procedura vrátí chybovou hlášku (vyjímku).</p>
+<div class="section" id="pred-zavolanim">
+<h3>11.1.1. Před zavoláním<a class="headerlink" href="#pred-zavolanim" title="Trvalý odkaz na tento nadpis">¶</a></h3>
+<div class="highlight-sql"><div class="highlight"><pre><span class="k">SELECT</span> <span class="o">*</span> <span class="k">FROM</span> <span class="n">polozka_vypujcky</span> <span class="n">pv</span> <span class="k">LEFT</span> <span class="k">JOIN</span> <span class="n">vozidlo</span> <span class="n">vo</span> <span class="k">ON</span> <span class="n">pv</span><span class="p">.</span><span class="n">id_vozidlo</span> <span class="o">=</span> <span class="n">vo</span><span class="p">.</span><span class="n">id</span> <span class="k">LEFT</span> <span class="k">JOIN</span> <span class="n">motorka</span> <span class="n">mo</span> <span class="k">ON</span> <span class="n">pv</span><span class="p">.</span><span class="n">id_motorka</span> <span class="o">=</span> <span class="n">mo</span><span class="p">.</span><span class="n">id</span> <span class="k">WHERE</span> <span class="n">vo</span><span class="p">.</span><span class="n">spz</span> <span class="o">=</span> <span class="s1">&#39;zsjlwhfr&#39;</span> <span class="k">OR</span> <span class="n">mo</span><span class="p">.</span><span class="n">spz</span> <span class="o">=</span> <span class="s1">&#39;zsjlwhfr&#39;</span>
+
+<span class="k">no</span> <span class="k">rows</span> <span class="n">selected</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="volani-procedury">
+<h3>11.1.2. Volání procedury<a class="headerlink" href="#volani-procedury" title="Trvalý odkaz na tento nadpis">¶</a></h3>
+<div class="highlight-sql"><div class="highlight"><pre><span class="k">CALL</span> <span class="n">automotopujcovna_api</span><span class="p">.</span><span class="n">vytvor_vypujcku</span><span class="p">(</span><span class="s1">&#39;zsjlwhfr&#39;</span><span class="p">,</span><span class="mi">22</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="vysledek">
+<h3>11.1.3. Výsledek<a class="headerlink" href="#vysledek" title="Trvalý odkaz na tento nadpis">¶</a></h3>
+<div class="highlight-sql"><div class="highlight"><pre><span class="n">ID</span>      <span class="n">SPZ</span>          <span class="n">ID_ZAKAZNIK</span>
+<span class="c1">------------------------------------</span>
+<span class="mi">4132</span>    <span class="n">zsjlwhfr</span>     <span class="mi">22</span>
+
+<span class="n">Plan</span> <span class="n">hash</span> <span class="n">value</span><span class="p">:</span> <span class="mi">1285226300</span>
+
+<span class="c1">--------------------------------------------------------------------------------------------</span>
+<span class="o">|</span> <span class="n">Id</span>  <span class="o">|</span> <span class="k">Operation</span>               <span class="o">|</span> <span class="n">Name</span>             <span class="o">|</span> <span class="k">Rows</span>  <span class="o">|</span> <span class="n">Bytes</span> <span class="o">|</span> <span class="n">Cost</span> <span class="p">(</span><span class="o">%</span><span class="n">CPU</span><span class="p">)</span><span class="o">|</span> <span class="n">Time</span>     <span class="o">|</span>
+<span class="c1">--------------------------------------------------------------------------------------------</span>
+<span class="o">|</span>   <span class="mi">0</span> <span class="o">|</span> <span class="k">SELECT</span> <span class="k">STATEMENT</span>        <span class="o">|</span>                  <span class="o">|</span>    <span class="mi">24</span> <span class="o">|</span>  <span class="mi">3552</span> <span class="o">|</span>    <span class="mi">43</span>   <span class="p">(</span><span class="mi">5</span><span class="p">)</span><span class="o">|</span> <span class="mi">00</span><span class="p">:</span><span class="mi">00</span><span class="p">:</span><span class="mi">01</span> <span class="o">|</span>
+<span class="o">|*</span>  <span class="mi">1</span> <span class="o">|</span>  <span class="n">FILTER</span>                 <span class="o">|</span>                  <span class="o">|</span>       <span class="o">|</span>       <span class="o">|</span>            <span class="o">|</span>          <span class="o">|</span>
+<span class="o">|*</span>  <span class="mi">2</span> <span class="o">|</span>   <span class="n">HASH</span> <span class="k">JOIN</span> <span class="k">RIGHT</span> <span class="k">OUTER</span> <span class="o">|</span>                  <span class="o">|</span>    <span class="mi">24</span> <span class="o">|</span>  <span class="mi">3552</span> <span class="o">|</span>    <span class="mi">43</span>   <span class="p">(</span><span class="mi">5</span><span class="p">)</span><span class="o">|</span> <span class="mi">00</span><span class="p">:</span><span class="mi">00</span><span class="p">:</span><span class="mi">01</span> <span class="o">|</span>
+<span class="o">|</span>   <span class="mi">3</span> <span class="o">|</span>    <span class="k">TABLE</span> <span class="k">ACCESS</span> <span class="k">FULL</span>    <span class="o">|</span> <span class="n">VOZIDLO</span>          <span class="o">|</span>  <span class="mi">6002</span> <span class="o">|</span>   <span class="mi">410</span><span class="n">K</span><span class="o">|</span>    <span class="mi">19</span>   <span class="p">(</span><span class="mi">0</span><span class="p">)</span><span class="o">|</span> <span class="mi">00</span><span class="p">:</span><span class="mi">00</span><span class="p">:</span><span class="mi">01</span> <span class="o">|</span>
+<span class="o">|*</span>  <span class="mi">4</span> <span class="o">|</span>    <span class="n">HASH</span> <span class="k">JOIN</span> <span class="k">RIGHT</span> <span class="k">OUTER</span><span class="o">|</span>                  <span class="o">|</span> <span class="mi">20492</span> <span class="o">|</span>  <span class="mi">1560</span><span class="n">K</span><span class="o">|</span>    <span class="mi">23</span>   <span class="p">(</span><span class="mi">5</span><span class="p">)</span><span class="o">|</span> <span class="mi">00</span><span class="p">:</span><span class="mi">00</span><span class="p">:</span><span class="mi">01</span> <span class="o">|</span>
+<span class="o">|</span>   <span class="mi">5</span> <span class="o">|</span>     <span class="k">TABLE</span> <span class="k">ACCESS</span> <span class="k">FULL</span>   <span class="o">|</span> <span class="n">MOTORKA</span>          <span class="o">|</span>  <span class="mi">1206</span> <span class="o">|</span> <span class="mi">77184</span> <span class="o">|</span>     <span class="mi">5</span>   <span class="p">(</span><span class="mi">0</span><span class="p">)</span><span class="o">|</span> <span class="mi">00</span><span class="p">:</span><span class="mi">00</span><span class="p">:</span><span class="mi">01</span> <span class="o">|</span>
+<span class="o">|</span>   <span class="mi">6</span> <span class="o">|</span>     <span class="k">TABLE</span> <span class="k">ACCESS</span> <span class="k">FULL</span>   <span class="o">|</span> <span class="n">POLOZKA_VYPUJCKY</span> <span class="o">|</span> <span class="mi">20492</span> <span class="o">|</span>   <span class="mi">280</span><span class="n">K</span><span class="o">|</span>    <span class="mi">17</span>   <span class="p">(</span><span class="mi">0</span><span class="p">)</span><span class="o">|</span> <span class="mi">00</span><span class="p">:</span><span class="mi">00</span><span class="p">:</span><span class="mi">01</span> <span class="o">|</span>
+<span class="o">|</span>   <span class="mi">7</span> <span class="o">|</span>     <span class="k">TABLE</span> <span class="k">ACCESS</span> <span class="k">FULL</span>   <span class="o">|</span> <span class="n">ZAKAZNIK</span>         <span class="o">|</span> <span class="mi">7492</span> <span class="o">|</span>   <span class="mi">72</span><span class="n">K</span>  <span class="o">|</span>    <span class="mi">7</span>    <span class="p">(</span><span class="mi">0</span><span class="p">)</span><span class="o">|</span> <span class="mi">00</span><span class="p">:</span><span class="mi">00</span><span class="p">:</span><span class="mi">01</span> <span class="o">|</span>
+<span class="c1">--------------------------------------------------------------------------------------------</span>
+
+<span class="n">Predicate</span> <span class="n">Information</span> <span class="p">(</span><span class="n">identified</span> <span class="k">by</span> <span class="k">operation</span> <span class="n">id</span><span class="p">):</span>
+<span class="c1">---------------------------------------------------</span>
+
+   <span class="mi">1</span> <span class="o">-</span> <span class="n">filter</span><span class="p">(</span><span class="ss">&quot;VO&quot;</span><span class="p">.</span><span class="ss">&quot;SPZ&quot;</span><span class="o">=</span><span class="s1">&#39;zsjlwhfr&#39;</span> <span class="k">OR</span> <span class="ss">&quot;MO&quot;</span><span class="p">.</span><span class="ss">&quot;SPZ&quot;</span><span class="o">=</span><span class="s1">&#39;zsjlwhfr&#39;</span><span class="p">)</span>
+   <span class="mi">2</span> <span class="o">-</span> <span class="k">access</span><span class="p">(</span><span class="ss">&quot;PV&quot;</span><span class="p">.</span><span class="ss">&quot;ID_VOZIDLO&quot;</span><span class="o">=</span><span class="ss">&quot;VO&quot;</span><span class="p">.</span><span class="ss">&quot;ID&quot;</span><span class="p">(</span><span class="o">+</span><span class="p">))</span>
+   <span class="mi">4</span> <span class="o">-</span> <span class="k">access</span><span class="p">(</span><span class="ss">&quot;PV&quot;</span><span class="p">.</span><span class="ss">&quot;ID_MOTORKA&quot;</span><span class="o">=</span><span class="ss">&quot;MO&quot;</span><span class="p">.</span><span class="ss">&quot;ID&quot;</span><span class="p">(</span><span class="o">+</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="procedura-zobraz-pochybne-zakazniky">
+<h2>11.2. Procedura zobraz_pochybne_zakazniky<a class="headerlink" href="#procedura-zobraz-pochybne-zakazniky" title="Trvalý odkaz na tento nadpis">¶</a></h2>
+<p>Tato procedura slouží k vypsání &#8220;pochybných zákazníků&#8221;, tedy takových zákazníku kteří již několikrát pozdě vrátíly půjčené vozidlo nebo motorku.
+Jejím parametrem je minimální počet včas nevrácených vypůjček.</p>
+<div class="section" id="id1">
+<h3>11.2.1. Volání procedury<a class="headerlink" href="#id1" title="Trvalý odkaz na tento nadpis">¶</a></h3>
+<div class="highlight-sql"><div class="highlight"><pre><span class="k">CALL</span> <span class="n">automotopujcovna_api</span><span class="p">.</span><span class="n">zobraz_pochybne_zakazniky</span><span class="p">(</span><span class="mi">5</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id2">
+<h3>11.2.2. Výsledek<a class="headerlink" href="#id2" title="Trvalý odkaz na tento nadpis">¶</a></h3>
+<div class="highlight-sql"><div class="highlight"><pre><span class="n">id_zakaznika</span><span class="o">=</span><span class="mi">1703</span><span class="p">,</span> <span class="n">pocet</span> <span class="n">nevracenych</span><span class="o">=</span><span class="mi">6</span>
+<span class="n">id_zakaznika</span><span class="o">=</span><span class="mi">3083</span><span class="p">,</span> <span class="n">pocet</span> <span class="n">nevracenych</span><span class="o">=</span><span class="mi">9</span>
+<span class="n">id_zakaznika</span><span class="o">=</span><span class="mi">1253</span><span class="p">,</span> <span class="n">pocet</span> <span class="n">nevracenych</span><span class="o">=</span><span class="mi">6</span>
+<span class="n">id_zakaznika</span><span class="o">=</span><span class="mi">784</span><span class="p">,</span> <span class="n">pocet</span> <span class="n">nevracenych</span><span class="o">=</span><span class="mi">6</span>
+<span class="n">id_zakaznika</span><span class="o">=</span><span class="mi">2868</span><span class="p">,</span> <span class="n">pocet</span> <span class="n">nevracenych</span><span class="o">=</span><span class="mi">7</span>
+<span class="n">id_zakaznika</span><span class="o">=</span><span class="mi">2193</span><span class="p">,</span> <span class="n">pocet</span> <span class="n">nevracenych</span><span class="o">=</span><span class="mi">6</span>
+<span class="n">id_zakaznika</span><span class="o">=</span><span class="mi">399</span><span class="p">,</span> <span class="n">pocet</span> <span class="n">nevracenych</span><span class="o">=</span><span class="mi">6</span>
+<span class="n">id_zakaznika</span><span class="o">=</span><span class="mi">245</span><span class="p">,</span> <span class="n">pocet</span> <span class="n">nevracenych</span><span class="o">=</span><span class="mi">6</span>
+</pre></div>
+</div>
+</div>
+</div>
 </div>
 
 

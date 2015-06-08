@@ -6,3 +6,40 @@ Skript, který vytvoří úložiště ještě jednou v „objektové“ podobě
 .. - místo relačních tabulek budou použity uživatelsky definované typy Object a objektové tabulky (s jinými názvy než v dosavadním modelu)
 .. - objektové tabulky budou naplněny importem z původních relačních tabulek
 .. - datové cizí klíče budou nahrazeny referencemi na objekt
+
+.. code-block:: sql
+
+    CREATE TYPE person_typ AS OBJECT (
+      idno           NUMBER,
+      first_name     VARCHAR2(20),
+      last_name      VARCHAR2(25),
+      email          VARCHAR2(25),
+      phone          VARCHAR2(20),
+      MAP MEMBER FUNCTION get_idno RETURN NUMBER, 
+      MEMBER PROCEDURE display_details ( SELF IN OUT NOCOPY person_typ ));
+    /
+
+    CREATE TYPE BODY person_typ AS
+      MAP MEMBER FUNCTION get_idno RETURN NUMBER IS
+      BEGIN
+        RETURN idno;
+      END;
+      MEMBER PROCEDURE display_details ( SELF IN OUT NOCOPY person_typ ) IS
+      BEGIN
+        -- use the PUT_LINE procedure of the DBMS_OUTPUT package to display details
+        DBMS_OUTPUT.PUT_LINE(TO_CHAR(idno) || ' ' || first_name || ' ' || last_name);
+        DBMS_OUTPUT.PUT_LINE(email || ' '  || phone);
+      END;
+    END;
+    /
+
+.. code-block:: sql
+
+    -- requires existing person_typ fr. Ex 1-1
+    CREATE TABLE contacts (
+      contact         person_typ,
+      contact_date    DATE );
+
+    INSERT INTO contacts VALUES (
+      person_typ (65, 'Verna', 'Mills', 'vmills@example.com', '1-650-555-0125'), 
+     '24 Jun 2003' );
