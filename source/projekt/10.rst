@@ -3,6 +3,43 @@
 Skript pro vytvoření balíčku (package) a procedur „business logiky“
 ===================================================================
 
+vytvorVypujcku(spz, id_zakaznika)
+=================================
+
+.. code-block:: sql
+    
+    CREATE OR REPLACE PROCEDURE vytvorVypujcku(p_spz IN varchar2, id_zakaznika IN number) IS 
+    id_vozmot number;
+    motorka boolean;
+    dostupne number;
+    vypujcka_id number;
+    BEGIN
+      if zkontroluj_zakaznika(id_zakaznika) then
+        motorka := false;
+        SELECT id INTO id_vozmot FROM vozidlo WHERE spz = p_spz;
+        if id_vozmot is null then
+           SELECT id INTO id_vozmot FROM motorka WHERE spz = p_spz;
+           motorka := true;
+        end if;
+        if not motorka then
+          SELECT id INTO dostupne FROM polozka_vypujcky pv JOIN vypujcka v ON pv.id_vypujcka = v.id WHERE pv.id_vozidlo = id_vozmot AND v.datum_vraceni <=sysdate;
+          INSERT INTO vypujcka (ZACATEK,KONEC,DATUM_SJEDNANI,ID_ZAKAZNIK,CISLO_POJISTKY) VALUES (sysdate, sysdate+7, sysdate, id_zakaznika,'DGUGEUZGS') returning ID into vypujcka_id;
+          INSERT INTO polozka_vypujcky (id_vozidlo, id_vypujcka) VALUES (id_vozmot, vypujcka_id);
+        else
+          SELECT id INTO dostupne FROM polozka_vypujcky pv JOIN vypujcka v ON pv.id_vypujcka = v.id WHERE pv.id_motorka = id_vozmot AND v.datum_vraceni <=sysdate;
+           INSERT INTO vypujcka (ZACATEK,KONEC,DATUM_SJEDNANI,ID_ZAKAZNIK,CISLO_POJISTKY) VALUES (sysdate, sysdate+7, sysdate, id_zakaznika,'DGUGEUZGS') returning ID into vypujcka_id;
+          INSERT INTO polozka_vypujcky (id_motorka, id_vypujcka) VALUES (id_vozmot, vypujcka_id);
+        end if;
+        
+        dbms_output.put_line('Vypujcka vytvorena!');
+      else
+        dbms_output.put_line('Nelze vytvořit vypujcku pro tohoto zakaznika, je bud zakazan nebo ma prosle vypujcky');
+      end if;
+      
+    END vytvorVypujcku;
+
+
+
 zobrazPochybneZakazniky(pocet_nevraceni)
 ========================================
 
