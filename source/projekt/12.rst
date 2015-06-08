@@ -7,5 +7,57 @@ Doplnění schématu o odvozené hodnoty
 .. hodnoty (průměrný plat zaměstnance v rámci oddělní apod.) – tyto hodnoty budou
 .. automaticky aktualizovány pomocí triggerů
 
-Databáze obsahuje dodatečné trigery(procedury) pro automatické dopočítávání hodnot, které vyplývají ze zbytku dat v databázi.
-Pro nás je nejdůležitější samotné stáří vozidla, které indikuje konec životnosti a tedy nutnost obměny daného vozu či motorky. Pro tyto potřeby obsahuje databáze trigger na výpočet stáří vozidla. Výstup z ní říká kolik dní do konce životnosti automobilu zbývá a je dále používán v analýze výhodnosti vozidla popsané v sekci 15.
+Budeme doplňovat průměrnou cenu výpůjčky pro daného zákazníka. Průměrnou cenu pro aktuální stav bude vypočítávat procedura, aktivovaná po každé změně v tabulce ``zakaznik`` pomocí triggeru.
+
+Doplnění sloupce 
+----------------
+
+.. code-block:: sql
+    
+    ALTER TABLE zakaznik add (PRUMCENA_VYPUJCKY float);
+
+Procedura
+---------
+
+.. code-block:: sql
+
+    create or replace procedure nastav_prumcenu (id_zakaznika IN number) AS
+    prumer number;
+    begin
+     SELECT AVG(vo.cena_den) + AVG(mo.cena_den) INTO prumer FROM polozka_vypujcky pv JOIN vypujcka v ON pv.id_vypujcka = v.id LEFT JOIN vozidlo vo ON pv.id_vozidlo = vo.id LEFT JOIN motorka mo ON pv.id_motorka = mo.id WHERE v.id_zakaznik = id_zakaznika;
+     UPDATE zakaznik SET PRUMCENA_VYPUJCKY=prumer WHERE id = id_zakaznika;
+    end;
+
+Trigger
+-------
+
+.. code-block:: sql
+
+    create or replace trigger prumcena_trigger
+    AFTER insert or update or delete
+    ON vypujcka
+    FOR EACH ROW
+    BEGIN
+      nastav_prumcenu(:new.id_zakaznik);
+    END;
+
+
+Data
+----
+
+.. code-block:: sql
+
+    JMENO                                                        PRUMCENA_VYPUJCKY
+    ------------------------------------------------------------ -----------------
+    Buckley Stark                                                974.5             
+    Jessie Moody                                                 1125.7            
+    Mcknight Dorsey                                              774.2             
+    Aurora Levine                                                2574.1            
+    Mai Hood                                                     1515.7            
+    Lily Cunningham                                              1678.1            
+    Ramona Fowler                                                3984.0            
+    Little Valenzuela                                            549.1             
+    Oliver Petersen                                              897.9             
+    Antonia Ellis                                                1870.8            
+    Case Castaneda                                               2067.2            
+    Gardner Mills                                                1211.4            
