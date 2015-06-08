@@ -116,7 +116,13 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="9.html">9. Test integritních omezení</a></li>
+<li class="toctree-l1"><a class="reference internal" href="9.html">9. Test integritních omezení</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="9.html#polozka-vypujcky-musi-obsahovat-prave-jedno-auto-nebo-motorku">9.1. Položka výpůjčky musí obsahovat právě jedno auto nebo motorku</a></li>
+<li class="toctree-l2"><a class="reference internal" href="9.html#zacatek-vypujcky-musi-byt-drive-nez-je-jeji-konec">9.2. Začátek výpůjčky musí být dříve, než je její konec</a></li>
+<li class="toctree-l2"><a class="reference internal" href="9.html#kazda-vypujcka-musi-mit-vyplnene-cislo-pojistne-smlouvy">9.3. Každá výpůjčka musí mít vyplněné číslo pojistné smlouvy.</a></li>
+<li class="toctree-l2"><a class="reference internal" href="9.html#vin-kod-nesmi-byt-prazdny-a-musi-byt-unikatni">9.4. VIN kód nesmí být prázdný a musí být unikátní</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="10.html">10. Skript pro vytvoření balíčku (package) a procedur „business logiky“</a></li>
 <li class="toctree-l1"><a class="reference internal" href="11.html">11. Testovací skript pro obě procedury, včetně souvisejících dotazů, které ověří, že každá procedura provedla to co měla</a></li>
 <li class="toctree-l1"><a class="reference internal" href="12.html">12. Doplnění schématu o odvozené hodnoty</a></li>
@@ -165,10 +171,16 @@
 <div class="highlight-sql"><div class="highlight"><pre><span class="k">ALTER</span> <span class="k">TABLE</span> <span class="n">vypujcka</span>
 <span class="k">ADD</span> <span class="k">CONSTRAINT</span> <span class="n">date_check</span> <span class="k">check</span> <span class="p">(</span><span class="n">zacatek</span> <span class="o">&lt;=</span> <span class="n">konec</span><span class="p">);</span>
 
+<span class="k">ALTER</span> <span class="k">TABLE</span> <span class="n">MOTORKA</span>
+<span class="k">ADD</span> <span class="k">CONSTRAINT</span> <span class="n">MOTORKA_UK1</span> <span class="k">UNIQUE</span> <span class="p">(</span><span class="n">VIN</span><span class="p">);</span>
+
+<span class="k">ALTER</span> <span class="k">TABLE</span> <span class="n">VOZIDLO</span>
+<span class="k">ADD</span> <span class="k">CONSTRAINT</span> <span class="n">MOTORKA_UK1</span> <span class="k">UNIQUE</span> <span class="p">(</span><span class="n">VIN</span><span class="p">);</span>
+
 <span class="k">CREATE</span> <span class="k">OR</span> <span class="k">REPLACE</span> <span class="k">PROCEDURE</span> <span class="n">kontrola_polozky</span> <span class="p">(</span><span class="n">id_motorka</span> <span class="k">in</span> <span class="nb">number</span><span class="p">,</span> <span class="n">id_vozidlo</span> <span class="k">in</span> <span class="nb">number</span><span class="p">)</span> <span class="k">AS</span>
 <span class="n">kapacita</span> <span class="nb">number</span><span class="p">;</span>
 <span class="k">BEGIN</span>
- <span class="n">IF</span> <span class="p">(</span><span class="n">id_motorka</span> <span class="k">is</span> <span class="k">null</span> <span class="o">||</span> <span class="n">id_vozidlo</span> <span class="k">is</span> <span class="k">null</span><span class="p">)</span> <span class="k">then</span>
+ <span class="n">IF</span> <span class="p">(</span><span class="n">id_motorka</span> <span class="k">is</span> <span class="k">null</span> <span class="k">AND</span> <span class="n">id_vozidlo</span> <span class="k">is</span> <span class="k">null</span><span class="p">)</span> <span class="k">then</span>
   <span class="n">raise_application_error</span><span class="p">(</span><span class="o">-</span><span class="mi">20000</span><span class="p">,</span> <span class="s1">&#39;Polozka objednavky neobsahuje ani vozidlo ani motorku!&#39;</span><span class="p">);</span>
  <span class="k">END</span> <span class="n">IF</span><span class="p">;</span>
 <span class="k">END</span><span class="p">;</span>

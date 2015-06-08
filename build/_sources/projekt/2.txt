@@ -6,7 +6,7 @@ Integritní omezení
 Triviální
 =========
 
-- Kubatura vozidla je celé kladné číslo.
+- Cena za pronájem vozidla nebo motorky za den je celé kladné číslo.
 - Každá výpůjčka musí mít vyplněné číslo pojistné smlouvy.
 - PSČ má délku 6.
 - Číslo občanského průkazu(OP) nesmí být prázdné.

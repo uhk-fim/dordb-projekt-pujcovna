@@ -116,7 +116,13 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l1 current"><a class="current reference internal" href="">9. Test integritních omezení</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">9. Test integritních omezení</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#polozka-vypujcky-musi-obsahovat-prave-jedno-auto-nebo-motorku">9.1. Položka výpůjčky musí obsahovat právě jedno auto nebo motorku</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#zacatek-vypujcky-musi-byt-drive-nez-je-jeji-konec">9.2. Začátek výpůjčky musí být dříve, než je její konec</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#kazda-vypujcka-musi-mit-vyplnene-cislo-pojistne-smlouvy">9.3. Každá výpůjčka musí mít vyplněné číslo pojistné smlouvy.</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#vin-kod-nesmi-byt-prazdny-a-musi-byt-unikatni">9.4. VIN kód nesmí být prázdný a musí být unikátní</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="10.html">10. Skript pro vytvoření balíčku (package) a procedur „business logiky“</a></li>
 <li class="toctree-l1"><a class="reference internal" href="11.html">11. Testovací skript pro obě procedury, včetně souvisejících dotazů, které ověří, že každá procedura provedla to co měla</a></li>
 <li class="toctree-l1"><a class="reference internal" href="12.html">12. Doplnění schématu o odvozené hodnoty</a></li>
@@ -162,6 +168,59 @@
             
   <div class="section" id="test-integritnich-omezeni">
 <h1>9. Test integritních omezení<a class="headerlink" href="#test-integritnich-omezeni" title="Trvalý odkaz na tento nadpis">¶</a></h1>
+<div class="section" id="polozka-vypujcky-musi-obsahovat-prave-jedno-auto-nebo-motorku">
+<h2>9.1. Položka výpůjčky musí obsahovat právě jedno auto nebo motorku<a class="headerlink" href="#polozka-vypujcky-musi-obsahovat-prave-jedno-auto-nebo-motorku" title="Trvalý odkaz na tento nadpis">¶</a></h2>
+<div class="highlight-sql"><div class="highlight"><pre>INSERT INTO polozka_vypujcky (id_vypujcka, id_motorka, id_vozidlo ) VALUES (&#39;9999&#39;,NULL,NULL);
+
+
+One error saving changes to table &quot;JOSEFJA1&quot;.&quot;POLOZKA_VYPUJCKY&quot;:
+Row 51: ORA-20000: Polozka objednavky neobsahuje ani vozidlo ani motorku!
+ORA-06512: na &quot;JOSEFJA1.KONTROLA_POLOZKY&quot;, line 5
+ORA-06512: na &quot;JOSEFJA1.TRIG_KONTROLA_POLOZKY_VYPUJCKY&quot;, line 2
+ORA-04088: chyba během provádění triggeru &#39;JOSEFJA1.TRIG_KONTROLA_POLOZKY_VYPUJCKY&#39;
+ORA-06512: na line 1
+</pre></div>
+</div>
+</div>
+<div class="section" id="zacatek-vypujcky-musi-byt-drive-nez-je-jeji-konec">
+<h2>9.2. Začátek výpůjčky musí být dříve, než je její konec<a class="headerlink" href="#zacatek-vypujcky-musi-byt-drive-nez-je-jeji-konec" title="Trvalý odkaz na tento nadpis">¶</a></h2>
+<div class="highlight-sql"><div class="highlight"><pre>INSERT INTO &quot;JOSEFJA1&quot;.&quot;VYPUJCKA&quot; (ZACATEK, KONEC, DATUM_SJEDNANI, ID_ZAKAZNIK, CISLO_POJISTKY) VALUES (TO_TIMESTAMP(&#39;08.06.15 10:09:35,210000000&#39;, &#39;DD.MM.RR HH24:MI:SS,FF&#39;), TO_TIMESTAMP(&#39;08.05.15 10:09:44,890000000&#39;, &#39;DD.MM.RR HH24:MI:SS,FF&#39;), TO_TIMESTAMP(&#39;08.06.15 10:09:58,710000000&#39;, &#39;DD.MM.RR HH24:MI:SS,FF&#39;), &#39;3000&#39;, &#39;12417886175&#39;)
+
+
+ORA-02290: kontrolní omezení (JOSEFJA1.DATE_CHECK) porušeno
+ORA-06512: na line 1
+One error saving changes to table &quot;JOSEFJA1&quot;.&quot;VYPUJCKA&quot;:
+Row 51: ORA-02290: kontrolní omezení (JOSEFJA1.DATE_CHECK) porušeno
+ORA-06512: na line 1
+</pre></div>
+</div>
+</div>
+<div class="section" id="kazda-vypujcka-musi-mit-vyplnene-cislo-pojistne-smlouvy">
+<h2>9.3. Každá výpůjčka musí mít vyplněné číslo pojistné smlouvy.<a class="headerlink" href="#kazda-vypujcka-musi-mit-vyplnene-cislo-pojistne-smlouvy" title="Trvalý odkaz na tento nadpis">¶</a></h2>
+<div class="highlight-sql"><div class="highlight"><pre>INSERT INTO &quot;JOSEFJA1&quot;.&quot;VYPUJCKA&quot; (ZACATEK, KONEC, DATUM_SJEDNANI, ID_ZAKAZNIK) VALUES (TO_TIMESTAMP(&#39;08.06.15 10:13:01,564000000&#39;, &#39;DD.MM.RR HH24:MI:SS,FF&#39;), TO_TIMESTAMP(&#39;08.06.15 10:13:04,850000000&#39;, &#39;DD.MM.RR HH24:MI:SS,FF&#39;), TO_TIMESTAMP(&#39;08.06.15 10:13:07,589000000&#39;, &#39;DD.MM.RR HH24:MI:SS,FF&#39;), &#39;1245&#39;)
+
+
+ORA-01400: do (&quot;JOSEFJA1&quot;.&quot;VYPUJCKA&quot;.&quot;CISLO_POJISTKY&quot;) nelze vložit hodnotu NULL
+ORA-06512: na line 1
+
+One error saving changes to table &quot;JOSEFJA1&quot;.&quot;VYPUJCKA&quot;:
+Row 51: ORA-01400: do (&quot;JOSEFJA1&quot;.&quot;VYPUJCKA&quot;.&quot;CISLO_POJISTKY&quot;) nelze vložit hodnotu NULL
+ORA-06512: na line 1
+</pre></div>
+</div>
+</div>
+<div class="section" id="vin-kod-nesmi-byt-prazdny-a-musi-byt-unikatni">
+<h2>9.4. VIN kód nesmí být prázdný a musí být unikátní<a class="headerlink" href="#vin-kod-nesmi-byt-prazdny-a-musi-byt-unikatni" title="Trvalý odkaz na tento nadpis">¶</a></h2>
+<p>..code-block:: sql</p>
+<blockquote>
+<div><p>INSERT INTO &#8220;JOSEFJA1&#8221;.&#8221;MOTORKA&#8221; (SPZ, VIN, TAKT_MOTORU, CENA_DEN, ID_BARVA, ID_KUBATURA, ID_TYP_MOTORKY, ID_PREVODOVKA, ID_OZNACENI) VALUES (&#8216;xxuigiug&#8217;, &#8216;existujici-vinko&#8217;, &#8216;2&#8217;, &#8216;490&#8217;, &#8216;20&#8217;, &#8216;1&#8217;, &#8216;22&#8217;, &#8216;1&#8217;, &#8216;900&#8217;)</p>
+<p>ORA-00001: nesplněna podmínka jedinečnosti (JOSEFJA1.SYS_C00133123)
+ORA-06512: na line 1</p>
+<p>One error saving changes to table &#8220;JOSEFJA1&#8221;.&#8221;MOTORKA&#8221;:
+Row 4: ORA-00001: nesplněna podmínka jedinečnosti (JOSEFJA1.SYS_C00133123)
+ORA-06512: na line 1</p>
+</div></blockquote>
+</div>
 </div>
 
 
