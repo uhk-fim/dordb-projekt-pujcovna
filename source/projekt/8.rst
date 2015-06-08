@@ -210,5 +210,8 @@ Výpis
 
 
 
+TODO: Porovnání alternativních dotazů: dotazy_alt.sql
+- dotaz používající poddotazy se ukázal jako mnohem méně náročný (cost 19), než dotaz využívající spojení tabulek (cost 40) 
+
 
 

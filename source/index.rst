@@ -2,7 +2,10 @@
 AUTO - MOTO Půjčovna - DORDB 2015
 =================================
 
-Realizace informačního systému pro potřeby auto-moto půjčovny.
+Realizace informačního systému pro potřeby auto-moto půjčovny. 
+Návrh databáze pro správu vozového parku, vyřizování vypůjček klientů a vymáhání nevrácených vozidel.
+
+Semestrální projekt DORDB 2015
 
 Autoři:
 -------

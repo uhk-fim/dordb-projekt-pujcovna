@@ -3,6 +3,22 @@
 Business logika
 ===============
 
+vytvorVypujcku()
+==============================
+
+Procedura pro vytváření vlastní výpůjčky, ověří existenci žádaných vozidel a založí všechny nezbytný databázové vazby.
+
+Parametry
+---------
+
+``spz_vozidla`` -  SPZ vozidla nebo motorky kterou chceme půjčit
+``id_zakaznika``` - ID id_zakaznika kteremu chceme vozidlo nebo motorku půjčit
+
+Návratová hodnota
+-----------------
+
+žádná (při chybě vyskočí aplikační vyjímka)
+
 zobrazNevraceneVypujckyKDatu()
 ==============================
 
@@ -21,7 +37,7 @@ seznam výpůjček
 zobrazPochybneZakazniky()
 =========================
 
-Vrátí seznam zákazníků, kteři často vrací po dohodnuté době vrácení nebo je zabanován.
+Vrátí seznam zákazníků, kteři často vrací po dohodnuté době vrácení nebo zákazníky kteří jsou zakázání (byly s nimy problémy).
 
 Parametry
 ---------
