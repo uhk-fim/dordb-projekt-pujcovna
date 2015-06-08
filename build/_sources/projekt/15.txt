@@ -3,6 +3,12 @@
 Navrhněte slovně fakta a dimenze pro datový sklad vycházející z vaší databáze
 =============================================================================
 
-Popište, k jakým analýzám bude možné tento sklad využít. Identifikujte tabulky/sloupce, ke kterým
-bude nutné v datovém skladu navíc evidovat historické hodnoty (pokud již v provozní
-databázi nejsou k dispozici).
+.. Popište, k jakým analýzám bude možné tento sklad využít. Identifikujte tabulky/sloupce, ke kterým bude nutné v datovém skladu navíc evidovat historické hodnoty (pokud již v provozní databázi nejsou k dispozici).
+
+Datový sklad Půjčovny bude sloužit pro zpětnou analýzu dat a dohledaní hříšníků, kteří například poškodili vypůjčené auto.
+
+V datovém skladu bude navíc nová tabulka v které bude uložena historie výpujček každého auta s doplňujícími informacemi. Bude tak možné zpětně dohledat 
+historii klientů, kteří si dané auto zapůjčili. Dále bude tabulka obsahovat informaci o výhodnosti daného dopravního prostředku - tržba / cena(čím větší tím lepší).
+
+Dále bude datový sklad navržen pro analýzu nejčastěji půčovaných aut a motorek pro budoucí optimalizaci. Tzn. že bude možné sledovat trendy a ty prostředky, které budou nejpoužívanější bude moci management navýšit a naopak ty, které budou málo půjčované(prodělečné) omezit.
+Pro tyto potřeby bude v datém skladu nová tabulka, která bude obsahovat list všech dosavadních prostředků seřazená podle počtu používání a dále podle poměru tržba / cena(čím větší tím lepší).

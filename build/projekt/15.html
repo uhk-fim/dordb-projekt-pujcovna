@@ -113,9 +113,41 @@
 <li class="toctree-l3"><a class="reference internal" href="8.html#id2">8.2.2. Výpis</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="8.html#vypis-vsech-nevracenych-vypujcek-po-datumu-vraceni">8.3. Výpis všech nevrácených výpůjček po datumu vrácení</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="8.html#id3">8.3.1. Dotaz</a></li>
+<li class="toctree-l3"><a class="reference internal" href="8.html#id4">8.3.2. Výpis</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="9.html">9. Test integritních omezení</a></li>
+<li class="toctree-l2"><a class="reference internal" href="8.html#vyhledani-vozidla-nebo-motocyklu-pro-dane-parametry">8.4. Vyhledání vozidla nebo motocyklu pro dané parametry</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="8.html#id5">8.4.1. Dotaz</a></li>
+<li class="toctree-l3"><a class="reference internal" href="8.html#id6">8.4.2. Výpis</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="9.html">9. Testy integritních omezení</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="9.html#polozka-vypujcky-musi-obsahovat-prave-jedno-auto-nebo-motorku">9.1. Položka výpůjčky musí obsahovat právě jedno auto nebo motorku</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="9.html#dotaz">9.1.1. Dotaz</a></li>
+<li class="toctree-l3"><a class="reference internal" href="9.html#chyba">9.1.2. Chyba</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="9.html#zacatek-vypujcky-musi-byt-drive-nez-je-jeji-konec">9.2. Začátek výpůjčky musí být dříve, než je její konec</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="9.html#id1">9.2.1. Dotaz</a></li>
+<li class="toctree-l3"><a class="reference internal" href="9.html#id2">9.2.2. Chyba</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="9.html#kazda-vypujcka-musi-mit-vyplnene-cislo-pojistne-smlouvy">9.3. Každá výpůjčka musí mít vyplněné číslo pojistné smlouvy.</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="9.html#id3">9.3.1. Dotaz</a></li>
+<li class="toctree-l3"><a class="reference internal" href="9.html#id4">9.3.2. Chyba</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="9.html#vin-kod-nesmi-byt-prazdny-a-musi-byt-unikatni">9.4. VIN kód nesmí být prázdný a musí být unikátní</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="9.html#id5">9.4.1. Dotaz</a></li>
+<li class="toctree-l3"><a class="reference internal" href="9.html#id6">9.4.2. Chyba</a></li>
+</ul>
+</li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="10.html">10. Skript pro vytvoření balíčku (package) a procedur „business logiky“</a></li>
 <li class="toctree-l1"><a class="reference internal" href="11.html">11. Testovací skript pro obě procedury, včetně souvisejících dotazů, které ověří, že každá procedura provedla to co měla</a></li>
 <li class="toctree-l1"><a class="reference internal" href="12.html">12. Doplnění schématu o odvozené hodnoty</a></li>
@@ -161,9 +193,11 @@
             
   <div class="section" id="navrhnete-slovne-fakta-a-dimenze-pro-datovy-sklad-vychazejici-z-vasi-databaze">
 <h1>15. Navrhněte slovně fakta a dimenze pro datový sklad vycházející z vaší databáze<a class="headerlink" href="#navrhnete-slovne-fakta-a-dimenze-pro-datovy-sklad-vychazejici-z-vasi-databaze" title="Trvalý odkaz na tento nadpis">¶</a></h1>
-<p>Popište, k jakým analýzám bude možné tento sklad využít. Identifikujte tabulky/sloupce, ke kterým
-bude nutné v datovém skladu navíc evidovat historické hodnoty (pokud již v provozní
-databázi nejsou k dispozici).</p>
+<p>Datový sklad Půjčovny bude sloužit pro zpětnou analýzu dat a dohledaní hříšníků, kteří například poškodili vypůjčené auto.</p>
+<p>V datovém skladu bude navíc nová tabulka v které bude uložena historie výpujček každého auta s doplňujícími informacemi. Bude tak možné zpětně dohledat
+historii klientů, kteří si dané auto zapůjčili. Dále bude tabulka obsahovat informaci o výhodnosti daného dopravního prostředku - tržba / cena(čím větší tím lepší).</p>
+<p>Dále bude datový sklad navržen pro analýzu nejčastěji půčovaných aut a motorek pro budoucí optimalizaci. Tzn. že bude možné sledovat trendy a ty prostředky, které budou nejpoužívanější bude moci management navýšit a naopak ty, které budou málo půjčované(prodělečné) omezit.
+Pro tyto potřeby bude v datém skladu nová tabulka, která bude obsahovat list všech dosavadních prostředků seřazená podle počtu používání a dále podle poměru tržba / cena(čím větší tím lepší).</p>
 </div>
 
 
