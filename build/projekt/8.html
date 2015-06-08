@@ -31,7 +31,7 @@
 
   
     <link rel="top" title="Dokumentace pro AUTO - MOTO Půjčovna - DORDB 0" href="../index.html"/>
-        <link rel="next" title="9. Test integritních omezení" href="9.html"/>
+        <link rel="next" title="9. Testy integritních omezení" href="9.html"/>
         <link rel="prev" title="7. Skript pro naplnění tabulky testovacími daty" href="7.html"/> 
 
   
@@ -114,9 +114,41 @@
 <li class="toctree-l3"><a class="reference internal" href="#id2">8.2.2. Výpis</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="#vypis-vsech-nevracenych-vypujcek-po-datumu-vraceni">8.3. Výpis všech nevrácených výpůjček po datumu vrácení</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id3">8.3.1. Dotaz</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id4">8.3.2. Výpis</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="9.html">9. Test integritních omezení</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#vyhledani-vozidla-nebo-motocyklu-pro-dane-parametry">8.4. Vyhledání vozidla nebo motocyklu pro dané parametry</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id5">8.4.1. Dotaz</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id6">8.4.2. Výpis</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="9.html">9. Testy integritních omezení</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="9.html#polozka-vypujcky-musi-obsahovat-prave-jedno-auto-nebo-motorku">9.1. Položka výpůjčky musí obsahovat právě jedno auto nebo motorku</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="9.html#dotaz">9.1.1. Dotaz</a></li>
+<li class="toctree-l3"><a class="reference internal" href="9.html#chyba">9.1.2. Chyba</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="9.html#zacatek-vypujcky-musi-byt-drive-nez-je-jeji-konec">9.2. Začátek výpůjčky musí být dříve, než je její konec</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="9.html#id1">9.2.1. Dotaz</a></li>
+<li class="toctree-l3"><a class="reference internal" href="9.html#id2">9.2.2. Chyba</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="9.html#kazda-vypujcka-musi-mit-vyplnene-cislo-pojistne-smlouvy">9.3. Každá výpůjčka musí mít vyplněné číslo pojistné smlouvy.</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="9.html#id3">9.3.1. Dotaz</a></li>
+<li class="toctree-l3"><a class="reference internal" href="9.html#id4">9.3.2. Chyba</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="9.html#vin-kod-nesmi-byt-prazdny-a-musi-byt-unikatni">9.4. VIN kód nesmí být prázdný a musí být unikátní</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="9.html#id5">9.4.1. Dotaz</a></li>
+<li class="toctree-l3"><a class="reference internal" href="9.html#id6">9.4.2. Chyba</a></li>
+</ul>
+</li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="10.html">10. Skript pro vytvoření balíčku (package) a procedur „business logiky“</a></li>
 <li class="toctree-l1"><a class="reference internal" href="11.html">11. Testovací skript pro obě procedury, včetně souvisejících dotazů, které ověří, že každá procedura provedla to co měla</a></li>
 <li class="toctree-l1"><a class="reference internal" href="12.html">12. Doplnění schématu o odvozené hodnoty</a></li>
@@ -282,6 +314,80 @@
 </div>
 </div>
 </div>
+<div class="section" id="vypis-vsech-nevracenych-vypujcek-po-datumu-vraceni">
+<h2>8.3. Výpis všech nevrácených výpůjček po datumu vrácení<a class="headerlink" href="#vypis-vsech-nevracenych-vypujcek-po-datumu-vraceni" title="Trvalý odkaz na tento nadpis">¶</a></h2>
+<div class="section" id="id3">
+<h3>8.3.1. Dotaz<a class="headerlink" href="#id3" title="Trvalý odkaz na tento nadpis">¶</a></h3>
+<div class="highlight-sql"><div class="highlight"><pre><span class="k">SELECT</span> <span class="o">*</span> <span class="k">FROM</span> <span class="n">vypujcka</span> <span class="k">WHERE</span> <span class="n">konec</span> <span class="o">&lt;</span> <span class="n">sysdate</span> <span class="k">AND</span> <span class="n">datum_vraceni</span> <span class="k">is</span> <span class="k">NULL</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id4">
+<h3>8.3.2. Výpis<a class="headerlink" href="#id4" title="Trvalý odkaz na tento nadpis">¶</a></h3>
+<div class="highlight-sql"><div class="highlight"><pre>    <span class="n">ID</span> <span class="n">ZACATEK</span>                      <span class="n">KONEC</span>                        <span class="n">DATUM_SJEDNANI</span>                 <span class="n">ID_ZAKAZNIK</span> <span class="n">CISLO_POJISTKY</span>
+<span class="c1">---------- ---------------------------- ---------------------------- ---------------------------- ---------------------------- -----------</span>
+   <span class="mi">286</span> <span class="mi">27</span><span class="p">.</span><span class="mi">02</span><span class="p">.</span><span class="mi">15</span> <span class="mi">04</span><span class="p">:</span><span class="mi">28</span><span class="p">:</span><span class="mi">36</span><span class="p">,</span><span class="mi">000000000</span>  <span class="mi">06</span><span class="p">.</span><span class="mi">06</span><span class="p">.</span><span class="mi">15</span> <span class="mi">17</span><span class="p">:</span><span class="mi">06</span><span class="p">:</span><span class="mi">21</span><span class="p">,</span><span class="mi">000000000</span>  <span class="mi">25</span><span class="p">.</span><span class="mi">12</span><span class="p">.</span><span class="mi">14</span> <span class="mi">12</span><span class="p">:</span><span class="mi">56</span><span class="p">:</span><span class="mi">47</span><span class="p">,</span><span class="mi">000000000</span>      <span class="mi">2125</span>      <span class="mi">267349504</span>
+   <span class="mi">287</span> <span class="mi">29</span><span class="p">.</span><span class="mi">04</span><span class="p">.</span><span class="mi">15</span> <span class="mi">15</span><span class="p">:</span><span class="mi">15</span><span class="p">:</span><span class="mi">18</span><span class="p">,</span><span class="mi">000000000</span>  <span class="mi">03</span><span class="p">.</span><span class="mi">06</span><span class="p">.</span><span class="mi">15</span> <span class="mi">23</span><span class="p">:</span><span class="mi">00</span><span class="p">:</span><span class="mi">41</span><span class="p">,</span><span class="mi">000000000</span>  <span class="mi">04</span><span class="p">.</span><span class="mi">01</span><span class="p">.</span><span class="mi">15</span> <span class="mi">20</span><span class="p">:</span><span class="mi">26</span><span class="p">:</span><span class="mi">31</span><span class="p">,</span><span class="mi">000000000</span>      <span class="mi">1751</span>      <span class="mi">602419577</span>
+   <span class="mi">290</span> <span class="mi">20</span><span class="p">.</span><span class="mi">04</span><span class="p">.</span><span class="mi">15</span> <span class="mi">14</span><span class="p">:</span><span class="mi">23</span><span class="p">:</span><span class="mi">18</span><span class="p">,</span><span class="mi">000000000</span>  <span class="mi">03</span><span class="p">.</span><span class="mi">06</span><span class="p">.</span><span class="mi">15</span> <span class="mi">02</span><span class="p">:</span><span class="mi">54</span><span class="p">:</span><span class="mi">25</span><span class="p">,</span><span class="mi">000000000</span>  <span class="mi">30</span><span class="p">.</span><span class="mi">09</span><span class="p">.</span><span class="mi">14</span> <span class="mi">01</span><span class="p">:</span><span class="mi">16</span><span class="p">:</span><span class="mi">04</span><span class="p">,</span><span class="mi">000000000</span>      <span class="mi">1455</span>      <span class="mi">445322202</span>
+   <span class="mi">303</span> <span class="mi">09</span><span class="p">.</span><span class="mi">02</span><span class="p">.</span><span class="mi">15</span> <span class="mi">11</span><span class="p">:</span><span class="mi">50</span><span class="p">:</span><span class="mi">19</span><span class="p">,</span><span class="mi">000000000</span>  <span class="mi">04</span><span class="p">.</span><span class="mi">06</span><span class="p">.</span><span class="mi">15</span> <span class="mi">15</span><span class="p">:</span><span class="mi">56</span><span class="p">:</span><span class="mi">52</span><span class="p">,</span><span class="mi">000000000</span>  <span class="mi">21</span><span class="p">.</span><span class="mi">06</span><span class="p">.</span><span class="mi">14</span> <span class="mi">22</span><span class="p">:</span><span class="mi">03</span><span class="p">:</span><span class="mi">18</span><span class="p">,</span><span class="mi">000000000</span>      <span class="mi">2016</span>      <span class="mi">625671929</span>
+   <span class="mi">328</span> <span class="mi">28</span><span class="p">.</span><span class="mi">02</span><span class="p">.</span><span class="mi">15</span> <span class="mi">21</span><span class="p">:</span><span class="mi">11</span><span class="p">:</span><span class="mi">12</span><span class="p">,</span><span class="mi">000000000</span>  <span class="mi">07</span><span class="p">.</span><span class="mi">06</span><span class="p">.</span><span class="mi">15</span> <span class="mi">03</span><span class="p">:</span><span class="mi">06</span><span class="p">:</span><span class="mi">46</span><span class="p">,</span><span class="mi">000000000</span>  <span class="mi">07</span><span class="p">.</span><span class="mi">01</span><span class="p">.</span><span class="mi">15</span> <span class="mi">21</span><span class="p">:</span><span class="mi">01</span><span class="p">:</span><span class="mi">47</span><span class="p">,</span><span class="mi">000000000</span>      <span class="mi">126</span>        <span class="mi">997176712</span>
+
+    <span class="n">Plan</span> <span class="n">hash</span> <span class="n">value</span><span class="p">:</span> <span class="mi">4169246078</span>
+
+    <span class="c1">------------------------------------------------------------------------------</span>
+    <span class="o">|</span> <span class="n">Id</span>  <span class="o">|</span> <span class="k">Operation</span>         <span class="o">|</span> <span class="n">Name</span>     <span class="o">|</span> <span class="k">Rows</span>  <span class="o">|</span> <span class="n">Bytes</span> <span class="o">|</span> <span class="n">Cost</span> <span class="p">(</span><span class="o">%</span><span class="n">CPU</span><span class="p">)</span><span class="o">|</span> <span class="n">Time</span>     <span class="o">|</span>
+    <span class="c1">------------------------------------------------------------------------------</span>
+    <span class="o">|</span>   <span class="mi">0</span> <span class="o">|</span> <span class="k">SELECT</span> <span class="k">STATEMENT</span>  <span class="o">|</span>          <span class="o">|</span>     <span class="mi">1</span> <span class="o">|</span>    <span class="mi">45</span> <span class="o">|</span>     <span class="mi">3</span>   <span class="p">(</span><span class="mi">0</span><span class="p">)</span><span class="o">|</span> <span class="mi">00</span><span class="p">:</span><span class="mi">00</span><span class="p">:</span><span class="mi">01</span> <span class="o">|</span>
+    <span class="o">|*</span>  <span class="mi">1</span> <span class="o">|</span>  <span class="k">TABLE</span> <span class="k">ACCESS</span> <span class="k">FULL</span><span class="o">|</span> <span class="n">VYPUJCKA</span> <span class="o">|</span>     <span class="mi">1</span> <span class="o">|</span>    <span class="mi">45</span> <span class="o">|</span>     <span class="mi">3</span>   <span class="p">(</span><span class="mi">0</span><span class="p">)</span><span class="o">|</span> <span class="mi">00</span><span class="p">:</span><span class="mi">00</span><span class="p">:</span><span class="mi">01</span> <span class="o">|</span>
+    <span class="c1">------------------------------------------------------------------------------</span>
+
+    <span class="n">Predicate</span> <span class="n">Information</span> <span class="p">(</span><span class="n">identified</span> <span class="k">by</span> <span class="k">operation</span> <span class="n">id</span><span class="p">):</span>
+    <span class="c1">---------------------------------------------------</span>
+
+       <span class="mi">1</span> <span class="o">-</span> <span class="n">filter</span><span class="p">(</span><span class="ss">&quot;DATUM_VRACENI&quot;</span> <span class="k">IS</span> <span class="k">NULL</span> <span class="k">AND</span> <span class="ss">&quot;KONEC&quot;</span><span class="o">&lt;</span><span class="n">SYSDATE</span><span class="o">@!</span> <span class="k">AND</span>
+                  <span class="ss">&quot;ZACATEK&quot;</span><span class="o">&lt;</span><span class="n">SYSDATE</span><span class="o">@!</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="vyhledani-vozidla-nebo-motocyklu-pro-dane-parametry">
+<h2>8.4. Vyhledání vozidla nebo motocyklu pro dané parametry<a class="headerlink" href="#vyhledani-vozidla-nebo-motocyklu-pro-dane-parametry" title="Trvalý odkaz na tento nadpis">¶</a></h2>
+<div class="section" id="id5">
+<h3>8.4.1. Dotaz<a class="headerlink" href="#id5" title="Trvalý odkaz na tento nadpis">¶</a></h3>
+<div class="highlight-sql"><div class="highlight"><pre><span class="k">SELECT</span> <span class="n">oznaceni</span><span class="p">.</span><span class="o">*</span><span class="p">,</span> <span class="n">vozidlo</span><span class="p">.</span><span class="n">spz</span> <span class="k">FROM</span> <span class="n">vozidlo</span> <span class="k">JOIN</span> <span class="n">oznaceni</span> <span class="k">ON</span> <span class="n">vozidlo</span><span class="p">.</span><span class="n">id_oznaceni</span> <span class="o">=</span> <span class="n">oznaceni</span><span class="p">.</span><span class="n">id</span> <span class="k">WHERE</span> <span class="n">oznaceni</span><span class="p">.</span><span class="n">vyrobce</span> <span class="o">=</span> <span class="s1">&#39;Cadillac&#39;</span> <span class="k">and</span> <span class="n">oznaceni</span><span class="p">.</span><span class="n">nazev</span> <span class="o">=</span> <span class="s1">&#39;STS&#39;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id6">
+<h3>8.4.2. Výpis<a class="headerlink" href="#id6" title="Trvalý odkaz na tento nadpis">¶</a></h3>
+<div class="highlight-sql"><div class="highlight"><pre>     <span class="n">ID</span>    <span class="n">VYROBCE</span>                                            <span class="n">NAZEV</span>                                              <span class="n">SPZ</span>
+<span class="c1">---------- -------------------------------------------------- -------------------------------------------------- --------------------</span>
+       <span class="mi">147</span> <span class="n">Cadillac</span>                                           <span class="n">STS</span>                                                <span class="n">n9nyu8fr</span>
+       <span class="mi">147</span> <span class="n">Cadillac</span>                                           <span class="n">STS</span>                                                <span class="n">srybvs4i</span>
+       <span class="mi">147</span> <span class="n">Cadillac</span>                                           <span class="n">STS</span>                                                <span class="n">w1zqto6r</span>
+
+<span class="n">Plan</span> <span class="n">hash</span> <span class="n">value</span><span class="p">:</span> <span class="mi">2898125470</span>
+
+<span class="c1">--------------------------------------------------------------------------------------------</span>
+<span class="o">|</span> <span class="n">Id</span>  <span class="o">|</span> <span class="k">Operation</span>                    <span class="o">|</span> <span class="n">Name</span>        <span class="o">|</span> <span class="k">Rows</span>  <span class="o">|</span> <span class="n">Bytes</span> <span class="o">|</span> <span class="n">Cost</span> <span class="p">(</span><span class="o">%</span><span class="n">CPU</span><span class="p">)</span><span class="o">|</span> <span class="n">Time</span>     <span class="o">|</span>
+<span class="c1">--------------------------------------------------------------------------------------------</span>
+<span class="o">|</span>   <span class="mi">0</span> <span class="o">|</span> <span class="k">SELECT</span> <span class="k">STATEMENT</span>             <span class="o">|</span>             <span class="o">|</span>     <span class="mi">1</span> <span class="o">|</span>    <span class="mi">32</span> <span class="o">|</span>     <span class="mi">8</span>   <span class="p">(</span><span class="mi">0</span><span class="p">)</span><span class="o">|</span> <span class="mi">00</span><span class="p">:</span><span class="mi">00</span><span class="p">:</span><span class="mi">01</span> <span class="o">|</span>
+<span class="o">|</span>   <span class="mi">1</span> <span class="o">|</span>  <span class="n">NESTED</span> <span class="n">LOOPS</span>                <span class="o">|</span>             <span class="o">|</span>       <span class="o">|</span>       <span class="o">|</span>            <span class="o">|</span>          <span class="o">|</span>
+<span class="o">|</span>   <span class="mi">2</span> <span class="o">|</span>   <span class="n">NESTED</span> <span class="n">LOOPS</span>               <span class="o">|</span>             <span class="o">|</span>     <span class="mi">1</span> <span class="o">|</span>    <span class="mi">32</span> <span class="o">|</span>     <span class="mi">8</span>   <span class="p">(</span><span class="mi">0</span><span class="p">)</span><span class="o">|</span> <span class="mi">00</span><span class="p">:</span><span class="mi">00</span><span class="p">:</span><span class="mi">01</span> <span class="o">|</span>
+<span class="o">|*</span>  <span class="mi">3</span> <span class="o">|</span>    <span class="k">TABLE</span> <span class="k">ACCESS</span> <span class="k">FULL</span>         <span class="o">|</span> <span class="n">OZNACENI</span>    <span class="o">|</span>     <span class="mi">1</span> <span class="o">|</span>    <span class="mi">19</span> <span class="o">|</span>     <span class="mi">3</span>   <span class="p">(</span><span class="mi">0</span><span class="p">)</span><span class="o">|</span> <span class="mi">00</span><span class="p">:</span><span class="mi">00</span><span class="p">:</span><span class="mi">01</span> <span class="o">|</span>
+<span class="o">|*</span>  <span class="mi">4</span> <span class="o">|</span>    <span class="k">INDEX</span> <span class="n">RANGE</span> <span class="n">SCAN</span>          <span class="o">|</span> <span class="n">ID_OZNACENI</span> <span class="o">|</span>     <span class="mi">4</span> <span class="o">|</span>       <span class="o">|</span>     <span class="mi">1</span>   <span class="p">(</span><span class="mi">0</span><span class="p">)</span><span class="o">|</span> <span class="mi">00</span><span class="p">:</span><span class="mi">00</span><span class="p">:</span><span class="mi">01</span> <span class="o">|</span>
+<span class="o">|</span>   <span class="mi">5</span> <span class="o">|</span>   <span class="k">TABLE</span> <span class="k">ACCESS</span> <span class="k">BY</span> <span class="k">INDEX</span> <span class="n">ROWID</span><span class="o">|</span> <span class="n">VOZIDLO</span>     <span class="o">|</span>     <span class="mi">4</span> <span class="o">|</span>    <span class="mi">52</span> <span class="o">|</span>     <span class="mi">5</span>   <span class="p">(</span><span class="mi">0</span><span class="p">)</span><span class="o">|</span> <span class="mi">00</span><span class="p">:</span><span class="mi">00</span><span class="p">:</span><span class="mi">01</span> <span class="o">|</span>
+<span class="c1">--------------------------------------------------------------------------------------------</span>
+
+<span class="n">Predicate</span> <span class="n">Information</span> <span class="p">(</span><span class="n">identified</span> <span class="k">by</span> <span class="k">operation</span> <span class="n">id</span><span class="p">):</span>
+<span class="c1">---------------------------------------------------</span>
+
+   <span class="mi">3</span> <span class="o">-</span> <span class="n">filter</span><span class="p">(</span><span class="ss">&quot;OZNACENI&quot;</span><span class="p">.</span><span class="ss">&quot;NAZEV&quot;</span><span class="o">=</span><span class="s1">&#39;STS&#39;</span> <span class="k">AND</span> <span class="ss">&quot;OZNACENI&quot;</span><span class="p">.</span><span class="ss">&quot;VYROBCE&quot;</span><span class="o">=</span><span class="s1">&#39;Cadillac&#39;</span><span class="p">)</span>
+   <span class="mi">4</span> <span class="o">-</span> <span class="k">access</span><span class="p">(</span><span class="ss">&quot;VOZIDLO&quot;</span><span class="p">.</span><span class="ss">&quot;ID_OZNACENI&quot;</span><span class="o">=</span><span class="ss">&quot;OZNACENI&quot;</span><span class="p">.</span><span class="ss">&quot;ID&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
 </div>
 
 
@@ -290,7 +396,7 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="9.html" class="btn btn-neutral float-right" title="9. Test integritních omezení" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="9.html" class="btn btn-neutral float-right" title="9. Testy integritních omezení" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="7.html" class="btn btn-neutral" title="7. Skript pro naplnění tabulky testovacími daty" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
