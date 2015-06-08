@@ -1,0 +1,8 @@
+
+====================================
+Doplnění schématu o odvozené hodnoty
+====================================
+
+*Skript, který doplní do zvolené tabulky schématu sloupec, který bude obsahovat odvozené
+hodnoty (průměrný plat zaměstnance v rámci oddělní apod.) – tyto hodnoty budou
+automaticky aktualizovány pomocí triggerů*

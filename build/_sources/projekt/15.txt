@@ -1,0 +1,8 @@
+
+
+Navrhněte slovně fakta a dimenze pro datový sklad vycházející z vaší databáze
+=============================================================================
+
+Popište, k jakým analýzám bude možné tento sklad využít. Identifikujte tabulky/sloupce, ke kterým
+bude nutné v datovém skladu navíc evidovat historické hodnoty (pokud již v provozní
+databázi nejsou k dispozici).

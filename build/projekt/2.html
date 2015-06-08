@@ -74,7 +74,6 @@
               <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="1.html">E-R diagram</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="1.html#diagram">Diagram</a></li>
-<li class="toctree-l2"><a class="reference internal" href="1.html#origial">Origiál</a></li>
 </ul>
 </li>
 <li class="toctree-l1 current"><a class="current reference internal" href="">Integritní omezení</a><ul>
@@ -104,7 +103,19 @@
 <li class="toctree-l1"><a class="reference internal" href="5.html">Skript vytvářející databázové schéma</a></li>
 <li class="toctree-l1"><a class="reference internal" href="6.html">Skript vytvářející dodatečná integritní omezení</a></li>
 <li class="toctree-l1"><a class="reference internal" href="7.html">Skript pro naplnění tabulky testovacími daty</a></li>
-<li class="toctree-l1"><a class="reference internal" href="8.html">Skript provádějící dotazy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="8.html">Skript provádějící dotazy</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="8.html#vypis-vsech-vypujcek-pro-daneho-klienta">Výpis všech výpůjček pro daného klienta</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="8.html#dotaz">Dotaz</a></li>
+<li class="toctree-l3"><a class="reference internal" href="8.html#vypis">Výpis</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="8.html#vypis-vsech-pujcenych-vozidel-a-s-poctem-dnu-do-konce-vypujcky">Výpis všech půjčených vozidel a s počtem dnů do konce výpůjčky.</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="8.html#id1">Dotaz</a></li>
+<li class="toctree-l3"><a class="reference internal" href="8.html#id2">Výpis</a></li>
+</ul>
+</li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="9.html">Test integritních omezení</a></li>
 <li class="toctree-l1"><a class="reference internal" href="10.html">Skript pro vytvoření balíčku (package) a procedur „business logiky“</a></li>
 </ul>
@@ -153,7 +164,7 @@
 <li>Každá výpůjčka musí mít vyplněné číslo pojistné smlouvy.</li>
 <li>PSČ má délku 6.</li>
 <li>Číslo občanského průkazu(OP) nesmí být prázdné.</li>
-<li>VIN kód nesmí být prázdný</li>
+<li>VIN kód nesmí být prázdný a musí být unikátní</li>
 </ul>
 </div>
 <div class="section" id="netrivialni">

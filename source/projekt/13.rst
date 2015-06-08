@@ -1,0 +1,8 @@
+
+================================================================
+Skript, který vytvoří úložiště ještě jednou v „objektové“ podobě
+================================================================
+
+- místo relačních tabulek budou použity uživatelsky definované typy Object a objektové tabulky (s jinými názvy než v dosavadním modelu)
+- objektové tabulky budou naplněny importem z původních relačních tabulek
+- datové cizí klíče budou nahrazeny referencemi na objekt
