@@ -27,7 +27,7 @@ Procedura
      SELECT AVG(vo.cena_den) + AVG(mo.cena_den) INTO prumer FROM polozka_vypujcky pv JOIN vypujcka v ON pv.id_vypujcka = v.id LEFT JOIN vozidlo vo ON pv.id_vozidlo = vo.id LEFT JOIN motorka mo ON pv.id_motorka = mo.id WHERE v.id_zakaznik = id_zakaznika;
      UPDATE zakaznik SET PRUMCENA_VYPUJCKY=prumer WHERE id = id_zakaznika;
     end;
-
+    /
 Trigger
 -------
 

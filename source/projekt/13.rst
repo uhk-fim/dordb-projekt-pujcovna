@@ -8,38 +8,165 @@ Skript, který vytvoří úložiště ještě jednou v „objektové“ podobě
 .. - datové cizí klíče budou nahrazeny referencemi na objekt
 
 .. code-block:: sql
-
-    CREATE TYPE person_typ AS OBJECT (
-      idno           NUMBER,
-      first_name     VARCHAR2(20),
-      last_name      VARCHAR2(25),
-      email          VARCHAR2(25),
-      phone          VARCHAR2(20),
-      MAP MEMBER FUNCTION get_idno RETURN NUMBER, 
-      MEMBER PROCEDURE display_details ( SELF IN OUT NOCOPY person_typ ));
+    
+    CREATE TYPE adresa_typ AS OBJECT (
+    id           NUMBER,
+    cp          NUMBER,
+    ulice      VARCHAR2(30),
+    obec          VARCHAR2(30),
+    psc          VARCHAR2(6),
+    MAP MEMBER FUNCTION get_id RETURN NUMBER, 
+    MEMBER PROCEDURE display_details ( SELF IN OUT NOCOPY adresa_typ ));
     /
 
-    CREATE TYPE BODY person_typ AS
-      MAP MEMBER FUNCTION get_idno RETURN NUMBER IS
+    CREATE TYPE BODY adresa_typ AS
+      MAP MEMBER FUNCTION get_id RETURN NUMBER IS
       BEGIN
-        RETURN idno;
+        RETURN id;
       END;
-      MEMBER PROCEDURE display_details ( SELF IN OUT NOCOPY person_typ ) IS
+      MEMBER PROCEDURE display_details ( SELF IN OUT NOCOPY adresa_typ ) IS
       BEGIN
-        -- use the PUT_LINE procedure of the DBMS_OUTPUT package to display details
-        DBMS_OUTPUT.PUT_LINE(TO_CHAR(idno) || ' ' || first_name || ' ' || last_name);
-        DBMS_OUTPUT.PUT_LINE(email || ' '  || phone);
+        DBMS_OUTPUT.PUT_LINE(TO_CHAR(id) || ' ' || ulice || ' ' || cp);
+        DBMS_OUTPUT.PUT_LINE(obec || ' '  || psc);
       END;
     END;
     /
 
-.. code-block:: sql
+    CREATE TYPE barva_typ AS OBJECT (
+    id           NUMBER,
+    typ_laku    VARCHAR2(20),
+    barva      VARCHAR2(30));
+    /
+    CREATE TYPE karoserie_typ AS OBJECT (
+    id            NUMBER,
+    typ_karoserie VARCHAR2(20));
+    /
+    CREATE TYPE prevodovka_typ AS OBJECT (
+    id            NUMBER,
+    typ_prevodovky VARCHAR2(20));
+    /
+    CREATE TYPE kubatura_typ AS OBJECT (
+    id           NUMBER,
+    kubatura    VARCHAR2(20),
+    ridicske_opravneni  VARCHAR2(3));
+    /
+    CREATE TYPE typ_motorky_typ AS OBJECT (
+    id           NUMBER,
+    druh    VARCHAR2(20));
+    /
+    CREATE TYPE polozka_vypujcky_typ AS OBJECT (
+    id           NUMBER,
+    id_vozidla  NUMBER,
+    id_motorka NUMBER);
+    /
+    CREATE TYPE pohon_typ AS OBJECT(
+    id    NUMBER,
+    typ_pohonu VARCHAR2(20));
+    /
+    CREATE TYPE oznaceni_typ AS OBJECT(
+    id    NUMBER,
+    vyrobce   VARCHAR2(40),
+    nazev     VARCHAR2(40));
+    /
 
-    -- requires existing person_typ fr. Ex 1-1
-    CREATE TABLE contacts (
-      contact         person_typ,
-      contact_date    DATE );
+    CREATE TYPE vozidlo_typ AS OBJECT(
+    id      NUMBER,
+    spz     VARCHAR2(40),
+    barva   barva_typ,
+    karoserie karoserie_typ,
+    prevodovka prevodovka_typ,
+    oznaceni  oznaceni_typ,
+    pohon pohon_typ,
+    vin varchar2(80),
+    pocet_mist NUMBER,
+    strana_rizeni VARCHAR2(20),
+    cena_den NUMBER),
+    MAP MEMBER FUNCTION get_id RETURN NUMBER, 
+    MEMBER PROCEDURE display_details ( SELF IN OUT NOCOPY vozidlo_typ ));
+    /
 
-    INSERT INTO contacts VALUES (
-      person_typ (65, 'Verna', 'Mills', 'vmills@example.com', '1-650-555-0125'), 
-     '24 Jun 2003' );
+    CREATE TYPE BODY vozidlo_typ AS
+      MAP MEMBER FUNCTION get_id RETURN NUMBER IS
+      BEGIN
+        RETURN id;
+      END;
+      MEMBER PROCEDURE display_details ( SELF IN OUT NOCOPY vozidlo_typ ) IS
+      BEGIN
+        DBMS_OUTPUT.PUT_LINE(TO_CHAR(id) || ' ' || spz);
+      END;
+    END;
+    /
+
+    CREATE TYPE motorka_typ AS OBJECT(
+    id      NUMBER,
+    spz     VARCHAR2(40),
+    barva   barva_typ,
+    prevodovka prevodovka_typ,
+    oznaceni  oznaceni_typ,
+    kubatura  kubatura_typ,
+    typ_motorky typ_motorky_typ,
+    vin varchar2(80),
+    takt_motoru NUMBER,
+    cena_den NUMBER,
+    MAP MEMBER FUNCTION get_id RETURN NUMBER, 
+    MEMBER PROCEDURE display_details ( SELF IN OUT NOCOPY vozidlo_typ ));
+    /
+
+    CREATE TYPE BODY motorka_typ AS
+      MAP MEMBER FUNCTION get_id RETURN NUMBER IS
+      BEGIN
+        RETURN id;
+      END;
+      MEMBER PROCEDURE display_details ( SELF IN OUT NOCOPY motorka_typ ) IS
+      BEGIN
+        DBMS_OUTPUT.PUT_LINE(TO_CHAR(id) || ' ' || spz);
+      END;
+    END;
+    /
+
+    CREATE TYPE zakaznik_typ AS OBJECT(
+    id NUMBER,
+    adresa adresa_typ,
+    jmeno varchar2(60),
+    cisloOP varchar2(60),
+    email varchar2(60),
+    telefon varchar2(20),
+    zakazan number,
+    MAP MEMBER FUNCTION get_id RETURN NUMBER, 
+    MEMBER PROCEDURE display_details ( SELF IN OUT NOCOPY zakaznik_typ ));
+    /
+
+    CREATE TYPE BODY zakaznik_typ AS
+      MAP MEMBER FUNCTION get_id RETURN NUMBER IS
+      BEGIN
+        RETURN id;
+      END;
+      MEMBER PROCEDURE display_details ( SELF IN OUT NOCOPY zakaznik_typ ) IS
+      BEGIN
+        DBMS_OUTPUT.PUT_LINE(TO_CHAR(id) || ' ' || jmeno || ' ' || email);
+      END;
+    END;
+    /
+
+    CREATE TYPE vypujcka_typ AS OBJECT(
+    id NUMBER,
+    zakaznik zakaznik_typ,
+    zacatek DATE,
+    konec DATE,
+    datum_sjednani DATE,
+    datum_vraceni DATE,
+    MAP MEMBER FUNCTION get_id RETURN NUMBER, 
+    MEMBER PROCEDURE display_details ( SELF IN OUT NOCOPY vypujcka_typ ));
+    /
+
+    CREATE TYPE BODY vypujcka_typ AS
+      MAP MEMBER FUNCTION get_id RETURN NUMBER IS
+      BEGIN
+        RETURN id;
+      END;
+      MEMBER PROCEDURE display_details ( SELF IN OUT NOCOPY vypujcka_typ ) IS
+      BEGIN
+        DBMS_OUTPUT.PUT_LINE(TO_CHAR(id) || ' ' || zacatek || ' ' || konec);
+      END;
+    END;
+    /
