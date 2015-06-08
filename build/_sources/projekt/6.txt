@@ -12,7 +12,7 @@ Skript vytvářející dodatečná integritní omezení
     ADD CONSTRAINT MOTORKA_UK1 UNIQUE (VIN);
 
     ALTER TABLE VOZIDLO
-    ADD CONSTRAINT MOTORKA_UK1 UNIQUE (VIN);
+    ADD CONSTRAINT VOZIDLO_UK1 UNIQUE (VIN);
 
     CREATE OR REPLACE PROCEDURE kontrola_polozky (id_motorka in number, id_vozidlo in number) AS
     kapacita number;
@@ -29,6 +29,3 @@ Skript vytvářející dodatečná integritní omezení
       BEGIN
         kontrola_polozky(:new.id_vozidlo,:new.id_motorka);
       END;
-
-
-TODO: unikatni CONSTRAINT pro motorky a auta
